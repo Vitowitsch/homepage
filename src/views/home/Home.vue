@@ -1,0 +1,151 @@
+<template>
+  <v-container fluid>
+    <v-btn @click="start(0)" dark depressed>Start Streaming</v-btn>
+    <v-timeline dense clipped :ripple="false" key="containerkey">
+      <v-layout column>
+        <v-slide-x-transition group>
+        <div v-for="(data, index) in myTransscript" v-bind:key="index">
+          <v-timeline-item class="mb-3" color="pink" small>
+            <v-flex xs12 v-show="true">
+              <v-card>
+                <v-card-text>
+                  <div :id="genWSTag(index)"></div>
+                  <div :id="genWSTLTag(index)"></div>
+                </v-card-text>
+              </v-card>
+              <v-card>
+                <template>
+                  <v-flex xs12>
+                    <v-card>
+                      <v-card-actions></v-card-actions>
+                      <v-card-text>
+                        <div :id="genWSTag(index)"></div>
+                        <div :id="genWSTLTag(index)"></div>
+                      </v-card-text>
+                    </v-card>
+                    <v-card>
+                      <RollingTimeline
+                        :annotation="data.annotation"
+                        :callsign="data.call_sign"
+                        :speakerid="data.speaker_id"
+                        :index="index"
+                      ></RollingTimeline>
+                    </v-card>
+                  </v-flex>
+                </template>
+              </v-card>
+            </v-flex>
+          </v-timeline-item>
+        </div>
+        </v-slide-x-transition>
+      </v-layout>
+    </v-timeline>
+  </v-container>
+</template>
+
+<script>
+import WaveSurfer from "wavesurfer.js";
+import TimelinePlugin from "wavesurfer.js/dist/plugin/wavesurfer.timeline.min.js";
+import MinimapPlugin from "wavesurfer.js/dist/plugin/wavesurfer.minimap.min.js";
+import audioFile from "@/assets/testaudio.wav";
+import transscript from "@/assets/backend-snapshot.json";
+import axios from "axios";
+import _ from "lodash";
+import RollingTimeline from "./RollingTimeline";
+import { EventBus } from "@/api/event-bus.js";
+
+const ICONS = {
+  info: "mdi-information",
+  warning: "mdi-alert",
+  error: "mdi-alert-circle",
+  success: "mdi-check-circle"
+};
+
+export default {
+  name: "Player",
+  components: {
+    WaveSurfer,
+    TimelinePlugin,
+    MinimapPlugin,
+    RollingTimeline
+  },
+  computed: {
+    timeline() {
+      return this.events.slice().reverse();
+    }
+  },
+  data: function() {
+    return {
+      wavesurfers: [],
+      myTransscript: transscript,
+      interval: null,
+      events: [],
+      input: null,
+      nonce: 0,
+      nextIndex: 1,
+      containerkey: 0
+    };
+  },
+  mounted() {
+    var myThis = this;
+    _.forEach(myThis.myTransscript, function(i, index) {
+      var wavesurfer = WaveSurfer.create({
+        container: "#wave" + index,
+        plugins: [
+          // TimelinePlugin.create({
+          //   container: "#wave-timeline" + index
+          // })
+          MinimapPlugin.create()
+        ]
+      });
+      wavesurfer.load(i.data_lake_file_location);
+      wavesurfer.on("ready", function() {
+        console.log("is ready ");
+      });
+      wavesurfer.on("finish", function() {
+        console.log("audio finsished");
+        myThis.playNext();
+      });
+      myThis.wavesurfers.push(wavesurfer);
+    });
+  },
+  methods: {
+    createWaveSurfer() {},
+    genWSTag(index) {
+      return "wave" + index;
+    },
+    genWSTLTag(index) {
+      return "wave-timeline" + index;
+    },
+    start(index) {
+      this.containerkey++;
+      console.log("playing " + index);
+      this.wavesurfers[index].play();
+      EventBus.$emit("play-features" + index);
+    },
+    playNext() {
+      this.nonce++;
+      this.start(this.nextIndex++);
+    },
+    addNext() {
+      this.events.push({
+        id: this.nonce++
+      });
+      this.input = null;
+    },
+    fetch() {
+      var that = this;
+      axios
+        .get("http://40.85.83.142:8080/get_feeds?atc_id=ksfo_twr")
+        .then(function(response) {
+          that.myTransscript = response;
+        })
+        .catch(function(error) {
+          console.log(error);
+        });
+    }
+  }
+};
+</script>
+
+<style></style>
