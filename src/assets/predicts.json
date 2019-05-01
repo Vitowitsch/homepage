@@ -1,0 +1,162 @@
+[
+  {
+    "keys": "https://tae24storage.blob.core.windows.net/acdn/dfw_lw_2_14.wav",
+    "annotation": "three sixty five roger",
+    "speaker_id": "ATC",
+    "call_sign": "CLEAR",
+    "user_id": "user123",
+    "t_date_time": 1
+  },
+  {
+    "keys": "https://tae24storage.blob.core.windows.net/acdn/log_lw_2_28.wav",
+    "annotation": "delta three sixty seven boston tower traffic will hold in position cross runway two two right and contact ground point nine",
+    "speaker_id": "Pilot",
+    "call_sign": "CLEAR",
+    "user_id": "User100",
+    "t_date_time": 2
+  },
+  {
+    "keys": "https://tae24storage.blob.core.windows.net/acdn/dca_lc_2_859.wav",
+    "annotation": "northwest eighteen seventy two runway three six taxi into position and hold",
+    "speaker_id": "ATC",
+    "call_sign": "CLEAR",
+    "user_id": "user123",
+    "t_date_time": 3
+  },
+  {
+    "keys": "https://tae24storage.blob.core.windows.net/acdn/log_f1_3_814.wav",
+    "annotation": "precision thirty five thirty six report runway two two left in sight",
+    "speaker_id": "ATC",
+    "call_sign": "CLEAR",
+    "user_id": "user123",
+    "t_date_time": 4
+  },
+  {
+    "keys": "https://tae24storage.blob.core.windows.net/acdn/log_id_2_461.wav",
+    "annotation": "precision thirty five sixty three boston radar contact ah fly heading two seven zero climb and maintain four thousand",
+    "speaker_id": "ATC",
+    "call_sign": "CLEAR",
+    "user_id": "user123",
+    "t_date_time": 5
+  },
+  {
+    "keys": "https://tae24storage.blob.core.windows.net/acdn/dfw_fe_2_375.wav",
+    "annotation": "november seven one ah four sierra regional approach roger depart holts heading of two zero five",
+    "speaker_id": "ATC",
+    "call_sign": "CLEAR",
+    "user_id": "user123",
+    "t_date_time": 6
+  },
+  {
+    "keys": "https://tae24storage.blob.core.windows.net/acdn/dca_d1_2_251.wav",
+    "annotation": "u s air one thirty three washington departure climb maintain flight level two three zero",
+    "speaker_id": "Pilot",
+    "call_sign": "CLEAR",
+    "user_id": "User100",
+    "t_date_time": 7
+  },
+  {
+    "keys": "https://tae24storage.blob.core.windows.net/acdn/log_f1_3_526.wav",
+    "annotation": "bizex three twenty three reduce speed to one seven zero then descend and maintain two thousand",
+    "speaker_id": "ATC",
+    "call_sign": "CLEAR",
+    "user_id": "user123",
+    "t_date_time": 8
+  },
+  {
+    "keys": "https://tae24storage.blob.core.windows.net/acdn/dfw_a2_1_2.wav",
+    "annotation": "american six eighty four turn right heading one five zero join one eight right localizer maintain three thousand present airspeed",
+    "speaker_id": "ATC",
+    "call_sign": "CLEAR",
+    "user_id": "user123",
+    "t_date_time": 9
+  },
+  {
+    "keys": "https://tae24storage.blob.core.windows.net/acdn/dfw_ge_1_230.wav",
+    "annotation": "roger speedbird two two nine heavy",
+    "speaker_id": "ATC",
+    "call_sign": "CLEAR",
+    "user_id": "user123",
+    "t_date_time": 10
+  },
+  {
+    "keys": "https://tae24storage.blob.core.windows.net/acdn/dfw_lw_2_14.wav",
+    "annotation": "three sixty five roger",
+    "speaker_id": "ATC",
+    "call_sign": "CLEAR",
+    "user_id": "user123",
+    "t_date_time": 11
+  },
+  {
+    "keys": "https://tae24storage.blob.core.windows.net/acdn/log_lw_2_28.wav",
+    "annotation": "delta three sixty seven boston tower traffic will hold in position cross runway two two right and contact ground point nine",
+    "speaker_id": "Pilot",
+    "call_sign": "CLEAR",
+    "user_id": "User100",
+    "t_date_time": 12
+  },
+  {
+    "keys": "https://tae24storage.blob.core.windows.net/acdn/dca_lc_2_859.wav",
+    "annotation": "northwest eighteen seventy two runway three six taxi into position and hold",
+    "speaker_id": "ATC",
+    "call_sign": "CLEAR",
+    "user_id": "user123",
+    "t_date_time": 13
+  },
+  {
+    "keys": "https://tae24storage.blob.core.windows.net/acdn/log_f1_3_814.wav",
+    "annotation": "precision thirty five thirty six report runway two two left in sight",
+    "speaker_id": "ATC",
+    "call_sign": "CLEAR",
+    "user_id": "user123",
+    "t_date_time": 14
+  },
+  {
+    "keys": "https://tae24storage.blob.core.windows.net/acdn/log_id_2_461.wav",
+    "annotation": "precision thirty five sixty three boston radar contact ah fly heading two seven zero climb and maintain four thousand",
+    "speaker_id": "ATC",
+    "call_sign": "CLEAR",
+    "user_id": "user123",
+    "t_date_time": 15
+  },
+  {
+    "keys": "https://tae24storage.blob.core.windows.net/acdn/dfw_fe_2_375.wav",
+    "annotation": "november seven one ah four sierra regional approach roger depart holts heading of two zero five",
+    "speaker_id": "ATC",
+    "call_sign": "CLEAR",
+    "user_id": "user123",
+    "t_date_time": 16
+  },
+  {
+    "keys": "https://tae24storage.blob.core.windows.net/acdn/dca_d1_2_251.wav",
+    "annotation": "u s air one thirty three washington departure climb maintain flight level two three zero",
+    "speaker_id": "Pilot",
+    "call_sign": "CLEAR",
+    "user_id": "User100",
+    "t_date_time": 17
+  },
+  {
+    "keys": "https://tae24storage.blob.core.windows.net/acdn/log_f1_3_526.wav",
+    "annotation": "bizex three twenty three reduce speed to one seven zero then descend and maintain two thousand",
+    "speaker_id": "ATC",
+    "call_sign": "CLEAR",
+    "user_id": "user123",
+    "t_date_time": 18
+  },
+  {
+    "keys": "https://tae24storage.blob.core.windows.net/acdn/dfw_a2_1_2.wav",
+    "annotation": "american six eighty four turn right heading one five zero join one eight right localizer maintain three thousand present airspeed",
+    "speaker_id": "ATC",
+    "call_sign": "CLEAR",
+    "user_id": "user123",
+    "t_date_time": 19
+  },
+  {
+    "keys": "https://tae24storage.blob.core.windows.net/acdn/dfw_ge_1_230.wav",
+    "annotation": "roger speedbird two two nine heavy",
+    "speaker_id": "ATC",
+    "call_sign": "CLEAR",
+    "user_id": "user123",
+    "t_date_time": 20
+  }
+]
