@@ -1,15 +1,14 @@
 <template>
-  <section id="about" class="hide-overflow">
+  <section id="skillmap">
     <v-layout white>
-      <v-flex xs12 md6 pa-5>
+      <v-flex xs3>
         <base-heading class="info--text">About Me</base-heading>
-
         <base-text class="mb-5">
           Experienced Software Architect with a demonstrated history of working in software development.
           <br>Skilled in AI, Blockchain, Big Data, Agile Methods, Clean Code, Java, C++ and others.
           <br>Strong engineering professional with a M.Sc. focused in Computer Science and Mathematics from The Julius Maximilians University of Würzburg.
         </base-text>
-        <v-chart :options="polar"/>
+        <v-chart :options="options"/>
       </v-flex>
     </v-layout>
   </section>
@@ -29,56 +28,97 @@
 
 <script>
 import ECharts from "vue-echarts";
-import "echarts/lib/chart/line";
-import "echarts/lib/component/polar";
+import treemap from "@/assets/treemap.json";
+import "echarts/lib/chart/treemap";
+
+function convert(source, target, basePath) {
+  for (var key in source) {
+    var path = basePath ? basePath + "." + key : key;
+    if (key.match(/^\$/)) {
+    } else {
+      target.children = target.children || [];
+      var idx = path.lastIndexOf(".") + 1;
+      if (-1 != idx) {
+        path = path.substring(idx);
+      }
+      var child = {
+        name: path
+      };
+
+      console.log(child.name);
+      target.children.push(child);
+      convert(source[key], child, path);
+    }
+  }
+
+  if (!target.children) {
+    target.value = source.$count || 1;
+  } else {
+    target.children.push({
+      name: basePath,
+      value: source.$count
+    });
+  }
+}
 
 export default {
   components: {
     "v-chart": ECharts
   },
-  data() {
-    let data = [];
-
-    for (let i = 0; i <= 360; i++) {
-      let t = (i / 180) * Math.PI;
-      let r = Math.sin(2 * t) * Math.cos(2 * t);
-      data.push([r, i]);
-    }
+  data: function() {
+    var data = [];
+    convert(treemap, data, "");
 
     return {
-      polar: {
+      options: {
         title: {
-          text: "极坐标双数值轴"
+          text: "ECharts 配置项查询分布",
+          subtext: "2016/04",
+          left: "leafDepth"
         },
-        legend: {
-          data: ["line"]
-        },
-        polar: {
-          center: ["50%", "54%"]
-        },
-        tooltip: {
-          trigger: "axis",
-          axisPointer: {
-            type: "cross"
-          }
-        },
-        angleAxis: {
-          type: "value",
-          startAngle: 0
-        },
-        radiusAxis: {
-          min: 0
-        },
+        tooltip: {},
         series: [
           {
-            coordinateSystem: "polar",
-            name: "line",
-            type: "line",
-            showSymbol: false,
-            data: data
+            name: "option",
+            type: "treemap",
+            visibleMin: 300,
+            data: data.children,
+            leafDepth: 1,
+            levels: [
+              {
+                itemStyle: {
+                  normal: {
+                    borderColor: "#555",
+                    borderWidth: 4,
+                    gapWidth: 4
+                  }
+                }
+              },
+              {
+                colorSaturation: [0.3, 0.6],
+                itemStyle: {
+                  normal: {
+                    borderColorSaturation: 0.7,
+                    gapWidth: 2,
+                    borderWidth: 2
+                  }
+                }
+              },
+              {
+                colorSaturation: [0.3, 0.5],
+                itemStyle: {
+                  normal: {
+                    borderColorSaturation: 0.6,
+                    gapWidth: 1
+                  }
+                }
+              },
+              {
+                colorSaturation: [0.3, 0.5]
+              }
+            ]
           }
-        ],
-        animationDuration: 2000
+        ]
       }
     };
   }
