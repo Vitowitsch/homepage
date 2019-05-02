@@ -1,17 +1,11 @@
 <template>
-  <section id="skillmap">
-    <v-layout white>
-      <v-flex xs3>
-        <base-heading class="info--text">About Me</base-heading>
-        <base-text class="mb-5">
-          Experienced Software Architect with a demonstrated history of working in software development.
-          <br>Skilled in AI, Blockchain, Big Data, Agile Methods, Clean Code, Java, C++ and others.
-          <br>Strong engineering professional with a M.Sc. focused in Computer Science and Mathematics from The Julius Maximilians University of Würzburg.
-        </base-text>
-        <v-chart :options="options"/>
-      </v-flex>
-    </v-layout>
-  </section>
+  <v-layout wrap fill-height>
+    <v-flex xs12 md6 primary text-xs-center pa-5 white--text>
+      <base-heading>Technical Skills</base-heading>
+      <base-text class="mb-5">click to browse</base-text>
+      <v-chart :options="options" autoresize="true"/>
+    </v-flex>
+  </v-layout>
 </template>
 
 <style>
