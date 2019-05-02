@@ -1,13 +1,12 @@
 <template>
-  <v-layout wrap fill-height>
-    <v-flex xs12 md6 primary text-xs-center pa-5 white--text>
+  <v-layout wrap>
+    <v-flex xs12 md6 dark>
       <base-heading>Technical Skills</base-heading>
-      <base-text class="mb-5">click to browse</base-text>
-      <v-chart :options="options" autoresize="true"/>
+      <base-text class="mb-5"></base-text>
+      <v-chart :options="options"/>
     </v-flex>
   </v-layout>
 </template>
-
 <style>
 /**
  * The default size is 600px×400px, for responsive charts
@@ -62,20 +61,17 @@ export default {
   data: function() {
     var data = [];
     convert(treemap, data, "");
-
     return {
       options: {
         title: {
-          text: "ECharts 配置项查询分布",
-          subtext: "2016/04",
-          left: "leafDepth"
+          text: "ECsadfdskjghdlgjkhdfgjkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkharts",
+          show: true
         },
-        tooltip: {},
         series: [
           {
             name: "option",
             type: "treemap",
-            visibleMin: 300,
+            visibleMin: 100,
             data: data.children,
             leafDepth: 1,
             levels: [

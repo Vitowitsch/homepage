@@ -1,0 +1,33 @@
+  skills: [
+      {
+        name: "Fullstack-Development",
+        value: 95
+      },
+      {
+        name: "Software-Architecture",
+        value: 95
+      },
+      {
+        name: "Back-End-Development / Micro-Services",
+        value: 95
+      },
+      {
+        name: "Front-End-Development / Micro-Frontends",
+        value: 75
+      },
+      {
+        name: "Big-Data",
+        value: 70
+      },
+      {
+        name: "Artificial Intelligence / Data-Science",
+        value: 75
+      },
+      {
+        name: "Agile Methods",
+        value: 80
+      },
+      {
+        name: "Continuous Integration / -Delivery",
+        value: 92
+      }
