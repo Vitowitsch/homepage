@@ -1,13 +1,9 @@
 <template>
   <section id="cv" class="hide-overflow">
-    <v-layout wrap>
+    <v-layout accent>
       <v-flex hidden-sm-and-down md6>
         <base-heading class="info--text">About Me</base-heading>
-
         <base-text class="mb-5">
-          Experienced Software Architect with a demonstrated history of working in software development.
-          <br>Skilled in AI, Blockchain, Big Data, Agile Methods, Clean Code, Java, C++ and others.
-          <br>Strong engineering professional with a M.Sc. focused in Computer Science and Mathematics from The Julius Maximilians University of Würzburg.
         </base-text>
       </v-flex>
       <v-flex xs12 md6 primary text-xs-center pa-5 white--text>
