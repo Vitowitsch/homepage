@@ -1,8 +1,9 @@
 <template>
   <div>
-    <EchartsTest/>
     <welcome/>
     <AboutMe/>
+    <EchartsTest/>
+
     <CV/>
     <v-spacer></v-spacer>
     <Skills/>
