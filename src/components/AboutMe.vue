@@ -13,13 +13,13 @@
         <base-subheading class="info--text">Skills</base-subheading>
         <base-text class="mb-5">Fullstack Software Architect and Developer</base-text>
 
-        <v-alert outlined color="info">
+        <!-- <v-alert outlined color="info">
           <v-layout v-for="(skill, i) in skills" :key="i" style="color: #69A1BB;" wrap>
             <v-flex xs6 text-uppercase v-text="skill.name"/>
             <v-flex xs6 text-xs-right v-text="`${skill.value}%`"/>
             <v-progress-linear :value="skill.value" color="info" height="8"/>
           </v-layout>
-        </v-alert>
+        </v-alert> -->
       </v-flex>
       <v-flex hidden-sm-and-down md6>
         <!-- <my-canvas></my-canvas> -->
