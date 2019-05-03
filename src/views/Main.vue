@@ -1,9 +1,10 @@
 <template>
   <v-container justify-space-between>
     <!-- <welcome/> -->
+    <EchartsTest/>
     <recent-projects/>
-    <Certs/>
-    <!-- <EchartsTest/> -->
+    <!-- <Certs/> -->
+  
     <!-- <CV/> -->
     <!-- <Skills/> -->
     <!-- <services/> -->

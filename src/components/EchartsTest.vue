@@ -1,21 +1,17 @@
 <template>
-  <v-layout wrap>
-    <v-flex xs12 md6 dark>
-      <base-heading>Technical Skills</base-heading>
-      <base-text class="mb-5"></base-text>
-      <v-chart :options="options"/>
-    </v-flex>
-  </v-layout>
+  <v-chart :options="options"/>
+  <!-- <v-container>
+    <v-layout mt-5 height="100%">
+      <v-flex md12>
+        
+      </v-flex>
+    </v-layout>
+  </v-container>-->
 </template>
 <style>
-/**
- * The default size is 600px×400px, for responsive charts
- * you may need to set percentage values as follows (also
- * don't forget to provide a size for the container).
- */
 .echarts {
   width: 100%;
-  height: 100%;
+  height: 20%;
 }
 </style>
 
