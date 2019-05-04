@@ -1,13 +1,8 @@
 <template>
-  <v-container fluid primary>
-    <v-layout>
-      <CityToll></CityToll>
-    </v-layout>
-    <hr>
-    <!-- <v-layout mt-5> -->
-    <Carbon></Carbon>
-    <!-- </v-layout> -->
-  </v-container>
+  <div>
+    <Carbon class="secondary"/>
+    <CityToll class="primary"></CityToll>
+  </div>
 </template>
 
 <script>

@@ -2,15 +2,17 @@
   <v-toolbar app>
     <v-toolbar-title>Veit Wehner's Place</v-toolbar-title>
     <v-spacer></v-spacer>
-    <v-tabs v-model="tab" grow>
-      <v-tab>
-        <anchor-router-link
-          :to="{name: 'carbon', hash: '#article'}"
-          :scrollOptions="scrollOptions"
-        >Projects</anchor-router-link>
-      </v-tab>
-      <v-tab to="carbon">CV</v-tab>
-    </v-tabs>
+    <transition>
+      <v-tabs v-model="tab" grow>
+        <v-tab>
+          <anchor-router-link :to="{hash: '#carbon'}" :scrollOptions="scrollOptions">Projects</anchor-router-link>
+        </v-tab>
+        <v-tab>
+          <anchor-router-link :to="{hash: '#skilltree'}" :scrollOptions="scrollOptions">Skills</anchor-router-link>
+        </v-tab>
+        <v-tab to="carbon">CV</v-tab>
+      </v-tabs>
+    </transition>
     <router-link to="/contact">
       <v-btn flat>Contact</v-btn>
     </router-link>
