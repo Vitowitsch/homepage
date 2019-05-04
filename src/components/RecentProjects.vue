@@ -1,12 +1,12 @@
 <template>
-  <v-container>
-    <v-layout mb-5>
+  <v-container fluid primary>
+    <v-layout>
       <CityToll></CityToll>
     </v-layout>
     <hr>
-    <v-layout mt-5>
-      <Carbon></Carbon>
-    </v-layout>
+    <!-- <v-layout mt-5> -->
+    <Carbon></Carbon>
+    <!-- </v-layout> -->
   </v-container>
 </template>
 

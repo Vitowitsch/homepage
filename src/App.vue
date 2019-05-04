@@ -1,47 +1,43 @@
 <template>
-  <v-app>
-    <v-toolbar  tabs>
-      <v-toolbar-side-icon></v-toolbar-side-icon>
-      <v-toolbar-title>Veit Wehner's Place</v-toolbar-title>
-      <template v-slot:extension>
-        <v-tabs v-model="tab" grow>
-          <v-tabs-slider color="yellow"></v-tabs-slider>
-          <v-tab v-for="item in items" :key="item">{{ item }}</v-tab>
-        </v-tabs>
-      </template>
-    </v-toolbar>
-    <v-tabs-items v-model="tab">
-      <v-tab-item v-for="item in items" :key="item">
-        <v-card flat>
-          <v-card-text>{{ text }}</v-card-text>
-        </v-card>
-      </v-tab-item>
-    </v-tabs-items>
-    <!-- <core-toolbar /> -->
-    <core-view/>
-    <!-- <core-footer /> -->
-  </v-app>
+  <div>
+    <ToolBar/>
+    <v-app>
+      <v-content>
+        <core-view/>
+      </v-content>
+    </v-app>
+  </div>
 </template>
 
 <script>
+import ToolBar from "@/components/base/ToolBar";
 export default {
   components: {
-    CoreFooter: () => import("@/components/base/Footer"),
-    CoreToolbar: () => import("@/components/base/Toolbar"),
-    CoreView: () => import("@/views/Main")
+    CoreView: () => import("@/views/Main"),
+    ToolBar
   },
   data() {
     return {
       tab: null,
-      items: ["about", "skills", "projects", "services", "contact"],
-      text: ""
+      scrollOptions: {
+        container: "body",
+        duration: 700,
+        easing: "ease",
+        offset: 0,
+        cancelable: true,
+        onStart: false,
+        onDone: false,
+        onCancel: false,
+        x: false,
+        y: true
+      }
     };
   }
 };
 </script>
 <style>
 .basil {
-  background-color: #fffbe6 !important;
+  color: #fffbe6 !important;
 }
 .basil--text {
   color: #356859 !important;

@@ -5,13 +5,13 @@ import colors from 'vuetify/es5/util/colors'
 
 Vue.use(Vuetify, {
   theme: {
-    primary: '#1976D2',
-    secondary: '#424242',
-    accent: '#82B1FF',
-    error: '#FF5252',
-    info: '#2196F3',
-    success: '#4CAF50',
-    warning: '#FFC107'
+    primary: '#82B1FF', //grey
+    secondary: '#d4d7d8', //dark grey
+    accent: '#82B1FF', //light blue
+    error: '#FF5252', //red
+    info: '#2196F3', //blue
+    success: '#4CAF50', //green
+    warning: '#FFC107' //yellow
   },
   iconfont: 'mdi'
 })
