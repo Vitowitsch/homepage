@@ -19,6 +19,8 @@
     "css-loader": "^2.1.1",
     "debounce": "^1.2.0",
     "echarts": "^4.2.1",
+    "echarts-gl": "^1.1.1",
+    "echarts-x": "^1.0.0-alpha",
     "font-awesome": "^4.7.0",
     "nprogress": "^0.2.0",
     "roboto-fontface": "^0.10.0",
