@@ -20,11 +20,9 @@
 </template>
 <script>
 import SkillBar  from "./SkillBar.vue";
-import Bubbles from "./Bubbles.vue";
 export default {
   components: {
     "skill-bar": SkillBar,
-    bubbles: Bubbles,
   },
   data: function() {
     return {

@@ -1,5 +1,6 @@
   <template>
-  <article>
+  <article class="carbon">
+    <div id="article" class="block"/>
     <v-chart :options="options"/>
     <v-container justify-space-between>
       <v-layout>

@@ -1,28 +1,22 @@
 <template>
-  <v-container justify-space-between>
-    <!-- <welcome/> -->
-    <EchartsTest/>
+  <div>
+    <CV secondary/>
     <recent-projects/>
     <!-- <Certs/> -->
-  
-    <!-- <CV/> -->
+
     <!-- <Skills/> -->
     <!-- <services/> -->
     <!-- <get-in-touch/> -->
-  </v-container>
+  </div>
 </template>
 
 <script>
 export default {
   components: {
-    EchartsTest: () => import("@/components/EchartsTest"),
     CV: () => import("@/components/CV"),
     Certs: () => import("@/components/Certs"),
     Skills: () => import("@/components/Skills"),
-    GetInTouch: () => import("@/components/GetInTouch"),
-    RecentProjects: () => import("@/components/RecentProjects"),
-    Services: () => import("@/components/Services"),
-    Welcome: () => import("@/components/Welcome")
+    RecentProjects: () => import("@/components/RecentProjects")
   }
 };
 </script>

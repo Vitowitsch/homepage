@@ -1,13 +1,7 @@
 <template>
-  <section id="cv" class="hide-overflow">
-    <v-layout accent>
-      <v-flex hidden-sm-and-down md6>
-        <base-heading class="info--text">About Me</base-heading>
-        <base-text class="mb-5">
-        </base-text>
-      </v-flex>
-      <v-flex xs12 md6 primary text-xs-center pa-5 white--text>
-        <base-heading>Curriculum Vitae</base-heading>
+  <v-container fluid secondary>
+    <v-layout>
+      <v-flex xs12>
         <v-timeline>
           <v-slide-x-reverse-transition group hide-on-leave>
             <v-timeline-item v-for="(item, i) in stages" :key="i" :color="item.color" small>
@@ -23,7 +17,7 @@
         </v-timeline>
       </v-flex>
     </v-layout>
-  </section>
+  </v-container>
 </template>
 
 <script>
