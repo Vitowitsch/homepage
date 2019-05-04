@@ -8,12 +8,7 @@
     </v-layout>
   </v-container>-->
 </template>
-<style>
-.echarts {
-  width: 100%;
-  height: 20%;
-}
-</style>
+
 
 <script>
 import ECharts from "vue-echarts";
@@ -34,7 +29,6 @@ function convert(source, target, basePath) {
         name: path
       };
 
-      console.log(child.name);
       target.children.push(child);
       convert(source[key], child, path);
     }
@@ -110,3 +104,9 @@ export default {
   }
 };
 </script>
+<style>
+.echarts {
+  width: 100%;
+  height: 20%;
+}
+</style>
