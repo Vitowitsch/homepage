@@ -1,12 +1,7 @@
 <template>
-  <v-chart :options="options"/>
-  <!-- <v-container>
-    <v-layout mt-5 height="100%">
-      <v-flex md12>
-        
-      </v-flex>
-    </v-layout>
-  </v-container>-->
+  <v-responsive :aspect-ratio="16/9">
+    <v-chart :options="options"/>
+  </v-responsive>
 </template>
 
 
@@ -107,6 +102,6 @@ export default {
 <style>
 .echarts {
   width: 100%;
-  height: 20%;
+  height: 100%;
 }
 </style>

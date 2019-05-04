@@ -9,7 +9,6 @@
       </v-layout>
       <v-layout wrap justify-space-around>
         <v-flex xs12 md5>
-          <section>
             <base-text>
               The estimated number of premature deaths due to traffic related air pollution is estimated by 60 thousand per year in Germany. Even if this number is controversial, 65 German cities surpassed the pollution levels in 2017. If they all were fined by the EU, this would add up to millions of Euros.
               <p></p>Traffic related pollution was one of the topics at the 2018’s
@@ -18,7 +17,6 @@
               >Code4Green</a> hackathon at the ministry of environment. It took place in the ministry itself that had been perfectly equipped with beds and all the stuff you need for a 24h hackathon. Even Minister Svenja Schulze herself showed up.
               <p></p>I was part of a team of seven. The idea for the final project only emerged the night before the hackathon: We built a smart system that calculates dynamic price for entering - or parking - in the city, based on the real time NOx level. It should also include a 24h hours forecast. There were two options for billing: Either an IOT device on the car that would automatically deduct the payment from a prepaid account when it entered a city zone, or smart parking ticket vending machines.
             </base-text>
-          </section>
         </v-flex>
         <v-flex xs9>
           <v-img :src="require('@/assets/pics/code4green-device.jpg')" aspect-ratio="2.0"/>

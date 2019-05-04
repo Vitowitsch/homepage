@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid secondary>
+  <v-container fluid secondary id="cv">
     <v-layout>
       <v-flex xs12>
         <v-timeline>

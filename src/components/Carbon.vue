@@ -1,8 +1,7 @@
   <template>
-  <article class="carbon">
-    <div id="article" class="block"/>
-    <v-chart :options="options"/>
-    <v-container justify-space-between>
+  <article id="carbon">
+    <!-- <v-chart :options="options"/> -->
+    <v-container justify-space-between >
       <v-layout>
         <div class="display-4">Forget Bitcoin - Blockchain can help reduce CO₂-emissions</div>
       </v-layout>
@@ -12,7 +11,7 @@
       </v-layout>
       <v-layout wrap justify-space-around>
         <v-flex xs12>
-          <v-chart :options="globe"/>
+          <!-- <v-chart :options="globe"/> -->
           <base-text mb-5>
             A predictive pricing for carbon certificates was awarded first prize at the Siemens-AI-Meets-Blockchain-Hackathon.
             In the 2016 Paris climate treaty the world's peoples decided to strictly regulate Carbon Dioxide emissions to reach our climate goals: to prevent the average temperature from warming up by more than 2° degrees till 2100.
@@ -35,7 +34,7 @@
 </template>
 <script>
 import ECharts from "vue-echarts";
-import "echarts-gl";
+// import "echarts-gl";
 // import "echarts-gl/lib/chart/treemap";
 export default {
   components: {
@@ -43,83 +42,83 @@ export default {
   },
   data() {
     return {
-      options: {
-        tooltip: {},
-        visualMap: {
-          show: false,
-          dimension: 2,
-          min: -1,
-          max: 1,
-          inRange: {
-            color: [
-              "#e0f3f8",
-              "#ffffbf",
-              "#fee090",
-              "#fdae61",
-              "#f46d43",
-              "#d73027",
-              "#a50026"
-            ]
-          }
-        },
-        xAxis3D: {},
-        yAxis3D: {},
-        zAxis3D: {},
-        grid3D: {},
-        series: [
-          {
-            type: "surface",
-            parametric: true,
-            parametricEquation: {
-              u: {
-                min: -Math.PI,
-                max: Math.PI,
-                step: Math.PI / 20
-              },
-              v: {
-                min: 0,
-                max: Math.PI,
-                step: Math.PI / 20
-              },
-              x: function(u, v) {
-                return Math.sin(v) * Math.sin(u);
-              },
-              y: function(u, v) {
-                return Math.sin(v) * Math.cos(u);
-              },
-              z: function(u, v) {
-                return Math.cos(v);
-              }
-            }
-          }
-        ]
-      },
-      globe: {
-        backgroundColor: "#000",
-        globe: {
-          baseTexture: "assets/pics/world.topo.bathy.200401.jpg",
-          heightTexture: "assets/pics/world.topo.bathy.200401.jpg",
-          displacementScale: 0.04,
-          shading: "realistic",
-          environment: "assets/pics/starfield.jpg",
-          realisticMaterial: {
-            roughness: 0.9
-          },
-          postEffect: {
-            enable: true
-          },
-          light: {
-            main: {
-              intensity: 5,
-              shadow: true
-            },
-            ambientCubemap: {
-              texture: "assets/pics/pisa.hdr",
-              diffuseIntensity: 0.2
-            }
-          }
-        }
-      }
+      // options: {
+      //   tooltip: {},
+      //   visualMap: {
+      //     show: false,
+      //     dimension: 2,
+      //     min: -1,
+      //     max: 1,
+      //     inRange: {
+      //       color: [
+      //         "#e0f3f8",
+      //         "#ffffbf",
+      //         "#fee090",
+      //         "#fdae61",
+      //         "#f46d43",
+      //         "#d73027",
+      //         "#a50026"
+      //       ]
+      //     }
+      //   },
+      //   xAxis3D: {},
+      //   yAxis3D: {},
+      //   zAxis3D: {},
+      //   grid3D: {},
+      //   series: [
+      //     {
+      //       type: "surface",
+      //       parametric: true,
+      //       parametricEquation: {
+      //         u: {
+      //           min: -Math.PI,
+      //           max: Math.PI,
+      //           step: Math.PI / 20
+      //         },
+      //         v: {
+      //           min: 0,
+      //           max: Math.PI,
+      //           step: Math.PI / 20
+      //         },
+      //         x: function(u, v) {
+      //           return Math.sin(v) * Math.sin(u);
+      //         },
+      //         y: function(u, v) {
+      //           return Math.sin(v) * Math.cos(u);
+      //         },
+      //         z: function(u, v) {
+      //           return Math.cos(v);
+      //         }
+      //       }
+      //     }
+      //   ]
+      // },
+      // globe: {
+      //   backgroundColor: "#000",
+      //   globe: {
+      //     baseTexture: "assets/pics/world.topo.bathy.200401.jpg",
+      //     heightTexture: "assets/pics/world.topo.bathy.200401.jpg",
+      //     displacementScale: 0.04,
+      //     shading: "realistic",
+      //     environment: "assets/pics/starfield.jpg",
+      //     realisticMaterial: {
+      //       roughness: 0.9
+      //     },
+      //     postEffect: {
+      //       enable: true
+      //     },
+      //     light: {
+      //       main: {
+      //         intensity: 5,
+      //         shadow: true
+      //       },
+      //       ambientCubemap: {
+      //         texture: "assets/pics/pisa.hdr",
+      //         diffuseIntensity: 0.2
+      //       }
+      //     }
+      //   }
+      // }
     };
   }
 };
