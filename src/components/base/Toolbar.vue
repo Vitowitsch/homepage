@@ -1,20 +1,11 @@
 <template>
   <v-toolbar app>
-    <v-toolbar-title>Veit Wehner's Place</v-toolbar-title>
+    <v-toolbar-side-icon @click.stop="handleDrawerToggle"></v-toolbar-side-icon>
     <v-spacer></v-spacer>
-    <transition>
-      <v-tabs v-model="tab" grow>
-        <v-tab>
-          <anchor-router-link :to="{hash: '#carbon'}" :scrollOptions="scrollOptions">Projects</anchor-router-link>
-        </v-tab>
-        <v-tab>
-          <anchor-router-link :to="{hash: '#skilltree'}" :scrollOptions="scrollOptions">Skills</anchor-router-link>
-        </v-tab>
-        <v-tab to="carbon">CV</v-tab>
-      </v-tabs>
-    </transition>
     <router-link to="/contact">
-      <v-btn flat>Contact</v-btn>
+      <v-btn icon flat>
+        <v-icon>contact_mail</v-icon>
+      </v-btn>
     </router-link>
   </v-toolbar>
 </template>
@@ -24,14 +15,6 @@ export default {
   name: "app-toolbar",
   components: {
     AnchorRouterLink
-  },
-  methods: {
-    handleDrawerToggle() {
-      window.getApp.$emit("APP_DRAWER_TOGGLED");
-    },
-    handleFullScreen() {
-      Util.toggleFullScreen();
-    }
   },
   data() {
     return {
@@ -50,6 +33,12 @@ export default {
         y: true
       }
     };
+  },
+  methods: {
+    handleDrawerToggle() {
+      console.log(window.getApp);
+      window.getApp.$emit("APP_DRAWER_TOGGLED");
+    }
   }
 };
 </script>
