@@ -1,14 +1,15 @@
 <template>
-  <v-container fluid secondary id="cv">
-    <v-layout>
-      <v-flex xs12>
-        <v-timeline>
+  <v-container fluid id="cv">
+    <v-layout >
+      <v-flex xs12 >
+        <v-timeline dense>
           <v-slide-x-reverse-transition group hide-on-leave>
             <v-timeline-item v-for="(item, i) in stages" :key="i" :color="item.color" small>
-              <template v-slot:opposite>
-                <span :class="`headline font-weight-bold ${item.color}--text`" v-text="item.year"></span>
-              </template>
+              <!-- <template v-slot:opposite>
+              
+              </template>-->
               <div class="py-3">
+                <span :class="`headline font-weight-bold ${item.color}--text`" v-text="item.year"></span>
                 <h2 :class="`headline font-weight-light mb-3 ${item.color}--text`">{{item.title}}</h2>
                 <div>{{item.text}}</div>
               </div>

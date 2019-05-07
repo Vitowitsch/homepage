@@ -1,9 +1,14 @@
 <template>
   <div>
-    <SkillTree/>
-    <recent-projects/>
-    <CV secondary/>
+    <recent-projects class="secondary"/>
+    <hr>
+    <CV/>
+    <hr>
+    <SkillTree class="secondary"/>
+    <hr>
     <Certs/>
+    <hr>
+    <contact class="secondary"/>
   </div>
 </template>
 
@@ -11,6 +16,7 @@
 export default {
   components: {
     CV: () => import("@/components/CV"),
+    contact: () => import("@/components/Contact"),
     Certs: () => import("@/components/Certs"),
     SkillTree: () => import("@/components/SkillTree"),
     RecentProjects: () => import("@/components/RecentProjects")
