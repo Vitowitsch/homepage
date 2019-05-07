@@ -1,11 +1,13 @@
 import Vue from 'vue'
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
-import colors from 'vuetify/es5/util/colors'
+import "material-design-icons-iconfont/dist/material-design-icons.css"
+import "roboto-fontface/css/roboto/roboto-fontface.css"
+import "font-awesome/css/font-awesome.css"
 
 Vue.use(Vuetify, {
   theme: {
-    primary: '##eff1f4', //grey
+    primary: '#eff1f4', //grey
     secondary: '#d4d7d8', //dark grey
     accent: '#82B1FF', //light blue
     error: '#FF5252', //red
@@ -13,5 +15,6 @@ Vue.use(Vuetify, {
     success: '#4CAF50', //green
     warning: '#FFC107' //yellow
   },
-  iconfont: 'mdi'
+  iconfont: 'fa4',
+  customProperties: true,
 })

@@ -1,9 +1,11 @@
 <template>
   <div>
     <ToolBar/>
+    <AppDrawer></AppDrawer>
     <v-app>
       <v-content>
-        <core-view/>
+        <Intro class="secondary"/>
+        <home/>
       </v-content>
     </v-app>
   </div>
@@ -11,10 +13,21 @@
 
 <script>
 import ToolBar from "@/components/base/ToolBar";
+import AppDrawer from "@/components/base/AppDrawer";
+import Intro from "@/components/Intro";
+import AppEvents from "./event.js";
 export default {
   components: {
-    CoreView: () => import("@/views/Main"),
-    ToolBar
+    home: () => import("@/views/Main"),
+    ToolBar,
+    AppDrawer,
+    Intro
+  },
+  created() {
+    AppEvents.forEach(item => {
+      this.$on(item.name, item.callback);
+    });
+    window.getApp = this;
   },
   data() {
     return {

@@ -1,42 +1,42 @@
 <template>
-  <v-container fluid>
+  <v-container fluid id="main">
     <v-btn @click="start(0)" dark depressed>Start Streaming</v-btn>
     <v-timeline dense clipped :ripple="false" key="containerkey">
       <v-layout column>
         <v-slide-x-transition group>
-        <div v-for="(data, index) in myTransscript" v-bind:key="index">
-          <v-timeline-item class="mb-3" color="pink" small>
-            <v-flex xs12 v-show="true">
-              <v-card>
-                <v-card-text>
-                  <div :id="genWSTag(index)"></div>
-                  <div :id="genWSTLTag(index)"></div>
-                </v-card-text>
-              </v-card>
-              <v-card>
-                <template>
-                  <v-flex xs12>
-                    <v-card>
-                      <v-card-actions></v-card-actions>
-                      <v-card-text>
-                        <div :id="genWSTag(index)"></div>
-                        <div :id="genWSTLTag(index)"></div>
-                      </v-card-text>
-                    </v-card>
-                    <v-card>
-                      <RollingTimeline
-                        :annotation="data.annotation"
-                        :callsign="data.call_sign"
-                        :speakerid="data.speaker_id"
-                        :index="index"
-                      ></RollingTimeline>
-                    </v-card>
-                  </v-flex>
-                </template>
-              </v-card>
-            </v-flex>
-          </v-timeline-item>
-        </div>
+          <div v-for="(data, index) in myTransscript" v-bind:key="index">
+            <v-timeline-item class="mb-3" color="pink" small>
+              <v-flex xs12 v-show="true">
+                <v-card>
+                  <v-card-text>
+                    <div :id="genWSTag(index)"></div>
+                    <div :id="genWSTLTag(index)"></div>
+                  </v-card-text>
+                </v-card>
+                <v-card>
+                  <template>
+                    <v-flex xs12>
+                      <v-card>
+                        <v-card-actions></v-card-actions>
+                        <v-card-text>
+                          <div :id="genWSTag(index)"></div>
+                          <div :id="genWSTLTag(index)"></div>
+                        </v-card-text>
+                      </v-card>
+                      <v-card>
+                        <RollingTimeline
+                          :annotation="data.annotation"
+                          :callsign="data.call_sign"
+                          :speakerid="data.speaker_id"
+                          :index="index"
+                        ></RollingTimeline>
+                      </v-card>
+                    </v-flex>
+                  </template>
+                </v-card>
+              </v-flex>
+            </v-timeline-item>
+          </div>
         </v-slide-x-transition>
       </v-layout>
     </v-timeline>
@@ -47,8 +47,16 @@
 import WaveSurfer from "wavesurfer.js";
 import TimelinePlugin from "wavesurfer.js/dist/plugin/wavesurfer.timeline.min.js";
 import MinimapPlugin from "wavesurfer.js/dist/plugin/wavesurfer.minimap.min.js";
-import audioFile from "@/assets/testaudio.wav";
-import transscript from "@/assets/backend-snapshot.json";
+import testaudio from "@/assets/audio/testaudio.wav";
+import dca_lc_1_464 from "@/assets/audio/dca_lc_1_464.wav";
+import dca_lc_2_1119 from "@/assets/audio/dca_lc_2_1119.wav";
+import dca_lc_3_7 from "@/assets/audio/dca_lc_3_7.wav";
+import dca_lc_4_426 from "@/assets/audio/dca_lc_4_426.wav";
+import dca_lc_4_427 from "@/assets/audio/dca_lc_4_427.wav";
+import dfw_le_2_488 from "@/assets/audio/dfw_le_2_488.wav";
+import dfw_lw_2_370 from "@/assets/audio/dfw_lw_2_370.wav";
+import dfw_lw_3_168 from "@/assets/audio/dfw_lw_3_168.wav";
+import transscript from "@/assets/short-transscript.json";
 import axios from "axios";
 import _ from "lodash";
 import RollingTimeline from "./RollingTimeline";
@@ -88,6 +96,16 @@ export default {
   },
   mounted() {
     var myThis = this;
+    var audio = [
+      dca_lc_1_464,
+      dca_lc_2_1119,
+      dca_lc_3_7,
+      dca_lc_4_426,
+      dca_lc_4_427,
+      dfw_le_2_488,
+      dfw_lw_2_370,
+      dfw_lw_3_168
+    ];
     _.forEach(myThis.myTransscript, function(i, index) {
       var wavesurfer = WaveSurfer.create({
         container: "#wave" + index,
@@ -98,7 +116,9 @@ export default {
           MinimapPlugin.create()
         ]
       });
-      wavesurfer.load(i.data_lake_file_location);
+      // wavesurfer.load(i.data_lake_file_location);
+      console.log("importing " + audio[index]);
+      wavesurfer.load(audio[index]);
       wavesurfer.on("ready", function() {
         console.log("is ready ");
       });
@@ -136,7 +156,7 @@ export default {
     fetch() {
       var that = this;
       axios
-        .get("http://40.85.83.142:8080/get_feeds?atc_id=ksfo_twr")
+        .get("https://tae24storage.blob.core.windows.net/acdn/filename")
         .then(function(response) {
           that.myTransscript = response;
         })

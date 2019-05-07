@@ -1,45 +1,21 @@
 {
   "Agile": {
-    "$count": 3,
-    "TDD": {
-      "$count": 1
-    },
+    "TDD": {},
     "Scrum": {},
-    "Kanban": {
-      "$count": 1
-    }
+    "Kanban": {}
   },
   "Docker": {
-    "$count": 3,
-    "EKS": {
-      "$count": 1
-    },
-    "ECS": {
-      "$count": 1
-    },
-    "Fargate": {
-      "$count": 1
-    }
+    "EKS": {},
+    "ECS": {},
+    "Fargate": {}
   },
   "AWS": {
-    "$count": 15,
-    "S3": {
-      "$count": 1
-    },
-    "EC2": {
-      "$count": 1
-    },
+    "S3": {},
+    "EC2": {},
     "DB": {
-      "$count": 3,
-      "Aurora": {
-        "$count": 1
-      },
-      "RDS": {
-        "$count": 1
-      },
-      "DynamoDB": {
-        "$count": 1
-      },
+      "Aurora": {},
+      "RDS": {},
+      "DynamoDB": {},
       "Redis": {}
     },
     "Elastic Beanstalk": {},
@@ -56,26 +32,14 @@
     "ECS": {},
     "ECS": {},
     "ECS": {},
-    "ECS": {
-      "$count": 1
-    },
-    "ECS": {
-      "$count": 1
-    },
-    "ECS": {
-      "$count": 1
-    },
-    "ECS": {
-      "$count": 1
-    },
-    "ECS": {
-      "$count": 1
-    }
+    "ECS": {},
+    "ECS": {},
+    "ECS": {},
+    "ECS": {},
+    "ECS": {}
   },
   "Databases": {
-    "$count": 9,
     "SQL": {
-      "$count": 5,
       "MsSQL": {},
       "Oracle": {},
       "MySQL": {},
@@ -85,14 +49,12 @@
       "JOOQ": {}
     },
     "NoSQL": {
-      "$count": 4,
       "MongoDB": {},
       "Cassandra": {},
       "CouchDB": {},
       "Redis": {}
     },
     "Datalakes": {
-      "$count": 4,
       "Presto": {},
       "DynamoDB": {},
       "HBase": {},
@@ -104,15 +66,12 @@
       "SPARQL": {}
     },
     "In-Memory": {
-      "$count": 3,
       "Redis": {},
       "H2": {}
     }
   },
   "UI": {
-    "$count": 30,
     "Languages": {
-      "$count": 6,
       "html": {},
       "css": {},
       "Javascript": {},
@@ -121,7 +80,6 @@
       "Qt": {}
     },
     "Web-Frameworks": {
-      "$count": 11,
       "Vue": {},
       "Node.JS": {},
       "Flutter": {},
@@ -137,9 +95,7 @@
     }
   },
   "AI": {
-    "$count": 5,
     "Neural-Networks": {
-      "$count": 4,
       "TensorFlow": {},
       "TensorFlow Lite": {},
       "Keras": {},
@@ -154,7 +110,6 @@
     "Bayes-Encoding": {}
   },
   "CI/CD": {
-    "$count": 8,
     "Jenkins": {},
     "Travis": {},
     "CruiseControl": {},
@@ -165,7 +120,6 @@
     "pip": {}
   },
   "Connectivity": {
-    "$count": 7,
     "REST": {},
     "graphQL": {},
     "ODATA": {},
@@ -175,13 +129,11 @@
     "Wireless-Sensor-Networks": {}
   },
   "Documentation": {
-    "$count": 2,
     "LaTEX": {},
     "Markdown": {}
   },
   "Git": {},
   "Programming Languages": {
-    "$count": 6,
     "Java": {},
     "C": {},
     "C++": {},

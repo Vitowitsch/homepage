@@ -1,5 +1,5 @@
 <template>
-  <v-responsive :aspect-ratio="16/9">
+  <v-responsive :aspect-ratio="16/9" id="skills">
     <v-chart :options="options"/>
   </v-responsive>
 </template>
@@ -49,7 +49,7 @@ export default {
     return {
       options: {
         title: {
-          text: "ECsadfdskjghdlgjkhdfgjkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkharts",
+          text: "",
           show: true
         },
         series: [
