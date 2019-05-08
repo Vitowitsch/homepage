@@ -1,5 +1,9 @@
 <template>
   <v-responsive :aspect-ratio="16/9" id="skills">
+    <project-headline>
+      <template v-slot:header>Skills</template>
+      Experience
+    </project-headline>
     <v-chart :options="options"/>
   </v-responsive>
 </template>

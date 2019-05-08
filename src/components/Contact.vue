@@ -1,6 +1,12 @@
 <template>
   <v-layout mt-4 id="contact">
-    <v-flex xs12 offset-sm3>
+    <v-flex xs12 md3 offset-sm3>
+      <project-headline>
+        <template v-slot:header>contact</template>
+        Get in Touch
+      </project-headline>
+    </v-flex>
+    <v-flex xs12 md6 offset-sm3>
       <v-card>
         <GmapMap
           :center="{lat:49.59099, lng:11.00783}"
