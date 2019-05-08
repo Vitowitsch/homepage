@@ -8,15 +8,5 @@
     "data_lake_file_location": "https://tae24storage.blob.core.windows.net/acdn/dca_lc_1_464.wav",
     "atc_id": "JFK",
     "call_sign": "okay clear"
-  },
-  {
-    "annotation": "united sixteen eighty three runway three six cleared for takeoff",
-    "speaker_id": "ATC",
-    "keys": "dca_lc_2_1119.wav",
-    "user_id": "ATC_30",
-    "l_time_stamp": 2,
-    "data_lake_file_location": "https://tae24storage.blob.core.windows.net/acdn/dca_lc_2_1119.wav",
-    "atc_id": "JFK",
-    "call_sign": "united six"
   }
 ]

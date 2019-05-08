@@ -1,32 +1,48 @@
 <template>
-  <v-container fluid>
-    <hr>
-    <v-carousel interval="99999999999">
-      <v-carousel-item v-for="p in projects" :key="p.title">
-        <v-img :src="require(`@/assets/certs/${p}`)" aspect-ratio="3.0" contain/>
-      </v-carousel-item>
-    </v-carousel>
+  <v-container fluid style="height: 100%">
+    <project-headline>
+      <template v-slot:header>badges</template>
+      Badges
+    </project-headline>
+    <v-layout justify-space-between>
+      <v-flex xs12 md3 v-for="p in projects" :key="p">
+        <expandable-image class="image" :src="p.url"></expandable-image>
+      </v-flex>
+    </v-layout>
   </v-container>
 </template>
 
 <script>
+import vuePicturePreview from "vue-picture-preview";
 export default {
+  components: {
+    "lg-preview": vuePicturePreview
+  },
   data: () => ({
-    items: [
-      {
-        src: "https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg"
-      },
-      {
-        src: "https://cdn.vuetifyjs.com/images/carousel/sky.jpg"
-      },
-      {
-        src: "https://cdn.vuetifyjs.com/images/carousel/bird.jpg"
-      },
-      {
-        src: "https://cdn.vuetifyjs.com/images/carousel/planet.jpg"
-      }
-    ],
-    projects: ["ai-hack1.jpg", "intrapreneurs.jpg", "futureland.png", "neo.png"]
-  })
+    selectedImage: null,
+    projects: [
+      { url: require("@/assets/certs/ai-hack1.jpg") },
+      { url: require("@/assets/certs/intrapreneurs.jpg") },
+      { url: require("@/assets/certs/futureland.png") },
+      { url: require("@/assets/certs/neo.png") }
+    ]
+  }),
+  methods: {
+    zoom(url) {
+      console.log("Zoom", url);
+      this.selectedImage = url;
+    }
+  }
 };
 </script>
+<style>
+.image {
+  width: 40%;
+  max-width: 100%;
+}
+.expandable-image {
+  position: relative;
+  transition: 0.25s opacity;
+  cursor: zoom-in;
+}
+</style>

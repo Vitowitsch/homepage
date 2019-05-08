@@ -1,9 +1,10 @@
   <template>
   <article>
     <v-container fluid>
-      <center>
-        <div class="display-3" style="text-decoration: underline;">Pollution is in the air</div>
-      </center>
+      <project-headline>
+        <template v-slot:header>Side-Project</template>
+        Pollution is in the air
+      </project-headline>
       <v-layout justify-space-around wrap mb-5 mt-5>
         <v-flex xs12 md5>
           <youtube :video-id="getVideoId()"></youtube>

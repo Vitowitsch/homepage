@@ -1,7 +1,11 @@
 <template>
   <v-container fluid id="cv">
-    <v-layout >
-      <v-flex xs12 >
+    <v-layout>
+      <v-flex xs12>
+        <project-headline>
+          <template v-slot:header>CV</template>
+          Curriculum Vitae
+        </project-headline>
         <v-timeline dense>
           <v-slide-x-reverse-transition group hide-on-leave>
             <v-timeline-item v-for="(item, i) in stages" :key="i" :color="item.color" small>

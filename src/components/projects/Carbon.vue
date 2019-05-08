@@ -2,14 +2,10 @@
   <article>
     <!-- <v-chart :options="options"/> -->
     <v-container fluid justify-space-between>
-      <center>
-        <div class="headline">
-          <p>
-            <span>Project</span>
-          </p>
-          <h1>Forget Bitcoin - Blockchain can help reduce CO₂-emissions</h1>
-        </div>
-      </center>
+      <project-headline>
+        <template v-slot:header>Side-Project</template>
+        Forget Bitcoin - Blockchain can help reduce CO₂-emissions
+      </project-headline>
       <v-layout xs12 mt-5 mb-5>
         <v-flex xs12>
           <World/>
@@ -51,62 +47,5 @@ export default {
   }
 };
 </script>
-<style>
-.headline {
-  position: relative;
-  display: inline-block;
-  border: 1px solid #252525;
-  margin-bottom: 120px;
-  color: #252525;
-  font: 12px "PT Sans", sans-serif;
-  line-height: 20px;
-  text-align: center;
-}
 
-.headline p span {
-  padding: 0 10px;
-  background-color: #fff;
-}
-
-.headline h1 {
-  padding: 10px 15px;
-  margin-bottom: 0;
-  text-transform: uppercase;
-  line-height: 53px;
-}
-
-h1 {
-  margin-bottom: 14px;
-  font-size: 36px;
-  line-height: 57px;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: #252525;
-  font-family: "Oswald", sans-serif;
-  font-weight: normal;
-}
-
-
-element.style {
-    text-align: justify;
-    line-height: 18px;
-}
-
-p {
-    margin-bottom: 20px;
-}
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
-</style>
 
