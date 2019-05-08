@@ -1,9 +1,7 @@
 <template>
   <div id="recent-projects">
     <Carbon class="primary"/>
-    <hr>
     <Cognac/>
-    <hr>
     <CityToll class="primary"/>
   </div>
 </template>

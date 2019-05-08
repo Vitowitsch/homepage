@@ -4,6 +4,7 @@
     <AppDrawer></AppDrawer>
     <v-app>
       <v-content>
+        <lg-preview></lg-preview>
         <Intro class="secondary"/>
         <home/>
       </v-content>
@@ -16,6 +17,7 @@ import ToolBar from "@/components/base/ToolBar";
 import AppDrawer from "@/components/base/AppDrawer";
 import Intro from "@/components/Intro";
 import AppEvents from "./event.js";
+
 export default {
   components: {
     home: () => import("@/views/Main"),

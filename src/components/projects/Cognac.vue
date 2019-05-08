@@ -1,9 +1,10 @@
 <template>
   <article>
     <v-container fluid>
-      <center>
-        <div class="display-3" style="text-decoration: underline;">Macathon Speech - Cognac</div>
-      </center>
+      <project-headline>
+        <template v-slot:header>Side-Project</template>
+        Macathon Speech - Cognac
+      </project-headline>
       <v-layout justify-space-around wrap mb-5 mt-5>
         <v-flex xs12 md11>
           <AtcStream/>
