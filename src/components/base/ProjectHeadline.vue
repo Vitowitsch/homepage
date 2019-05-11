@@ -25,7 +25,7 @@
   font: 12px "PT Sans", sans-serif;
   line-height: 20px;
   text-align: center;
-  margin-top: 150px;
+  margin-top: 50px;
 }
 
 .headline p span {

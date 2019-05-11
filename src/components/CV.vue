@@ -1,16 +1,13 @@
 <template>
   <v-container fluid id="cv">
-    <v-layout>
-      <v-flex xs12>
-        <project-headline>
-          <template v-slot:header>CV</template>
-          Curriculum Vitae
-        </project-headline>
-        <v-timeline dense>
+     <project-header>
+        <template v-slot:header>CV</template>
+           Curriculum Vitae
+           <template v-slot:article>
+             <v-timeline dense>
           <v-slide-x-reverse-transition group hide-on-leave>
             <v-timeline-item v-for="(item, i) in stages" :key="i" :color="item.color" small>
               <!-- <template v-slot:opposite>
-              
               </template>-->
               <div class="py-3">
                 <span :class="`headline font-weight-bold ${item.color}--text`" v-text="item.year"></span>
@@ -20,8 +17,8 @@
             </v-timeline-item>
           </v-slide-x-reverse-transition>
         </v-timeline>
-      </v-flex>
-    </v-layout>
+        </template>
+        </project-header>
   </v-container>
 </template>
 
@@ -32,8 +29,8 @@ export default {
     this.start();
   },
   data: () => ({
-    items: [],
-    stages: [
+    viewIdx : 0,
+    items: [
       {
         color: "#b6b7ba",
         year: "2007",
@@ -90,26 +87,22 @@ export default {
           "Integration of Matlab-Algorithms for Predictive-Maintenance as Docker-Container into Amazon-AWS."
       }
     ],
+    stages: [],
     interval: null,
     slidingIdx: 0
   }),
   methods: {
-    addEvent() {
-      if (this.slidingIdx < this.stages.length) {
-        this.items.unshift(this.stages[this.slidingIdx++]);
+    addItem() {
+      if (this.stages.length != this.items.length){
+        console.log("added item");
+        this.stages.push(this.items[this.viewIdx++]);
       }
-    },
-    genAlert() {
-      const color = this.genColor();
-      return {
-        color
-      };
     },
     genColor() {
       return COLORS[Math.floor(Math.random() * 3)];
     },
     start() {
-      this.interval = setInterval(this.addEvent, 2000);
+      this.interval = setInterval(this.addItem, 500);
     },
     stop() {
       clearInterval(this.interval);

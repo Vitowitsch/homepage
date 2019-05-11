@@ -1,11 +1,11 @@
 <template>
   <v-container fluid id="main">
     <v-btn @click="start(0)" dark depressed>Start Streaming</v-btn>
-    <v-timeline dense clipped :ripple="false" key="containerkey">
+    <v-timeline dense clipped :ripple="false" >
       <v-layout column>
         <v-slide-x-transition group>
           <div v-for="(data, index) in myTransscript" v-bind:key="index">
-            <v-timeline-item class="mb-3" color="pink" small>
+            <v-timeline-item class="mb-3" color="pink" :key="index" small>
               <v-flex xs12 v-show="true">
                 <v-card>
                   <v-card-text>
@@ -59,7 +59,6 @@ import dfw_lw_3_168 from "@/assets/audio/dfw_lw_3_168.wav";
 import transscript from "@/assets/short-transscript.json";
 import axios from "axios";
 import _ from "lodash";
-import RollingTimeline from "./RollingTimeline";
 import { EventBus } from "@/api/event-bus.js";
 
 const ICONS = {
@@ -75,7 +74,7 @@ export default {
     WaveSurfer,
     TimelinePlugin,
     MinimapPlugin,
-    RollingTimeline
+    RollingTimeline: () => import("./RollingTimeline")
   },
   computed: {
     timeline() {
@@ -93,6 +92,9 @@ export default {
       nextIndex: 1,
       containerkey: 0
     };
+  },
+  created(){
+ 
   },
   mounted() {
     var myThis = this;
@@ -128,6 +130,7 @@ export default {
       });
       myThis.wavesurfers.push(wavesurfer);
     });
+
   },
   methods: {
     createWaveSurfer() {},
