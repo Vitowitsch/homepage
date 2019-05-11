@@ -3,7 +3,7 @@
     <v-toolbar-side-icon @click.stop="handleDrawerToggle"></v-toolbar-side-icon>
     <v-spacer></v-spacer>
     <router-link to="/contact">
-      <v-btn icon flat>
+      <v-btn icon flat  to="#contact">
         <v-icon>contact_mail</v-icon>
       </v-btn>
     </router-link>

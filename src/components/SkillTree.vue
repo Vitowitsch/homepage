@@ -1,11 +1,15 @@
 <template>
-  <v-responsive :aspect-ratio="16/9" id="skills">
-    <project-headline>
+  <v-container fluid id="skill">
+    <project-header>
       <template v-slot:header>Skills</template>
       Experience
-    </project-headline>
-    <v-chart :options="options"/>
-  </v-responsive>
+      <template v-slot:article>
+        <v-responsive :aspect-ratio="16/9">
+          <v-chart :options="options"/>
+        </v-responsive>
+      </template>
+    </project-header>
+  </v-container>
 </template>
 
 
@@ -51,6 +55,7 @@ export default {
     var data = [];
     convert(treemap, data, "");
     return {
+      minimized: true,
       options: {
         title: {
           text: "",
@@ -67,6 +72,7 @@ export default {
               {
                 itemStyle: {
                   normal: {
+                    color: "#353433",
                     borderColor: "#555",
                     borderWidth: 4,
                     gapWidth: 4

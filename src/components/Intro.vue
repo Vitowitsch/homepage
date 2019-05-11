@@ -1,5 +1,6 @@
 <template>
-  <v-expansion-panel value="1">
+<v-container fluid>
+  <v-expansion-panel v-model="panel" expand>
     <v-expansion-panel-content>
       <template v-slot:header>
         <div></div>
@@ -14,4 +15,19 @@
       </v-card>
     </v-expansion-panel-content>
   </v-expansion-panel>
+  </v-container>
 </template>
+<script>
+export default {
+  data() {
+    return {
+      panel: [false]
+    };
+  },
+  methods: {
+    readLess() {
+      this.panel = [false];
+    }
+  }
+};
+</script>

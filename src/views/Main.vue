@@ -1,10 +1,10 @@
 <template>
   <div>
-    <recent-projects class="secondary"/>
+    <recent-projects/>
     <CV/>
-    <SkillTree class="secondary"/>
+    <SkillTree/>
     <References/>
-    <contact class="secondary"/>
+    <contact/>
   </div>
 </template>
 

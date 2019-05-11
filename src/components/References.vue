@@ -1,15 +1,19 @@
 <template>
-  <v-carousel interval="99999999999" height="100%">
-    <v-carousel-item v-for="r in refs" :key="r.who">
-      <v-container fluid wrap>
-        <v-layout>
-          <v-flex xs4>
+  <v-carousel cycle="false" id="references" lazy>
+    <project-headline>
+      <template v-slot:header>Personal</template>
+      References
+    </project-headline>
+    <v-carousel-item v-for="r in refs" :key="r.text">
+      <v-container>
+        <v-layout justify-space-around wrap>
+          <v-flex xs12 md5>
             <reference-text>
               <template v-slot:header>{{r.position}}</template>
               {{r.who}}
             </reference-text>
           </v-flex>
-          <v-flex xs8>
+          <v-flex xs12 md5>
             <div style="font-style: italic;">{{r.text}}</div>
           </v-flex>
         </v-layout>
@@ -52,13 +56,13 @@ export default {
           We value him for his broad experience with software development, his deep technical understanding, \
           remarkable efficiency, extraordinary team spirit and targeted communication. \
           He is the kind of employee you could wish for. I can recommend him very strongly.''",
-        who: "Name on request",
+        who: "%name on request%",
         position: "Siemens Project Manager"
       },
       {
         text:
           "''Veit Wehner always shows initiative, diligence and has good ideas that work in practice. He always reaches the target goals and surpasses them often.''",
-        who: "Referal on Demand",
+        who: "%name on request%",
         position: "Siemens Project Manager"
       }
     ],
