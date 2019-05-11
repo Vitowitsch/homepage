@@ -13,11 +13,7 @@
 </template>
 
 <script>
-import vuePicturePreview from "vue-picture-preview";
 export default {
-  components: {
-    "lg-preview": vuePicturePreview
-  },
   data: () => ({
     selectedImage: null,
     projects: [

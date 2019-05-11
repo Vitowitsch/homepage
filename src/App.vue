@@ -4,8 +4,7 @@
     <AppDrawer></AppDrawer>
     <v-app>
       <v-content>
-        <lg-preview></lg-preview>
-        <Intro class="secondary"/>
+        <Intro/>
         <home/>
       </v-content>
     </v-app>

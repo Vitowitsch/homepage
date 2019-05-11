@@ -11,6 +11,10 @@ import colors from "vuetify/es5/util/colors"
 import VueYouTubeEmbed from 'vue-youtube-embed'
 import * as VueGoogleMaps from 'vue2-google-maps'
 import VueExpandableImage from 'vue-expandable-image'
+import VueYoutube from 'vue-youtube'
+import "./stylus/main.styl"
+
+Vue.use(VueYoutube)
 Vue.use(VueExpandableImage)
 Vue.use(VueYouTubeEmbed)
 

@@ -34,9 +34,7 @@ export default {
   props: ["index", "annotation", "speakerid", "callsign"],
   mounted() {
     var myThis = this;
-    console.log("fetched " + "play-features" + myThis.index);
     EventBus.$on("play-features" + myThis.index, function() {
-      console.log("catched feature-event");
       if (myThis.interval == null) {
         myThis.start();
       } else {
