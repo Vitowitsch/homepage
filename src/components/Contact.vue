@@ -1,11 +1,11 @@
 <template>
-  <v-layout id="contact" wrap fluid>
-    <v-flex xs12 sm6 offset-sm3>
+  <v-layout justify-center>
+    <v-flex xs12 md5 id="contact">
       <project-headline>
         <template v-slot:header>contact</template>
         Get in Touch
       </project-headline>
-       <iframe
+      <iframe
         width="100%"
         height="100%"
         id="gmap_canvas"
@@ -15,18 +15,7 @@
         marginheight="0"
         marginwidth="0"
       ></iframe>
-        <v-card-title primary-title>
-          <div>
-            <h3 class="headline mb-0">Veit Wehner</h3>
-            <p></p>
-            <div class="subheading">
-                91052 Erlangen, Germany
-                
-              <br>E-Mail: veit.wehner@gmail.com
-              <br> </div>
-          </div>
-        </v-card-title>
-      </v-card>
+      <v-alert :value="true" color="black" icon="email" outline>veit.wehner@gmail.com</v-alert>
     </v-flex>
   </v-layout>
 </template>

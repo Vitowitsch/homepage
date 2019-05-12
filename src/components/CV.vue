@@ -1,25 +1,23 @@
 <template>
-  <v-container fluid id="cv">
-     <project-header>
-        <template v-slot:header>CV</template>
-           Curriculum Vitae
-           <template v-slot:article>
-             <v-timeline dense>
-          <v-slide-x-reverse-transition group hide-on-leave>
-            <v-timeline-item v-for="(item, i) in stages" :key="i" :color="item.color" small>
-              <!-- <template v-slot:opposite>
-              </template>-->
-              <div class="py-3">
-                <span :class="`headline font-weight-bold ${item.color}--text`" v-text="item.year"></span>
-                <h2 :class="`headline font-weight-light mb-3 ${item.color}--text`">{{item.title}}</h2>
-                <div>{{item.text}}</div>
-              </div>
-            </v-timeline-item>
-          </v-slide-x-reverse-transition>
-        </v-timeline>
-        </template>
-        </project-header>
-  </v-container>
+  <v-card ml5 id="cv">
+    <project-headline>
+      <template v-slot:header>CV</template>
+      Curriculum Vitae
+    </project-headline>
+    <v-timeline>
+      <v-slide-x-reverse-transition group hide-on-leave>
+        <v-timeline-item v-for="(item, i) in stages" :key="i" :color="item.color" small>
+          <!-- <template v-slot:opposite>
+          </template>-->
+          <div class="py-3">
+            <span :class="`headline font-weight-bold ${item.color}--text`" v-text="item.year"></span>
+            <h2 :class="`headline font-weight-light mb-3 ${item.color}--text`">{{item.title}}</h2>
+            <div>{{item.text}}</div>
+          </div>
+        </v-timeline-item>
+      </v-slide-x-reverse-transition>
+    </v-timeline>
+  </v-card>
 </template>
 
 <script>
@@ -29,14 +27,14 @@ export default {
     this.start();
   },
   data: () => ({
-    viewIdx : 0,
+    viewIdx: 0,
     items: [
       {
         color: "#b6b7ba",
         year: "2007",
         text:
           "Master in Computer Science (major), Mathematics (minor) at University of Würzburg. Thesis about Remote-Control in Sensor-Networks.",
-        title: "Master of Computer-Science"
+        title: "Master's Degree"
       },
       {
         color: "#b6b7ba",
@@ -93,7 +91,7 @@ export default {
   }),
   methods: {
     addItem() {
-      if (this.stages.length != this.items.length){
+      if (this.stages.length != this.items.length) {
         console.log("added item");
         this.stages.push(this.items[this.viewIdx++]);
       }

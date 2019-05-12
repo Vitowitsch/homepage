@@ -1,45 +1,47 @@
 <template>
-  <v-container>
-    <v-flex xs6 v-bind="{[`md${columns}`]: true}">
-      <v-expansion-panel light v-model="panelIndex" expand>
-        <v-expansion-panel-content>
-          <template v-slot:header>
+  <!-- <v-flex xs12 v-bind="{[`md${columns}`]: true}"> -->
+  <v-expansion-panel v-model="panelIndex" expand>
+    <v-expansion-panel-content :class="theme">
+      <template v-slot:header>
+        <center>
+          <div class="headline">
             <p>
-              <center>
-                <div class="headline">
-                  <p>
-                    <span>
-                      <slot name="header"/>
-                    </span>
-                  </p>
-                  <h1>
-                    <slot></slot>
-                  </h1>
-                </div>
-              </center>
+              <span>
+                <slot name="header"/>
+              </span>
             </p>
-          </template>
-          <v-layout>
-            <slot name="article"/>
-          </v-layout>
-          <div style="align-content: center;">
-            <v-btn flat @click="readLess" icon>
-              <v-icon>close</v-icon>
-            </v-btn>
+            <h1>
+              <slot></slot>
+            </h1>
           </div>
-        </v-expansion-panel-content>
-      </v-expansion-panel>
-    </v-flex>
-  </v-container>
+          <v-layout justify-center mt-2 mb-4>
+            <div class="title">
+              <slot name="subheading"/>
+            </div>
+          </v-layout>
+          <base-text>
+            <slot name="intro"/>
+          </base-text>
+        </center>
+      </template>
+      <v-layout>
+        <v-flex>
+          <slot name="article"/>
+        </v-flex>
+      </v-layout>
+    </v-expansion-panel-content>
+  </v-expansion-panel>
+  <!-- </v-flex> -->
 </template>
 <script>
 export default {
+  props: { theme: { type: String } },
   data() {
     return {
       panel: [false],
       panelIndex: -9,
       mini: true,
-      columns: 6
+      columns: 12
     };
   },
   methods: {
@@ -53,7 +55,7 @@ export default {
       if (true === this.panelIndex[0]) {
         this.columns = 12;
       } else {
-        this.columns = 6;
+        this.columns = 12;
       }
       console.log("cols: " + this.columns);
       //if this panelIndex matches this component's index.. do stuff since we're selected
@@ -71,7 +73,7 @@ export default {
   font: 12px "PT Sans", sans-serif;
   line-height: 20px;
   text-align: center;
-  margin-top: 150px;
+  margin-top: 30px;
 }
 
 .headline p span {
@@ -87,7 +89,6 @@ export default {
 }
 
 h1 {
-  margin-bottom: 14px;
   font-size: 36px;
   line-height: 57px;
 }
@@ -113,9 +114,5 @@ element.style {
   right: 0;
   left: 0;
   letter-spacing: 1px;
-}
-
-p {
-  margin-bottom: 20px;
 }
 </style>

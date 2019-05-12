@@ -1,11 +1,10 @@
 <template>
-  <v-carousel cycle="false" id="references" lazy>
+  <v-carousel  id="references" lazy>
     <project-headline>
       <template v-slot:header>Personal</template>
       References
     </project-headline>
     <v-carousel-item v-for="r in refs" :key="r.text">
-      <v-container>
         <v-layout justify-space-around wrap>
           <v-flex xs12 md5>
             <reference-text>
@@ -17,7 +16,6 @@
             <div style="font-style: italic;">{{r.text}}</div>
           </v-flex>
         </v-layout>
-      </v-container>
     </v-carousel-item>
   </v-carousel>
 </template>
