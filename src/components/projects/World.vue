@@ -1,10 +1,8 @@
 <template>
-  <section>
     <geo-chart :data="[['United States', 44], ['Germany', 23], ['Brazil', 22]]"></geo-chart>
     <!-- <figure style="background-color: #404a59;">
       <chart :options="map" :init-options="initOptions" ref="map" autoresize/>
     </figure>-->
-  </section>
   <!-- <chart :options="options"/>
   <p>{{options}}</p>-->
 </template>

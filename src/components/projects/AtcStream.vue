@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid id="main">
+  <div fluid id="main">
     <v-btn @click="start(0)" dark depressed>Start Streaming</v-btn>
     <v-timeline dense clipped :ripple="false" >
       <v-layout column>
@@ -40,7 +40,7 @@
         </v-slide-x-transition>
       </v-layout>
     </v-timeline>
-  </v-container>
+  </div>
 </template>
 
 <script>

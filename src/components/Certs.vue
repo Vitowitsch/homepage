@@ -1,15 +1,15 @@
 <template>
-  <v-container fluid style="height: 100%">
+  <div fluid style="height: 100%">
     <project-headline>
-      <template v-slot:header>badges</template>
-      Badges
+      <template v-slot:header>Badges</template>
+      Certificates
     </project-headline>
     <v-layout justify-space-between>
       <v-flex xs12 md3 v-for="p in projects" :key="p">
         <expandable-image class="image" :src="p.url"></expandable-image>
       </v-flex>
     </v-layout>
-  </v-container>
+  </div>
 </template>
 
 <script>

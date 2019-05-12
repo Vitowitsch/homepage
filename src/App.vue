@@ -4,7 +4,6 @@
     <AppDrawer></AppDrawer>
     <v-app>
       <v-content>
-        <Intro/>
         <home/>
       </v-content>
     </v-app>
@@ -14,15 +13,14 @@
 <script>
 import ToolBar from "@/components/base/ToolBar";
 import AppDrawer from "@/components/base/AppDrawer";
-import Intro from "@/components/Intro";
+
 import AppEvents from "./event.js";
 
 export default {
   components: {
     home: () => import("@/views/Main"),
     ToolBar,
-    AppDrawer,
-    Intro
+    AppDrawer
   },
   created() {
     AppEvents.forEach(item => {
