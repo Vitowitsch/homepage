@@ -38,6 +38,6 @@ export default {
   font-weight: normal;
   font-style: normal;
   line-height: 2.1;
-  color:black;
+  color: black;
 }
 </style>

@@ -9,7 +9,7 @@ import colors from 'vuetify/es5/util/colors'
 Vue.use(Vuetify, {
   theme: {
     primary: '#ffffff', //'#eff1f4', //grey
-    secondary: '#ffffff', //'#d4d7d8', //dark grey
+    secondary: '#eeeeee', //'#d4d7d8', //dark grey
     accent: '#82B1FF', //light blue
     error: '#FF5252', //red
     info: '#2196F3', //blue

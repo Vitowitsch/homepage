@@ -1,17 +1,12 @@
 <template>
-  <v-container fluid id="skill">
-    <project-header>
+  <v-responsive :aspect-ratio="16/9" id="skills">
+    <project-headline>
       <template v-slot:header>Skills</template>
       Experience
-      <template v-slot:article>
-        <v-responsive :aspect-ratio="16/9">
-          <v-chart :options="options"/>
-        </v-responsive>
-      </template>
-    </project-header>
-  </v-container>
+    </project-headline>
+    <v-chart :options="options"/>
+  </v-responsive>
 </template>
-
 
 <script>
 import ECharts from "vue-echarts";
@@ -70,9 +65,10 @@ export default {
             leafDepth: 1,
             levels: [
               {
+                colorSaturation: [0.1, 0.4],
                 itemStyle: {
                   normal: {
-                    color: "#353433",
+                    color: "#00564d",
                     borderColor: "#555",
                     borderWidth: 4,
                     gapWidth: 4
@@ -80,7 +76,7 @@ export default {
                 }
               },
               {
-                colorSaturation: [0.3, 0.6],
+                colorSaturation: [0.1, 0.4],
                 itemStyle: {
                   normal: {
                     borderColorSaturation: 0.7,
@@ -90,7 +86,7 @@ export default {
                 }
               },
               {
-                colorSaturation: [0.3, 0.5],
+                colorSaturation: [0.1, 0.4],
                 itemStyle: {
                   normal: {
                     borderColorSaturation: 0.6,

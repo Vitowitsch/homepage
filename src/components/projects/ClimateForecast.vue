@@ -1,7 +1,5 @@
 <template>
-  <section>
     <line-chart :data="data"/>
-  </section>
 </template>
 <script>
 import Vue from "vue";

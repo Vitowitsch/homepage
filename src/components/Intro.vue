@@ -1,27 +1,36 @@
 <template>
-<v-container fluid>
-  <v-expansion-panel v-model="panel" expand>
-    <v-expansion-panel-content>
-      <template v-slot:header>
-        <div></div>
-      </template>
-      <v-card>
-        <v-card-text>
-          <center>
-            <headline-upper-text><% SOFTWARE ARCHITECT / FULL-STACK DEVELOPER %></headline-upper-text>
-          </center>
-        </v-card-text>
-        <v-img :src="require('@/assets/pics/siena.jpg')" aspect-ratio="2.75"></v-img>
-      </v-card>
-    </v-expansion-panel-content>
-  </v-expansion-panel>
-  </v-container>
+  <v-card>
+    <v-card-text>
+      <title-header>
+        Veit Wehner
+        <template v-slot:header>
+          SOFTWARE ARCHITECT
+          <br>FULL-STACK DEVELOPER
+        </template>
+      </title-header>
+    </v-card-text>
+    <center>
+      <v-flex xs10>
+        <v-responsive :aspect-ratio="16/9" ml-5 pl-5>
+          <v-img :src="require('@/assets/pics/intro.jpg')" aspect-ratio="3.0"></v-img>
+          <v-btn icon to="#start" append>
+            <v-icon x-large color="black">arrow_downward</v-icon>
+          </v-btn>
+        </v-responsive>
+      </v-flex>
+    </center>
+    <center>
+      <v-card-actions>
+        <center></center>
+      </v-card-actions>
+    </center>
+  </v-card>
 </template>
 <script>
 export default {
   data() {
     return {
-      panel: [false]
+      panel: [true]
     };
   },
   methods: {
