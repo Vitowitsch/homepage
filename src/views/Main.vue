@@ -1,31 +1,40 @@
 <template>
-  <v-container fluid>
-    <Intro class="primary"/>
-    <div id="start"></div>
-    <v-flex xs12>
-      <Carbon/>
-    </v-flex>
-    <hr>
-    <v-flex xs12>
-      <Cognac/>
-    </v-flex>
-    <hr>
-    <v-flex xs12>
-      <CityToll/>
-    </v-flex>
-    <SkillTree/>
-    <References class="secondary"/>
-    <Certs/>
-    <CV class="secondary"/>
-    <contact/>
-  </v-container>
+  <main>
+      <!-- <MapTest></MapTest> -->
+    <v-container fluid>
+      <!-- <WorldClimateChart></WorldClimateChart> -->
+      <!-- <WorldClimate></WorldClimate> -->
+      <Intro class="primary"/>
+      <div id="start"></div>
+      <v-flex xs12>
+        <Carbon/>
+      </v-flex>
+      <hr>
+      <v-flex xs12>
+        <Cognac/>
+      </v-flex>
+      <hr>
+      <v-flex xs12>
+        <CityToll/>
+      </v-flex>
+      <SkillTree/>
+      <References class="secondary"/>
+      <Certs/>
+      <CV class="secondary"/>
+      <contact/>
+    </v-container>
+  </main>
 </template>
 
 <script>
 import Carbon from "@/components/projects/Carbon";
+import MapTest from "@/components/backup/MapTest";
+// import WorldClimate from "@/components/backup/WorldClimate";
+// import WorldClimateChart from "@/components/backup/WorldClimateChart";
 import CityToll from "@/components/projects/CityToll";
 import Cognac from "@/components/projects/Cognac";
 import Intro from "@/components/Intro";
+import ClimateGlobe from "@/components/projects/ClimateGlobe";
 export default {
   components: {
     References: () => import("@/components/References"),
@@ -36,7 +45,11 @@ export default {
     Carbon,
     CityToll,
     Cognac,
-    Intro
+    Intro,
+    ClimateGlobe,
+    MapTest
+    // WorldClimate,
+    // WorldClimateChart
   }
 };
 </script>

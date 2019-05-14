@@ -1,5 +1,4 @@
   <template>
-  <!-- <v-chart :options="options"/> -->
   <project-header id="carbon" theme="secondary">
     <template v-slot:header>My Project</template>
     <template
@@ -7,7 +6,9 @@
     >A predictive pricing for carbon certificates was awarded first prize at the Siemens-AI-Meets-Blockchain-Hackathon.</template>
     Forget Bitcoin - Blockchain can help reduce CO₂-emissions
     <template v-slot:intro>
-      <World/>
+      <figure style="background-color: #404a59;">
+        <ClimateGlobe/>
+      </figure>
     </template>
     <template v-slot:article>
       <!-- <v-img :src="require('@/assets/pics/globe.jpg')" aspect-ratio="3.0" contain/> -->
@@ -37,11 +38,11 @@
 </template>
 <script>
 import ClimateForecast from "./ClimateForecast";
-import World from "./World";
+import ClimateGlobe from "./ClimateGlobe";
 export default {
   components: {
     ClimateForecast,
-    World
+    ClimateGlobe
   },
   data() {
     return {

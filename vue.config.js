@@ -13,7 +13,7 @@ module.exports = {
   configureWebpack: {
     devtool: "source-map"
   },
-  transpileDependencies: ["vue-echarts", "resize-detector"],
+  transpileDependencies: ["vue-echarts","resize-detector"],
   chainWebpack: config => {
     config.plugins.delete("named-chunks");
     config.module

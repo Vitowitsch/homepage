@@ -5,8 +5,8 @@
       Certificates
     </project-headline>
     <v-layout justify-space-between>
-      <v-flex xs12 md3 v-for="p in projects" :key="p">
-        <expandable-image class="image" :src="p.url"></expandable-image>
+      <v-flex xs12 md3 v-for="p in projects" :key="p.url">
+        <div class="expandable-image"  :src="p.url"></div>
       </v-flex>
     </v-layout>
   </div>
