@@ -59,9 +59,6 @@
 </template>
 <script>
 export default {
-  components: {
-    YoutubePlayer: () => import("@/components/base/YoutubePlayer")
-  },
   data() {
     return {
       e1: 0,
