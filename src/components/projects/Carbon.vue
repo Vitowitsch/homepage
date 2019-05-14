@@ -6,7 +6,7 @@
     >A predictive pricing for carbon certificates was awarded first prize at the Siemens-AI-Meets-Blockchain-Hackathon.</template>
     Forget Bitcoin - Blockchain can help reduce CO₂-emissions
     <template v-slot:intro>
-      <figure style="background-color: #404a59;">
+      <figure>
         <ClimateGlobe/>
       </figure>
     </template>
