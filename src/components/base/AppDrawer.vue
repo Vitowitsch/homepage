@@ -47,7 +47,7 @@
               <v-list-tile-title class="menu-item subheading">{{ item.title }}</v-list-tile-title>
             </v-list-tile-content>
           </v-list-tile>
-          <div v-else :key="item">
+          <div v-else :key="item.name">
             <v-list-group  no-action prepend-icon="format_align_left">
               <template v-slot:activator>
                 <v-list-tile ripple="ripple">
