@@ -1,14 +1,14 @@
 <template>
-  <figure >
+  <figure>
     <v-chart :options="options" :init-options="initOptions" autoresize/>
   </figure>
 </template>
+  
 <script>
 import Vue from "vue";
 import ECharts from "vue-echarts"; // refers to components/ECharts.vue in webpack
 
 // import ECharts modules manually to reduce bundle size
-import "echarts/lib/chart/bar";
 import "echarts/lib/component/tooltip";
 
 // If you want to use ECharts extensions, just import the extension package and it will work
@@ -1143,95 +1143,100 @@ export default {
 
 
 <style lang="stylus">
-*,
-*::before,
-*::after
-  box-sizing border-box
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 
+figure {
+  display: inline-block;
+  position: relative;
+  margin: 2em auto;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 0 45px rgba(0, 0, 0, 0.2);
+  padding: 1.5em 2em;
+  min-width: calc(40vw + 4em);
 
-
-figure
-  display inline-block
-  position relative
-  margin 2em auto
-  border 1px solid rgba(0, 0, 0, .1)
-  border-radius 8px
-  box-shadow 0 0 45px rgba(0, 0, 0, .2)
-  padding 1.5em 2em
-  min-width: calc(40vw + 4em)
-
-  .echarts
+  .echarts {
     // width 40vw
-    width 100%
-    min-width 400px
-    height 300px
+    width: 100%;
+    min-width: 400px;
+    height: 300px;
+  }
+}
 
+@media (min-width: 980px) {
+  figure.half {
+    padding: 1em 1.5em;
+    min-width: calc(240px + 3em);
 
+    .echarts {
+      width: 28vw;
+      min-width: 240px;
+      height: 180px;
+    }
 
-@media (min-width 980px)
-  figure.half
-    padding 1em 1.5em
-    min-width calc(240px + 3em)
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+}
 
-    .echarts
-      width 28vw
-      min-width 240px
-      height 180px
+@media (max-width: 980px) {
+  p {
+    display: flex;
+    justify-content: center;
 
-    &:not(:last-child)
-      margin-right 15px
+    select {
+      text-indent: calc(50% - 1em);
+    }
 
-@media (max-width 980px)
-  p
-    display flex
-    justify-content center
+    select, label {
+      border: 1px solid #4fc08d;
+      border-radius: 2em;
+      background-color: #fff;
+      color: #42b983;
+      cursor: pointer;
+      transition: opacity 0.3s;
+    }
 
-    select
-      text-indent calc(50% - 1em)
+    button, input, select, label {
+      flex: 1 0;
+      margin: 0 0.5em;
+      padding: 0;
+      line-height: 2.4em;
+      max-width: 40vw;
+      border-radius: 2px;
+      font-size: 0.8em;
+    }
 
-    select,
-    label
-      border 1px solid #4fc08d
-      border-radius 2em
-      background-color #fff
-      color #42b983
-      cursor pointer
-      transition opacity .3s
+    select {
+      -webkit-appearance: none;
+    }
 
-    button,
-    input,
-    select,
-    label
-      flex 1 0
-      margin 0 .5em
-      padding 0
-      line-height 2.4em
-      max-width 40vw
-      border-radius 2px
-      font-size .8em
+    input[type='checkbox'] {
+      display: none;
 
-    select
-      -webkit-appearance none
+      &:checked + label {
+        background: #42b983;
+        color: #fff;
+      }
+    }
+  }
 
-    input[type="checkbox"]
-      display none
+  figure {
+    width: 100vw;
+    margin: 1em auto;
+    padding: 0 1em;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
 
-      &:checked + label
-        background #42b983
-        color #fff
-
-  figure
-    width 100vw
-    margin 1em auto
-    padding 0 1em
-    border none
-    border-radius 0
-    box-shadow none
-
-    .echarts
-      width 100%
-      min-width 0
-      height 75vw
-
-
+    .echarts {
+      width: 100%;
+      min-width: 0;
+      height: 75vw;
+    }
+  }
+}
 </style>
