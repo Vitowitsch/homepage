@@ -1,0 +1,549 @@
+<template>
+  <figure>
+    <v-chart :options="options" autoresize theme="macarons"/>
+  </figure>
+</template>
+
+<script>
+import Vue from "vue";
+import ECharts from "vue-echarts";
+import "echarts/theme/macarons.js";
+Vue.component("v-chart", ECharts);
+// import echarts from "echarts";
+// require("echarts/theme/macarons");
+
+export default {
+  props: {
+    title: {
+      type: String,
+      required: true
+    },
+    className: {
+      type: String,
+      default: "chart"
+    },
+    width: {
+      type: String,
+      default: "100%"
+    },
+    height: {
+      type: String,
+      default: "350px"
+    },
+    autoResize: {
+      type: Boolean,
+      default: true
+    },
+    chartData: {
+      type: Array,
+      required: true
+    },
+    xData: {
+      type: Array,
+      required: true
+    }
+  },
+  data() {
+    return {
+      legend: {},
+      chart: null,
+      sidebarElm: null,
+      options: {
+        legend: {},
+        // title: [
+        //   {
+        //     left: "center",
+        //     text: "Gigatons  CO₂ emissions and the Climate"
+        //   }
+        // ],
+        tooltip: {
+          trigger: "axis"
+        },
+        xAxis: { type: "category" },
+        yAxis: { gridIndex: 0,   name: "Gigatons-CO₂", },
+        dataZoom: [
+          {
+            id: "dataZoomX",
+            type: "slider",
+            filterMode: "empty"
+          }
+        ],
+        dataset: {
+          source: [
+            [
+              "GtCO2e",
+              "2016",
+              "2017",
+              "2018",
+              "2019",
+              "2020",
+              "2021",
+              "2022",
+              "2023",
+              "2024",
+              "2025",
+              "2026",
+              "2027",
+              "2028",
+              "2029",
+              "2030",
+              "2031",
+              "2032",
+              "2033",
+              "2034",
+              "2035",
+              "2036",
+              "2037",
+              "2038",
+              "2039",
+              "2040",
+              "2041",
+              "2042",
+              "2043",
+              "2044",
+              "2045",
+              "2046",
+              "2047",
+              "2048",
+              "2049",
+              "2050",
+              "2051",
+              "2052",
+              "2053",
+              "2054",
+              "2055",
+              "2056",
+              "2057",
+              "2058",
+              "2059",
+              "2060",
+              "2061",
+              "2062",
+              "2063",
+              "2064",
+              "2065",
+              "2066",
+              "2067",
+              "2068",
+              "2069",
+              "2070",
+              "2071",
+              "2072",
+              "2073",
+              "2074",
+              "2075",
+              "2076",
+              "2077",
+              "2078",
+              "2079",
+              "2080",
+              "2081",
+              "2082",
+              "2083",
+              "2084",
+              "2085",
+              "2086",
+              "2087",
+              "2088",
+              "2089",
+              "2090",
+              "2091",
+              "2092",
+              "2093",
+              "2094",
+              "2095",
+              "2096",
+              "2097",
+              "2098",
+              "2099",
+              "2100"
+            ],
+            [
+              "baseline",
+              59,
+              61,
+              63,
+              65,
+              66,
+              68,
+              70,
+              71,
+              73,
+              74,
+              76,
+              77,
+              79,
+              80,
+              82,
+              83,
+              84,
+              85,
+              87,
+              88,
+              89,
+              90,
+              91,
+              93,
+              94,
+              95,
+              97,
+              99,
+              100,
+              102,
+              104,
+              105,
+              107,
+              109,
+              110,
+              112,
+              113,
+              115,
+              116,
+              118,
+              119,
+              120,
+              122,
+              123,
+              125,
+              126,
+              128,
+              130,
+              131,
+              133,
+              134,
+              136,
+              138,
+              139,
+              141,
+              142,
+              143,
+              143,
+              144,
+              145,
+              146,
+              146,
+              147,
+              148,
+              149,
+              150,
+              151,
+              153,
+              154,
+              155,
+              156,
+              158,
+              159,
+              160,
+              161,
+              163,
+              164,
+              165,
+              167,
+              168,
+              170,
+              171,
+              172,
+              174,
+              175
+            ],
+            [
+              "current policy projections",
+              51,
+              52,
+              52,
+              52,
+              52,
+              53,
+              53,
+              54,
+              54,
+              55,
+              55,
+              56,
+              56,
+              57,
+              57,
+              58,
+              58,
+              58,
+              59,
+              59,
+              59,
+              59,
+              59,
+              60,
+              60,
+              60,
+              60,
+              60,
+              60,
+              60,
+              61,
+              61,
+              61,
+              61,
+              61,
+              61,
+              61,
+              61,
+              61,
+              60,
+              60,
+              60,
+              60,
+              59,
+              59,
+              59,
+              59,
+              59,
+              58,
+              58,
+              58,
+              58,
+              58,
+              57,
+              57,
+              57,
+              57,
+              57,
+              57,
+              56,
+              56,
+              56,
+              56,
+              56,
+              55,
+              55,
+              55,
+              54,
+              54,
+              53,
+              52,
+              52,
+              51,
+              51,
+              51,
+              50,
+              50,
+              50,
+              49,
+              49,
+              49,
+              49,
+              49,
+              48,
+              48
+            ],
+            [
+              "2-degree-consistent",
+              52,
+              53,
+              53,
+              54,
+              54,
+              53,
+              51,
+              50,
+              48,
+              47,
+              45,
+              44,
+              42,
+              40,
+              39,
+              38,
+              36,
+              35,
+              34,
+              33,
+              31,
+              30,
+              29,
+              27,
+              26,
+              25,
+              24,
+              24,
+              23,
+              22,
+              21,
+              20,
+              19,
+              18,
+              18,
+              17,
+              16,
+              16,
+              15,
+              14,
+              14,
+              13,
+              12,
+              12,
+              11,
+              11,
+              10,
+              10,
+              10,
+              9,
+              9,
+              9,
+              8,
+              8,
+              8,
+              7,
+              7,
+              7,
+              7,
+              6,
+              6,
+              6,
+              6,
+              5,
+              5,
+              5,
+              5,
+              5,
+              5,
+              5,
+              5,
+              5,
+              5,
+              5,
+              5,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              3,
+              3,
+              3
+            ]
+          ]
+        },
+        series: [
+          {
+            name: "without intervention",
+            type: "line",
+            smooth: true,
+            seriesLayoutBy: "row"
+          },
+          {
+            name: "current policy",
+            type: "line",
+            smooth: true,
+            seriesLayoutBy: "row"
+          },
+          {
+            name: "2-degree-consistent",
+            type: "line",
+            smooth: true,
+            seriesLayoutBy: "row"
+          }
+        ]
+      }
+    };
+  }
+};
+</script>
+<style lang="stylus">
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+figure {
+  display: inline-block;
+  position: relative;
+  margin: 2em auto;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 0 45px rgba(0, 0, 0, 0.2);
+  padding: 1.5em 2em;
+  min-width: calc(40vw + 4em);
+
+  .echarts {
+    // width 40vw
+    width: 100%;
+    min-width: 400px;
+    height: 300px;
+  }
+}
+
+@media (min-width: 980px) {
+  figure.half {
+    padding: 1em 1.5em;
+    min-width: calc(240px + 3em);
+
+    .echarts {
+      width: 28vw;
+      min-width: 240px;
+      height: 180px;
+    }
+
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+}
+
+@media (max-width: 980px) {
+  p {
+    display: flex;
+    justify-content: center;
+
+    select {
+      text-indent: calc(50% - 1em);
+    }
+
+    select, label {
+      border: 1px solid #4fc08d;
+      border-radius: 2em;
+      background-color: #fff;
+      color: #42b983;
+      cursor: pointer;
+      transition: opacity 0.3s;
+    }
+
+    button, input, select, label {
+      flex: 1 0;
+      margin: 0 0.5em;
+      padding: 0;
+      line-height: 2.4em;
+      max-width: 40vw;
+      border-radius: 2px;
+      font-size: 0.8em;
+    }
+
+    select {
+      -webkit-appearance: none;
+    }
+
+    input[type='checkbox'] {
+      display: none;
+
+      &:checked + label {
+        background: #42b983;
+        color: #fff;
+      }
+    }
+  }
+
+  figure {
+    width: 100vw;
+    margin: 1em auto;
+    padding: 0 1em;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+
+    .echarts {
+      width: 100%;
+      min-width: 0;
+      height: 75vw;
+    }
+  }
+}
+</style>

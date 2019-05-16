@@ -6,9 +6,7 @@
     >A predictive pricing for carbon certificates was awarded first prize at the Siemens-AI-Meets-Blockchain-Hackathon.</template>
     Forget Bitcoin - Blockchain can help reduce CO₂-emissions
     <template v-slot:intro>
-      <figure>
-        <ClimateGlobe/>
-      </figure>
+      <ClimateGlobe/>
     </template>
     <template v-slot:article>
       <!-- <v-img :src="require('@/assets/pics/globe.jpg')" aspect-ratio="3.0" contain/> -->
@@ -20,7 +18,10 @@
             To support the world-wide reductions, an emission-trading-system was established, where states can grant the rights to emit a certain amount of CO₂ into the atmosphere. However, since the price of those certificates is not aligned to the climate-goals, this system has contributed little to real emission reduction.
             At last year's Siemens-Hackathon in the Munich AI-Lab we invented an AI-based pricing model which includes current climate goals, by factoring current CO₂ emissions and necessary reductions into the certificate price. The trading system itself is managed by a Smart-Contract-Blockchain, controlling number and price of certificates. A company that works efficiently and has less CO₂ emissions than planned, can sell their rights to another company with higher needs, via the blockchain.
           </base-text>
-          <ClimateForecast/>
+          <!-- <ClimateForecast/> -->
+          <v-flex>
+            <ClimatePathways/>
+          </v-flex>
         </v-flex>
         <v-flex xs12 md5>
           <base-text>
@@ -38,11 +39,13 @@
 </template>
 <script>
 import ClimateForecast from "./ClimateForecast";
+import ClimatePathways from "./ClimatePathways";
 import ClimateGlobe from "./ClimateGlobe";
 export default {
   components: {
     ClimateForecast,
-    ClimateGlobe
+    ClimateGlobe,
+    ClimatePathways
   },
   data() {
     return {
