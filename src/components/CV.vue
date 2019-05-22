@@ -1,33 +1,31 @@
 <template>
-  <v-card ml5 id="cv">
-    <project-headline>
-      <template v-slot:header>CV</template>
-      Curriculum Vitae
-    </project-headline>
-    <v-timeline>
-      <v-slide-x-reverse-transition group hide-on-leave>
-        <v-timeline-item v-for="(item, i) in stages" :key="i" :color="item.color" small>
-          <!-- <template v-slot:opposite>
-          </template>-->
-          <div class="py-3">
-            <span :class="`headline font-weight-bold ${item.color}--text`" v-text="item.year"></span>
-            <h2 :class="`headline font-weight-light mb-3 ${item.color}--text`">{{item.title}}</h2>
-            <div>{{item.text}}</div>
-          </div>
-        </v-timeline-item>
-      </v-slide-x-reverse-transition>
-    </v-timeline>
-  </v-card>
+    <v-layout justify-center fluid mt-5>
+      <v-flex xs12 md5>
+        <v-card xs12 id="cv">
+          <project-headline>
+            <template v-slot:header>CV</template>
+            Curriculum Vitae
+          </project-headline>
+          <v-timeline dense>
+            <v-slide-x-reverse-transition group hide-on-leave>
+              <v-timeline-item v-for="(item, i) in items" :key="i" color="blue-grey" small>
+                <div class="py-3">
+                  <span :class="`headline font-weight-bold black--text`" v-text="item.year"></span>
+                  <h2 :class="`headline font-weight-light mb-3 teal--text`">{{item.title}}</h2>
+                  <div>{{item.text}}</div>
+                </div>
+              </v-timeline-item>
+            </v-slide-x-reverse-transition>
+          </v-timeline>
+        </v-card>
+      </v-flex>
+    </v-layout>
 </template>
 
 <script>
 const COLORS = ["#ced3db"];
 export default {
-  created() {
-    this.start();
-  },
   data: () => ({
-    viewIdx: 0,
     items: [
       {
         color: "#b6b7ba",
@@ -88,24 +86,6 @@ export default {
     stages: [],
     interval: null,
     slidingIdx: 0
-  }),
-  methods: {
-    addItem() {
-      if (this.stages.length != this.items.length) {
-        console.log("added item");
-        this.stages.push(this.items[this.viewIdx++]);
-      }
-    },
-    genColor() {
-      return COLORS[Math.floor(Math.random() * 3)];
-    },
-    start() {
-      this.interval = setInterval(this.addItem, 500);
-    },
-    stop() {
-      clearInterval(this.interval);
-      this.interval = null;
-    }
-  }
+  })
 };
 </script>

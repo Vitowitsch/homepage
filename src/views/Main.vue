@@ -1,22 +1,14 @@
 <template>
   <main>
-      <!-- <MapTest></MapTest> -->
+    <!-- <MapTest></MapTest> -->
     <v-container fluid>
       <!-- <WorldClimateChart></WorldClimateChart> -->
       <!-- <WorldClimate></WorldClimate> -->
       <Intro class="primary"/>
       <div id="start"></div>
-      <v-flex xs12>
-        <Carbon/>
-      </v-flex>
-      <hr>
-      <v-flex xs12>
-        <Cognac/>
-      </v-flex>
-      <hr>
-      <v-flex xs12>
-        <CityToll/>
-      </v-flex>
+      <Carbon/>
+      <Cognac/>
+      <CityToll/>
       <SkillTree/>
       <References class="secondary"/>
       <Certs/>

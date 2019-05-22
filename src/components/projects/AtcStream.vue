@@ -1,45 +1,29 @@
 <template>
   <div fluid id="main">
     <v-btn @click="start(0)" dark depressed>Start Streaming</v-btn>
-    <v-timeline dense clipped :ripple="false" >
+
+    <div v-for="(data, index) in myTransscript" v-bind:key="index">
       <v-layout column>
-        <v-slide-x-transition group>
-          <div v-for="(data, index) in myTransscript" v-bind:key="index">
-            <v-timeline-item class="mb-3" color="pink" :key="index" small>
-              <v-flex xs12 v-show="true">
-                <v-card>
-                  <v-card-text>
-                    <div :id="genWSTag(index)"></div>
-                    <div :id="genWSTLTag(index)"></div>
-                  </v-card-text>
-                </v-card>
-                <v-card>
-                  <template>
-                    <v-flex xs12>
-                      <v-card>
-                        <v-card-actions></v-card-actions>
-                        <v-card-text>
-                          <div :id="genWSTag(index)"></div>
-                          <div :id="genWSTLTag(index)"></div>
-                        </v-card-text>
-                      </v-card>
-                      <v-card>
-                        <RollingTimeline
-                          :annotation="data.annotation"
-                          :callsign="data.call_sign"
-                          :speakerid="data.speaker_id"
-                          :index="index"
-                        ></RollingTimeline>
-                      </v-card>
-                    </v-flex>
-                  </template>
-                </v-card>
-              </v-flex>
-            </v-timeline-item>
-          </div>
-        </v-slide-x-transition>
+        <v-flex xs12>
+          <v-card>
+            <v-card-text>
+              <div :id="genWSTag(index)"></div>
+              <div :id="genWSTLTag(index)"></div>
+            </v-card-text>
+          </v-card>
+        </v-flex>
       </v-layout>
-    </v-timeline>
+      <v-layout wrap>
+        <v-flex xs12>
+          <RollingTimeline
+            :annotation="data.annotation"
+            :callsign="data.call_sign"
+            :speakerid="data.speaker_id"
+            :index="index"
+          ></RollingTimeline>
+        </v-flex>
+      </v-layout>
+    </div>
   </div>
 </template>
 
@@ -93,9 +77,7 @@ export default {
       containerkey: 0
     };
   },
-  created(){
- 
-  },
+  created() {},
   mounted() {
     var myThis = this;
     var audio = [
@@ -130,7 +112,6 @@ export default {
       });
       myThis.wavesurfers.push(wavesurfer);
     });
-
   },
   methods: {
     createWaveSurfer() {},

@@ -1,28 +1,36 @@
 <template>
-  <!-- <v-flex xs12 v-bind="{[`md${columns}`]: true}"> -->
-  <v-expansion-panel v-model="panelIndex" expand>
-    <v-expansion-panel-content :class="theme">
+  <v-expansion-panel v-model="panelIndex" expand :class="theme">
+    <v-expansion-panel-content hide-actions :class="theme" :value="opened">
+      <template v-slot:actions>
+        <v-btn color="teal" flat>read-more</v-btn>
+      </template>
       <template v-slot:header>
-        <center>
-          <div class="headline">
-            <p>
-              <span>
-                <slot name="header"/>
-              </span>
-            </p>
-            <h1>
-              <slot></slot>
-            </h1>
-          </div>
-          <v-layout justify-center mt-2 mb-4>
-            <div class="title">
-              <slot name="subheading"/>
-            </div>
-          </v-layout>
-          <base-text>
+        <v-container fluid>
+          <center>
+            <v-layout wrap>
+              <v-flex xs12>
+                <div class="headline">
+                  <p>
+                    <span>
+                      <slot name="header"/>
+                    </span>
+                  </p>
+                  <h1>
+                    <slot></slot>
+                  </h1>
+                </div>
+              </v-flex>
+              <v-flex xs12>
+                <div class="title">
+                  <slot name="subheading"/>
+                </div>
+              </v-flex>
+            </v-layout>
+          </center>
+          <v-layout justify-center mt-2 mb-4 wrap justify-start>
             <slot name="intro"/>
-          </base-text>
-        </center>
+          </v-layout>
+        </v-container>
       </template>
       <v-layout>
         <v-flex>
@@ -30,14 +38,18 @@
         </v-flex>
       </v-layout>
     </v-expansion-panel-content>
+    <v-btn @click="handleExpansion" icon>
+     <v-btn color="teal" flat>read-more</v-btn>
+    </v-btn>
   </v-expansion-panel>
-  <!-- </v-flex> -->
 </template>
 <script>
 export default {
   props: { theme: { type: String } },
   data() {
     return {
+      opened: false,
+      openedText: "read-more",
       panel: [false],
       panelIndex: -9,
       mini: true,
@@ -47,6 +59,16 @@ export default {
   methods: {
     readLess() {
       this.panel = [false];
+    },
+    handleExpansion() {
+      if (this.opened === false) {
+        console.log("was open");
+        this.openedText = "read-more";
+      } else {
+        console.log("was closed");
+        this.openedText = "close";
+      }
+      this.opened = !this.opened;
     }
   },
   watch: {
