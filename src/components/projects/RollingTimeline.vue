@@ -1,7 +1,7 @@
 <template>
-  <v-card class="mx-auto" max-width="6000">
+  <v-card class="mx-auto">
     <v-card-text class="py-0">
-      <v-timeline>
+      <v-timeline dense>
         <v-slide-x-reverse-transition group hide-on-leave>
           <v-timeline-item
             v-for="(item,index) in items"
@@ -41,14 +41,13 @@ export default {
         myThis.stop();
       }
     });
-    this.text.push("TRANSSCRIPT: " + this.annotation);
-    this.text.push("SPEAKER: " +this.speakerid);
-    this.text.push("CALL-SIGN: " +this.callsign);
+    this.text.push("SCRIPT: " + this.annotation);
+    this.text.push("SPEAKER: " + this.speakerid);
+    this.text.push("CALL-SIGN: " + this.callsign);
   },
   data: () => ({
     interval: null,
-    items: [-1
-    ],
+    items: [-1],
     text: [],
     nonce: 3,
     contentAdded: 0

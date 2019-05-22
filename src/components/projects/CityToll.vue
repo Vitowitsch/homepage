@@ -4,14 +4,22 @@
     Pollution is in the air
     <template
       v-slot:subheading
-    >A smart city toll system (Cito) made second prizes.</template>
+    >
+    <div class="mt-4 mb-3">A smart city toll system (Cito) made second prizes.
+      </div>
+    </template>
     <template v-slot:intro>
-      The estimated number of premature deaths due to traffic related air pollution is estimated by 60 thousand per year in Germany. Even if this number is controversial, 65 German cities surpassed the pollution levels in 2017. If they all were fined by the EU, this would add up to millions of Euros.
-      Traffic related pollution was one of the topics at the 2018’s
-      <a
+         <v-layout justify-center wrap mb-1 mt-5>
+    <v-flex xs12 md8>
+        The estimated number of premature deaths due to traffic related air pollution is estimated by 60 thousand per year in Germany. 
+        Even if this number is controversial, 65 German cities surpassed the pollution levels in 2017. If they all were fined by the EU, this would add up to millions of Euros.
+        Traffic related pollution was one of the topics at the 2018’s <a
         style="color:black;"
         href="https://www.bmu.de/service/veranstaltungen/wettbewerbe/code4green"
       >Code4Green</a> hackathon at the ministry of environment.
+
+      </v-flex>
+      </v-layout>
     </template>
     <template v-slot:article>
       <v-layout justify-center wrap mb-5 mt-5>

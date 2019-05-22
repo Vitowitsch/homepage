@@ -1,18 +1,18 @@
 <template>
-  <p>
-    <center>
-      <div class="headline">
-        <p>
-          <span>
-            <slot name="header"/>
-          </span>
-        </p>
-        <h1>
-          <slot></slot>
-        </h1>
-      </div>
-    </center>
-  </p>
+    <p>
+      <center>
+        <div class="headline">
+          <p>
+            <span>
+              <slot name="header"/>
+            </span>
+          </p>
+          <h1>
+            <slot></slot>
+          </h1>
+        </div>
+      </center>
+    </p>
 </template>
 <style scoped>
 .headline {

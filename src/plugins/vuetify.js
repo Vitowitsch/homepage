@@ -3,7 +3,8 @@ import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
 import "material-design-icons-iconfont/dist/material-design-icons.css"
 import "roboto-fontface/css/roboto/roboto-fontface.css"
-import "font-awesome/css/font-awesome.css"
+import "font-awesome/css/font-awesome.css" // iconfont : 'fa4'
+import '@mdi/font/css/materialdesignicons.css' 
 import colors from 'vuetify/es5/util/colors'
 
 Vue.use(Vuetify, {
@@ -16,6 +17,6 @@ Vue.use(Vuetify, {
     success: '#4CAF50', //green
     warning: '#FFC107' //yellow
   },
-  iconfont: 'fa4',
+  iconfont: 'mdi',
   customProperties: true,
 })
