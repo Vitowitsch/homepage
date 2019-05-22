@@ -1,10 +1,8 @@
 <template>
     <line-chart
-      :init-options="initOptions"
       :chartData="baseLineYData"
       :xData="baseLineXData"
       title="baseline"
-      autoresize
     />
 </template>
 
@@ -19,9 +17,6 @@ export default {
   },
   data() {
     return {
-      initOptions: {
-        renderer: "canvas"
-      },
       baseLineXData: [
         "2016",
         "2017",
@@ -202,5 +197,4 @@ export default {
   methods: {}
 };
 </script>
-
 

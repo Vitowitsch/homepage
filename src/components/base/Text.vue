@@ -10,7 +10,7 @@ export default {
   },
   data: function() {
     return {
-      fontSize: "font-size:50px;"
+      fontSize: ""
     };
   },
   methods: {},
@@ -20,7 +20,7 @@ export default {
         case "xs":
           return "12";
         default:
-          return "font-size:16px;";
+          return "font-size:14px;";
       }
     }
   }
@@ -31,13 +31,12 @@ export default {
 @import url("https://fonts.googleapis.com/css?family=Oswald");
 @import url("https://fonts.googleapis.com/css?family=PT+Sans:400,700");
 .base-text {
-  padding: 15px 0 5px 30px;
   /* border-left: 1px solid #e1e1e1; */
-  margin-top: -10px;
   font-family: "PT Sans", sans-serif;
   font-weight: normal;
   font-style: normal;
-  line-height: 2.1;
+  line-height: 1.5;
   color: black;
+  text-align: left;
 }
 </style>
