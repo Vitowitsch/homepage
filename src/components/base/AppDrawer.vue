@@ -1,6 +1,6 @@
 <template>
   <div style="border-style: dotted dashed solid double;">
-    <v-navigation-drawer
+    <v-navigation-drawer 
       id="appDrawer"
       app
       v-model="drawer"
@@ -22,7 +22,7 @@
             </v-list-tile-content>
 
             <v-list-tile-action>
-              <v-btn icon @click.stop="mini = !mini">
+              <v-btn icon @click.stop="mini = !mini; drawer = false">
                 <v-icon>chevron_left</v-icon>
               </v-btn>
             </v-list-tile-action>
@@ -48,7 +48,7 @@
             </v-list-tile-content>
           </v-list-tile>
           <div v-else :key="item.name">
-            <v-list-group  no-action prepend-icon="format_align_left">
+            <v-list-group no-action prepend-icon="format_align_left">
               <template v-slot:activator>
                 <v-list-tile ripple="ripple">
                   <v-list-tile-title class="menu-item subheading">Projects</v-list-tile-title>
@@ -56,7 +56,12 @@
               </template>
               <!-- <v-list-group sub-group no-action> -->
               <v-list-tile v-for="(p, i) in projects" :key="i" :to="{hash: p.target}">
-                <v-list-tile-title class="menu-item body-2"  ripple="ripple" v-text="p.title" :to="{hash: p.target}"></v-list-tile-title>
+                <v-list-tile-title
+                  class="menu-item body-2"
+                  ripple="ripple"
+                  v-text="p.title"
+                  :to="{hash: p.target}"
+                ></v-list-tile-title>
                 <v-list-tile-action>
                   <v-icon v-text="p.icon"></v-icon>
                 </v-list-tile-action>
@@ -116,13 +121,18 @@ export default {
         icon: "center_focus_strong"
       },
       {
+        title: "Badges",
+        target: "badges",
+        icon: "monetization_on"
+      },
+      {
         title: "References",
         target: "references",
         icon: "grade"
       }
     ],
     projects: [
-      { title: "Carbon Trading", target: "carbon", icon: "code" },
+      { title: "Carbon", target: "carbon", icon: "code" },
       { title: "City Toll", target: "citytoll", icon: "code" },
       { title: "Cognac", target: "cognac", icon: "code" }
     ]

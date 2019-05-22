@@ -1,28 +1,53 @@
 <template>
-  <v-carousel  id="references" lazy>
-    <project-headline>
-      <template v-slot:header>Personal</template>
-      References
-    </project-headline>
-    <v-carousel-item v-for="r in refs" :key="r.text">
-        <v-layout justify-space-around wrap>
-          <v-flex xs12 md5>
-            <reference-text>
-              <template v-slot:header>{{r.position}}</template>
-              {{r.who}}
-            </reference-text>
-          </v-flex>
-          <v-flex xs12 md5>
-            <div style="font-style: italic;">{{r.text}}</div>
-          </v-flex>
-        </v-layout>
-    </v-carousel-item>
-  </v-carousel>
+  <v-card flat dark tile id="references">
+    <v-window v-model="onboarding">
+      <v-window-item v-for="r in refs" :key="r.text">
+        <project-headline>
+          <template v-slot:header>Personal</template>
+          References
+        </project-headline>
+        <v-card light tile color="secondary" flat>
+          <v-layout align-center justify-center fill-height tag="v-card-text">
+            <v-layout justify-space-around wrap>
+              <v-flex xs12 md5>
+                <reference-text>
+                  <template v-slot:header>{{r.position}}</template>
+                  {{r.who}}
+                </reference-text>
+              </v-flex>
+              <v-flex xs12 md5>
+                <div
+                  :class="`black--text text--darken-1`"
+                  style="border: 1px dotted black ;font-style: italic;padding: 20px;"
+                >{{r.text}}</div>
+              </v-flex>
+            </v-layout>
+          </v-layout>
+        </v-card>
+      </v-window-item>
+    </v-window>
+    <v-card-actions class="justify-space-between">
+      <v-btn flat @click="prev">
+        <v-icon x-large color="black darken-5">mdi-chevron-left</v-icon>
+      </v-btn>
+      <v-item-group v-model="onboarding" class="text-xs-center" mandatory>
+        <!-- <v-item v-for="n in refs.length" :key="`btn-${n}`">
+          <v-btn slot-scope="{ active, toggle }" :input-value="active" icon @click="toggle">
+            <v-icon small>mdi-record</v-icon>
+          </v-btn>
+        </v-item>-->
+      </v-item-group>
+      <v-btn flat @click="next">
+        <v-icon x-large color="black">mdi-chevron-right</v-icon>
+      </v-btn>
+    </v-card-actions>
+  </v-card>
 </template>
 
 <script>
 export default {
   data: () => ({
+    onboarding: 0,
     refs: [
       {
         text:
@@ -65,6 +90,16 @@ export default {
       }
     ],
     projects: ["ai-hack1.jpg", "intrapreneurs.jpg", "futureland.png", "neo.png"]
-  })
+  }),
+  methods: {
+    next() {
+      this.onboarding =
+        this.onboarding + 1 === this.refs.length ? 0 : this.onboarding + 1;
+    },
+    prev() {
+      this.onboarding =
+        this.onboarding - 1 < 0 ? this.refs.length - 1 : this.onboarding - 1;
+    }
+  }
 };
 </script>
