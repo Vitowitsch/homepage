@@ -54,19 +54,17 @@
                   <v-list-tile-title class="menu-item subheading">Projects</v-list-tile-title>
                 </v-list-tile>
               </template>
-              <!-- <v-list-group sub-group no-action> -->
               <v-list-tile v-for="(p, i) in projects" :key="i" :to="{hash: p.target}">
                 <v-list-tile-title
                   class="menu-item body-2"
                   ripple="ripple"
                   v-text="p.title"
-                  :to="{hash: p.target}"
+                  :to="p.target"
                 ></v-list-tile-title>
                 <v-list-tile-action>
                   <v-icon v-text="p.icon"></v-icon>
                 </v-list-tile-action>
               </v-list-tile>
-              <!-- </v-list-group> -->
             </v-list-group>
           </div>
         </template>

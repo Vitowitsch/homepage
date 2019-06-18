@@ -1,7 +1,7 @@
 <template>
   <main>
     <v-container fluid>
-      <!-- <Intro class="primary"/>
+      <Intro class="primary"/>
       <div id="start"></div>
       <Carbon/>
       <Cognac/>
@@ -9,8 +9,7 @@
       <SkillTree/>
       <References class="secondary"/>
       <Certs/>
-      <CV class="secondary"/> -->
-      <Blog/>
+      <CV class="secondary"/>
     </v-container>
   </main>
 </template>
@@ -20,7 +19,6 @@ import Carbon from "@/components/projects/Carbon";
 import CityToll from "@/components/projects/CityToll";
 import Cognac from "@/components/projects/Cognac";
 import Intro from "@/components/Intro";
-import Blog from "@/components/blog/Blog";
 import ClimateGlobe from "@/components/projects/ClimateGlobe";
 export default {
   components: {
@@ -34,7 +32,6 @@ export default {
     Cognac,
     Intro,
     ClimateGlobe,
-    Blog
   }
 };
 </script>
