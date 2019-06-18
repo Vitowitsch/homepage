@@ -28,18 +28,15 @@
               </v-flex>
 
               <v-flex xs12 md3>
-                This page for getting us in contact if you are looking for an experienced Softwarearchitect or Fullstack-Developer.
-                <p></p>Find below information of what I am doing at professionally and by hobby. If you are looking for someone with a
-                broad range of expert IT knowledge you go right with me. I have demostrated history of working as
-                Full-Stack-Developer and Software-Architect. Skilled in AI, Cloud, Big-Data, Embedded, Backend- and Frontend, Clean-Code,
-                Agile and lots of other areas I can provide value to your project.
+                <a>
+             Welcome!<p/>
+                My name is Veit Wehner. If you are looking for an experienced software architect or full stack developer, I might be the right person for you.<p/>
+                I have a broad range of expert IT knowledge and demonstrated experiences as with AI, Cloud, Big-Data, Embedded, Backend- and Frontend, Clean-Code, Agile and lots of other areas.<p/>
+                </a>
               </v-flex>
               <v-flex xs12 md3>
-                My motto is to keep it simple but I with with
-                a M.Sc. in Computer Science and Mathematics and a lot of experience I have the understanding for complex requirements.
-                <p></p>At the time, I am working at Siemens for customers in Europe with excellent recommendations. But I can take on
-                other interesting projects as a freelancer in Home Office. I would be happy to get in contact if you have any fitting projects.
-                If it works out well there is always the option to switch to full-time.
+                My motto is to keep it simple, but I with an M.Sc. in Computer Science and Mathematics and a lot of experience I have the understanding for complex requirements.<p/>
+                At the moment I am working at Siemens for customers in Europe, where I got excellent recommendations. I want to take on interesting projects as a freelancer in Home Office. If you have any fitting projects, please get in contact with me. There is always an option to switch to full time.
               </v-flex>
             </v-layout>
           </base-text>
