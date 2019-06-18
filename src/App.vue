@@ -2,10 +2,9 @@
   <div>
     <ToolBar/>
     <AppDrawer></AppDrawer>
-  
     <v-app>
       <v-content>
-        <home/>
+        <router-view></router-view>
       </v-content>
     </v-app>
   </div>
