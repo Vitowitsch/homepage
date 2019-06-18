@@ -1,10 +1,7 @@
 <template>
   <main>
-    <!-- <MapTest></MapTest> -->
     <v-container fluid>
-      <!-- <WorldClimateChart></WorldClimateChart> -->
-      <!-- <WorldClimate></WorldClimate> -->
-      <Intro class="primary"/>
+      <!-- <Intro class="primary"/>
       <div id="start"></div>
       <Carbon/>
       <Cognac/>
@@ -12,20 +9,18 @@
       <SkillTree/>
       <References class="secondary"/>
       <Certs/>
-      <CV class="secondary"/>
-      <contact/>
+      <CV class="secondary"/> -->
+      <Blog/>
     </v-container>
   </main>
 </template>
 
 <script>
 import Carbon from "@/components/projects/Carbon";
-import MapTest from "@/components/backup/MapTest";
-// import WorldClimate from "@/components/backup/WorldClimate";
-// import WorldClimateChart from "@/components/backup/WorldClimateChart";
 import CityToll from "@/components/projects/CityToll";
 import Cognac from "@/components/projects/Cognac";
 import Intro from "@/components/Intro";
+import Blog from "@/components/blog/Blog";
 import ClimateGlobe from "@/components/projects/ClimateGlobe";
 export default {
   components: {
@@ -39,9 +34,7 @@ export default {
     Cognac,
     Intro,
     ClimateGlobe,
-    MapTest
-    // WorldClimate,
-    // WorldClimateChart
+    Blog
   }
 };
 </script>

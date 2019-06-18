@@ -1,5 +1,5 @@
 <template>
-  <v-toolbar app tabs>
+  <v-toolbar app tabs dark>
     <v-toolbar-side-icon @click.stop="handleDrawerToggle"></v-toolbar-side-icon>
     <v-toolbar-title>My Place</v-toolbar-title>
     <v-spacer></v-spacer>

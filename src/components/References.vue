@@ -79,8 +79,8 @@ export default {
           We value him for his broad experience with software development, his deep technical understanding, \
           remarkable efficiency, extraordinary team spirit and targeted communication. \
           He is the kind of employee you could wish for. I can recommend him very strongly.''",
-        who: "%name on request%",
-        position: "Siemens Project Manager"
+        who: "Alexander Eck-Zimmer",
+        position: "Head of Software Development, Siemens Graz"
       },
       {
         text:
