@@ -129,7 +129,13 @@ export default {
         title: "References",
         target: "references",
         icon: "grade"
-      }
+      },
+      {
+        title: "Blog",
+        target: "blog",
+        icon: "create"
+      },
+
     ],
     projects: [
       { title: "Carbon", target: "carbon", icon: "code" },

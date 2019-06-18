@@ -2,6 +2,7 @@
   <div>
     <ToolBar/>
     <AppDrawer></AppDrawer>
+  
     <v-app>
       <v-content>
         <home/>
@@ -15,10 +16,9 @@ import ToolBar from "@/components/base/ToolBar";
 import AppDrawer from "@/components/base/AppDrawer";
 import AppEvents from "./event.js";
 
-
 export default {
   components: {
-    home: () => import("@/views/Main"),
+    home: () => import("@/views/Home"),
     ToolBar,
     AppDrawer
   },
@@ -47,11 +47,7 @@ export default {
   }
 };
 </script>
-<style>
-.basil {
-  color: #fffbe6 !important;
-}
-.basil--text {
-  color: #356859 !important;
-}
+
+<style lang="scss">
+@import "./sass/app";
 </style>
