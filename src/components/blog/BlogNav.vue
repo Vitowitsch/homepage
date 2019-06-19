@@ -24,12 +24,14 @@ export default {
       default: () => {}
     }
   },
+
   computed: {
     labels() {
       return Object.keys(this.filters)
         .map(filter => this.content.labels[filter])
     }
   },
+
   methods: {
     navBack() {
       if (this.navs && !this.filters.author) this.$router.go(-1)
