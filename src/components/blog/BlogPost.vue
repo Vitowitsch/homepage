@@ -3,68 +3,94 @@
     <article v-if="allReady" class="post">
       <header class="post__header">
         <h2 class="post__title">{{ title }}</h2>
-        <h3 class="post__meta">
-          by
+
+        <h3 class="post__meta">by <router-link class="post__author"
+          :to="`/by/${kebabify(author)}`">{{ author }}</router-link>
           <span class="post__sep"></span>
           <time>{{ prettyDate(published) }}</time>
         </h3>
+
         <blockquote class="post__subtitle">{{ description }}</blockquote>
       </header>
+
       <section class="post__body rte" v-html="content"></section>
+
       <footer class="post__footer">
-        <vue-disqus
-          v-if="commentsReady"
-          shortname="vue-blog-demo"
-          :key="post"
-          :identifier="post"
-          :url="`https://vue-blog-demo.netlify.com/read/${post}`"
-        />
+        <vue-disqus v-if="commentsReady" shortname="vue-blog-demo"
+          :key="post" :identifier="post" :url="`https://vue-blog-demo.netlify.com/read/${post}`"/>
       </footer>
     </article>
   </transition>
 </template>
 
 <script>
-import VueDisqus from "vue-disqus/VueDisqus";
-import { kebabify, prettyDate } from "@/utils/helpers";
+import VueDisqus from 'vue-disqus/VueDisqus'
+import { kebabify, prettyDate } from '@/utils/helpers'
+
 export default {
-  name: "blog-post",
-  resource: "BlogPost",
+  name: 'blog-post',
+  resource: 'BlogPost',
   components: { VueDisqus },
   props: { post: String },
+
   data() {
     return {
-      title: "cycling down the danube",
-      author: "Veit Wehner",
-      content:
-        "While bored at walking speed and overchallenged at driving speed, \
-      the brain is stimulated perfectly when moving with 15 mph on a bike. \
-      With time and permission from my boss and my family I am happy to take on some bike tours this year. ",
-      published: "2019-06-17T18:31:01Z",
-      description: "Cycling",
+      title: '',
+      author: '',
+      content: '',
+      published: '',
+      description: '',
       commentsReady: false,
-      ready: true
-    };
+      ready: false
+    }
   },
+
   computed: {
     allReady() {
       return this.ready && this.post;
     }
   },
+
+  watch: {
+    post(to, from) {
+      if (to === from || !this.post) return;
+
+      this.commentsReady = false
+      this.$getResource('post', to)
+        .then(this.showComments)
+        .then(() => {
+          this.ready = true;
+        });
+    }
+  },
+
   methods: {
     kebabify,
-    prettyDate
+    prettyDate,
+    showComments() {
+      // This is injected by prerender-spa-plugin on build time, we don't prerender disqus comments.
+      if (window.__PRERENDER_INJECTED &&
+          window.__PRERENDER_INJECTED.prerendered) {
+        return;
+      }
+
+      setTimeout(() => {
+        this.commentsReady = true
+      }, 1000)
+    }
   },
+
   mounted() {
     if (!this.post) {
       this.ready = true;
       return;
     }
-    this.$getResource("post", this.post)
+
+    this.$getResource('post', this.post)
       .then(this.showComments)
       .then(() => {
         this.ready = true;
       });
   }
-};
+}
 </script>
