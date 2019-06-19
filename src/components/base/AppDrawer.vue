@@ -34,7 +34,7 @@
         <v-divider></v-divider>
         <template v-for="(item) in menus">
           <v-list-tile
-            :to="{hash: item.target}"
+            :to="{path: item.target}"
             ripple="ripple"
             :key="item.name"
             v-if="item.title!='Projects'"
@@ -54,7 +54,7 @@
                   <v-list-tile-title class="menu-item subheading">Projects</v-list-tile-title>
                 </v-list-tile>
               </template>
-              <v-list-tile v-for="(p, i) in projects" :key="i" :to="{hash: p.target}">
+              <v-list-tile v-for="(p, i) in projects" :key="i" :to="{path: p.target}">
                 <v-list-tile-title
                   class="menu-item body-2"
                   ripple="ripple"
@@ -100,7 +100,7 @@ export default {
     menus: [
       {
         title: "Home",
-        target: "",
+        target: "/",
         icon: "dashboard"
       },
       {
@@ -110,22 +110,22 @@ export default {
       },
       {
         title: "CV",
-        target: "cv",
+        target: "/home#cv",
         icon: "person_outline"
       },
       {
         title: "Skills",
-        target: "skills",
+        target: "/home#skills",
         icon: "center_focus_strong"
       },
       {
         title: "Badges",
-        target: "badges",
+        target: "/home#badges",
         icon: "monetization_on"
       },
       {
         title: "References",
-        target: "references",
+        target: "/home#references",
         icon: "grade"
       },
       {
@@ -136,9 +136,9 @@ export default {
 
     ],
     projects: [
-      { title: "Carbon", target: "carbon", icon: "code" },
-      { title: "City Toll", target: "citytoll", icon: "code" },
-      { title: "Cognac", target: "cognac", icon: "code" }
+      { title: "Carbon", target: "/projects#carbon", icon: "code" },
+      { title: "City Toll", target: "/projects#citytoll", icon: "code" },
+      { title: "Cognac", target: "/projects#cognac", icon: "code" }
     ]
   })
 };
