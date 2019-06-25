@@ -1,6 +1,6 @@
 .nav {
-  position: fixed;
-  top: 10%;
+  position: sticky;
+  top: 100;
   left: 50%;
   width: calc(100% - 2.5rem);
   max-width: 90rem;
