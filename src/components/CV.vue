@@ -73,7 +73,7 @@ export default {
         year: "2018 - today",
         title: "Intrapreneurs-Sponsorship at Siemens",
         text:
-          "Foundation member of sponsorship project RailRadar at MO IT - a Train-Safety invention."
+          "Ein Siemens-Förderprojekt"
       },
       {
         color: "#b6b7ba",
