@@ -1,21 +1,16 @@
 <template>
-  <nav class="nav">
-    <h1 class="nav__title">
-      <router-link to="/">{{ content.title }}</router-link>
-    </h1>
-
-    <transition-group tag="menu" name="nav__item" class="nav__menu">
-      <li v-for="label in labels" class="nav__item" :key="label" @click="navBack">
-        <i class="nav__item--icon"></i>
-        <span class="nav__item--label">{{ label }}</span>
-      </li>
-    </transition-group>
-  </nav>
+  <div>
+    
+    <li v-for="label in labels" class="nav__item" :key="label" @click="navBack">
+      <v-btn depressed small color="error" >close</v-btn>
+      <i class="nav__item--icon"></i>
+    </li>
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'blog-nav',
+  name: "blog-nav",
   props: {
     navs: Number,
     content: Object,
@@ -27,16 +22,20 @@ export default {
 
   computed: {
     labels() {
-      return Object.keys(this.filters)
-        .map(filter => this.content.labels[filter])
+      return Object.keys(this.filters).map(
+        filter => this.content.labels[filter]
+      );
     }
   },
 
   methods: {
     navBack() {
-      if (this.navs && !this.filters.author) this.$router.go(-1)
-      else this.$router.push('/')
+      if (this.navs && !this.filters.author) this.$router.go(-1);
+      else this.$router.push("/");
     }
   }
-}
+};
 </script>
+<style lang="scss">
+@import "../../sass/app";
+</style>

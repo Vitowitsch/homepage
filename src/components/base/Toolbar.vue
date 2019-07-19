@@ -1,7 +1,7 @@
 <template>
   <v-toolbar app tabs dark>
     <v-toolbar-side-icon @click.stop="handleDrawerToggle"></v-toolbar-side-icon>
-    <v-toolbar-title>My Place</v-toolbar-title>
+    <v-toolbar-title>Bots and Clouds</v-toolbar-title>
     <v-spacer></v-spacer>
     <!-- <template v-slot:extension> -->
     <!-- <v-tabs v-model="tab" dark grow align-with-title> -->
@@ -47,33 +47,7 @@ export default {
         x: false,
         y: true
       },
-      links: [
-        {
-          title: "CV",
-          target: "cv",
-          icon: "person_outline"
-        },
-        {
-          title: "Skills",
-          target: "skills",
-          icon: "center_focus_strong"
-        },
-        {
-          title: "Badges",
-          target: "badges",
-          icon: "monetization_on"
-        },
-        {
-          title: "References",
-          target: "references",
-          icon: "grade"
-        },
-        {
-          title: "References",
-          target: "contact",
-          icon: "contact_mail"
-        }
-      ]
+      links: []
     };
   },
   methods: {
