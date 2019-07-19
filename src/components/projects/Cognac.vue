@@ -17,11 +17,12 @@
       <v-layout justify-space-around wrap mt-5>
         <v-flex xs12 md5>
           <base-text>
-          Based on a dataset of 52 hours air-traffic voice we trained four neural networks from scratch. <br>Some features were extracted directly from speech. 
-          For other features were transcribed the audio first and applied Natural Language Processing (NLP) on the text.<p></p>
-          After two nights of Transfer Learning with DeepSpeech2 on the ATC data, the results surpassed Microsofts Speech Recognition. 
-          The reason is that the vocabulary of ATC-speech is somewhat limited on the one hand and has extreme background noise on the other hand. 
-          Microsoft's Cortana gave us a 40 percent accuracy in that special setup while the model we trained ourselves reached 80 percent. 
+          Based on a dataset of 52 hours of air-traffic communication we trained four neural networks from scratch. <br>Some features were extracted directly from speech. 
+          For other features we used automatic transcription of the audio first and applied Natural Language Processing (NLP) on the text.<p></p>
+          The difficulties we had to face were the background noice and the very specific vocabulary.
+          Microsoft's Cortana gave us a 40 percent accuracy in that special setup.
+          After two nights of Transfer Learning with DeepSpeech2 on the ATC data, our results surpassed Microsofts Speech Recognition.  
+           with an accuracy of 80 percent. 
           </base-text>
         </v-flex>
         <v-flex xs12 md5>

@@ -6,7 +6,7 @@
       <SkillTree/>
       <References class="secondary"/>
       <Certs/>
-      <CV class="secondary"/>
+      <CV />
     </v-container>
   </main>
 </template>

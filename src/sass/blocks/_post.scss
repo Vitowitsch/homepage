@@ -18,7 +18,7 @@
     left: calc(100% / 3 + 3.25rem);
     width: calc(100% / 1.5 - 3.25rem);
     height: 100%;
-    padding: 10rem 5rem 5rem 0;
+    padding: 10rem 5rem 5rem 5rem;
     overflow-y: scroll;
 
     &-enter-active { transition: all 525ms cb(out) 225ms }
