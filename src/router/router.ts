@@ -16,11 +16,11 @@ var scrollBehavior = function(to, from, savedPosition) {
 
     // scroll to anchor by returning the selector
     if (to.hash) {
-      position.selector = to.hash;
+      (position as any).selector = to.hash;
 
       // specify offset of the element
       if (to.hash === "#anchor2") {
-        position.offset = { y: 100 };
+        (position as any).offset = { y: 100 };
       }
 
       if (document.querySelector(to.hash)) {
@@ -43,8 +43,8 @@ var scrollBehavior = function(to, from, savedPosition) {
       if (to.matched.some(m => m.meta.scrollToTop)) {
         // coords will be used if no selector is provided,
         // or if the selector didn't match any element.
-        position.x = 0;
-        position.y = 0;
+        (position as any).x = 0;
+        (position as any).y = 0;
       }
 
       // wait for the out transition to complete (if necessary)

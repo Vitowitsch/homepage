@@ -1,13 +1,8 @@
 <template>
-  <main class="activities" :class="{ 'blog--reading': this.post }">
-    <blog-nav :content="content" :filters="filters" :navs="navs"/>
+  <main class="blog" :class="{ 'blog--reading': this.post }">
+    <blog-nav :content="content" :filters="filters" :navs="navs" style="top: 200px;"/>
     <blog-feed :filters="filters"/>
-    Filter:{{filters}}<br>
-    Post: {{post}}<br>
-    Content: {{content}}<br>
-    Navigation: {{navs}}<br>
     <blog-post :post="post"/>
-
     <blog-footer/>
   </main>
 </template>

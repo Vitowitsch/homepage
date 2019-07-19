@@ -1,12 +1,11 @@
 <template>
   <div style="border-style: dotted dashed solid double;">
-    <v-navigation-drawer 
+    <v-navigation-drawer
       id="appDrawer"
+      width="205"
       app
       v-model="drawer"
       dark
-      disable-resize-watcher
-      :mini-variant.sync="mini"
       hide-overlay
       stateless
     >
@@ -14,18 +13,13 @@
         <v-list class="pa-0">
           <v-list-tile>
             <v-list-tile-avatar>
-              <img src="@/assets/pics/me-thumb.jpg">
+              <img src="@/assets/pics/me-thumb.jpg" />
             </v-list-tile-avatar>
 
             <v-list-tile-content>
               <v-list-tile-title>Veit Wehner</v-list-tile-title>
             </v-list-tile-content>
 
-            <v-list-tile-action>
-              <v-btn icon @click.stop="mini = !mini; drawer = false">
-                <v-icon>chevron_left</v-icon>
-              </v-btn>
-            </v-list-tile-action>
           </v-list-tile>
         </v-list>
       </v-toolbar>
@@ -38,6 +32,7 @@
             ripple="ripple"
             :key="item.name"
             v-if="item.title!='Projects'"
+            @click.stop="mini = !mini; drawer = false"
           >
             <v-list-tile-action v-if="item.icon">
               <v-icon>{{ item.icon }}</v-icon>
@@ -60,6 +55,7 @@
                   ripple="ripple"
                   v-text="p.title"
                   :to="p.target"
+                  @click.stop="mini = !mini; drawer = false"
                 ></v-list-tile-title>
                 <v-list-tile-action>
                   <v-icon v-text="p.icon"></v-icon>
@@ -131,8 +127,7 @@ export default {
         title: "Blog",
         target: "blog",
         icon: "favorite_border"
-      },
-
+      }
     ],
     projects: [
       { title: "Carbon", target: "/projects#carbon", icon: "code" },

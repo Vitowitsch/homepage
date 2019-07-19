@@ -1,9 +1,6 @@
 <template>
   <v-expansion-panel v-model="panelIndex" expand :class="theme">
     <v-expansion-panel-content hide-actions :class="theme" :value="opened">
-      <template v-slot:actions>
-        <v-btn color="teal" flat>read-more</v-btn>
-      </template>
       <template v-slot:header>
         <v-container fluid>
           <center>
@@ -39,7 +36,7 @@
       </v-layout>
     </v-expansion-panel-content>
     <v-btn @click="handleExpansion" icon>
-     <v-btn color="teal" flat>read-more</v-btn>
+     <v-btn color="error" flat>read-more</v-btn>
     </v-btn>
   </v-expansion-panel>
 </template>

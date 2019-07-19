@@ -1,6 +1,6 @@
 <template>
-    <v-layout justify-center fluid mt-5>
-      <v-flex xs12 md5>
+    <v-layout justify-center>
+      <v-flex xs12>
         <v-card xs12 id="cv">
           <project-headline>
             <template v-slot:header>CV</template>

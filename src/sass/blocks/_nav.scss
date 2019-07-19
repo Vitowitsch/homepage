@@ -1,9 +1,9 @@
 .nav {
-  position: sticky;
-  top: 100;
+  position: fixed;
+  top: 0;
   left: 50%;
   width: calc(100% - 2.5rem);
-  max-width: 90rem;
+  max-width: 50rem;
   padding: 1.25rem .625rem .625rem;
   border-bottom: 1px solid cc(border);
   background-color: cc(bg, .975);
@@ -43,7 +43,7 @@
     cursor: pointer;
     display: inline-block;
     position: relative;
-    margin-left: .75rem;
+    margin-left: 11rem;
     padding-left: .25rem;
     user-select: none;
     white-space: nowrap;

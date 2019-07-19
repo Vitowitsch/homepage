@@ -5,7 +5,7 @@
       Certificates
     </project-headline>
     <v-layout justify-space-between>
-      <v-flex xs12 md6 offset-sm3 style="border: 1px dotted black;">
+      <v-flex xs12 style="border: 1px dotted black;">
         <v-card>
           <v-container grid-list-sm fluid style="border: 1px dotted black;">
             <v-layout wrap>
