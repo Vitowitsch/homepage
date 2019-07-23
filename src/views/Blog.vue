@@ -1,6 +1,6 @@
 <template>
   <main class="blog" :class="{ 'blog--reading': this.post }">
-    <blog-nav :content="content" :filters="filters" :navs="navs" style="top: 200px;"/>
+    <blog-nav :content="content" :filters="filters" :navs="navs" />
     <blog-feed :filters="filters"/>
     <blog-post :post="post"/>
     <blog-footer/>

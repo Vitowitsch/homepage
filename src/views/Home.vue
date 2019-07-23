@@ -1,12 +1,12 @@
 <template>
   <main>
     <v-container fluid>
-      <Intro class="primary"/>
+      <Intro style="border: 1px solid black;"/>
       <div id="start"></div>
-      <SkillTree/>
-      <References class="secondary"/>
-      <Certs/>
-      <CV />
+      <SkillTree style="border: 1px solid black;"/>
+      <References style="border: 1px solid black;"/>
+      <Certs style="border: 1px solid black;"/>
+      <CV style="border: 1px solid black;"/>
     </v-container>
   </main>
 </template>
@@ -24,3 +24,4 @@ export default {
   }
 };
 </script>
+

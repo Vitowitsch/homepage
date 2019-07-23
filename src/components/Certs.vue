@@ -5,9 +5,9 @@
       Certificates
     </project-headline>
     <v-layout justify-space-between>
-      <v-flex xs12 style="border: 1px dotted black;">
+      <v-flex xs12
         <v-card>
-          <v-container grid-list-sm fluid style="border: 1px dotted black;">
+          <v-container grid-list-sm fluid>
             <v-layout wrap>
               <v-flex v-for="p in projects" :key="p.url" xs4 d-flex>
                 <v-card flat tile class="d-flex" style="border: 1px dotted black;">

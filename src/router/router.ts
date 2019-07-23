@@ -64,18 +64,11 @@ const router = new Router({
     { path: "/", name: "home", component: Home, meta: { scrollToTop: true } },
     { path: "/home", name: "home", component: Home },
     { path: "/blog", name: "feed", component: Blog },
-    { path: "/blog", name: "/by/:author", component: Blog },
     { path: "/blog", name: "post", component: Blog, props: true },
     { path: "/projects", name: "projects", component: Projects },
     {
       path: "/",
       name: "feed",
-      component: Blog
-    },
-    {
-      path: "/by/:author",
-      name: "author",
-      props: true,
       component: Blog
     },
     {

@@ -1,5 +1,5 @@
 <template>
-  <v-toolbar app tabs dark>
+  <v-toolbar app dark tabs class="accent">
     <v-toolbar-side-icon @click.stop="handleDrawerToggle"></v-toolbar-side-icon>
     <v-toolbar-title>Bots and Clouds</v-toolbar-title>
     <v-spacer></v-spacer>

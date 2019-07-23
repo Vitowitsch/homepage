@@ -2,14 +2,15 @@
   <div style="border-style: dotted dashed solid double;">
     <v-navigation-drawer
       id="appDrawer"
-      width="205"
+      width="170"
       app
+      dark 
       v-model="drawer"
-      dark
+      class="accent darken-4"
       hide-overlay
       stateless
     >
-      <v-toolbar flat transparent>
+      <v-toolbar flat transparent color="accent">
         <v-list class="pa-0">
           <v-list-tile>
             <v-list-tile-avatar>
@@ -32,7 +33,7 @@
             ripple="ripple"
             :key="item.name"
             v-if="item.title!='Projects'"
-            @click.stop="mini = !mini; drawer = false"
+            @click.stop="drawer = false"
           >
             <v-list-tile-action v-if="item.icon">
               <v-icon>{{ item.icon }}</v-icon>
@@ -98,11 +99,11 @@ export default {
         target: "/",
         icon: "dashboard"
       },
-      {
-        title: "Projects",
-        target: "recent-projects",
-        icon: "format_align_left"
-      },
+      // {
+      //   title: "Projects",
+      //   target: "recent-projects",
+      //   icon: "format_align_left"
+      // },
       {
         title: "CV",
         target: "/home#cv",

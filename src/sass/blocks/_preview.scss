@@ -95,11 +95,6 @@
     }
   }
 
-  &__published::after {
-    content: 'by';
-    padding: 0 .25rem;
-  }
-
   &__author {
     @extend %ff--500;
     text-decoration: underline;

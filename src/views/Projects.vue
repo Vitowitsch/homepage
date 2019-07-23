@@ -1,8 +1,7 @@
  <template>
   <main>
-    <Carbon/>
+    <!-- <Carbon/> -->
     <Cognac/>
-    <CityToll/>
   </main>
 </template>
 
