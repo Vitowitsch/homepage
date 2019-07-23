@@ -71,7 +71,7 @@ export default {
       author: "Veit Wehner",
       content: "",
       published: "2019-06-17T18:31:01Z",
-      description: "",
+      description: "RailRadar – ein Siemens Intrapreneurs Bootcamp Projekt",
       commentsReady: false,
       ready: true
     };

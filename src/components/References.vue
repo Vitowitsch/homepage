@@ -1,12 +1,12 @@
 <template>
-  <v-card flat dark tile id="references">
+  <v-card flat tile id="references">
     <v-window v-model="onboarding">
       <v-window-item v-for="r in refs" :key="r.text">
         <project-headline>
           <template v-slot:header>Personal</template>
           References
         </project-headline>
-        <v-card light tile color="secondary" flat>
+        <v-card light tile flat>
           <v-layout align-center justify-center fill-height tag="v-card-text">
             <v-layout justify-space-around wrap>
               <v-flex xs12 md5>

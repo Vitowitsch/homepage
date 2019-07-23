@@ -6,9 +6,11 @@
         Pollution is in the air
       </project-headline>
       <base-text>
-        <center>
-          <div class="title">A smart city toll system (Cito) made second prizes.</div>
-        </center>
+        <blockquote class="post__subtitle">
+          <center>
+            <div class="title">A smart city toll system (Cito) made second prizes.</div>
+          </center>
+        </blockquote>
         <p></p>The estimated number of premature deaths due to traffic related air pollution is estimated by 60 thousand per year in Germany.
         Even if this number is controversial, 65 German cities surpassed the pollution levels in 2017.
         If they all were fined by the EU, this would add up to millions of Euros.
@@ -26,7 +28,8 @@
           automatically deduct the payment from a prepaid account when it entered a city zone, or smart parking ticket vending machines.
         </p>Our hackathon IoT-prototype retrieves real time and forecast pollution data from our cloud service. The city toll is deducted from a prepaid account, based on GPS and NOx level. Users can see their account balance, a 24 hour pollution forecast with corresponding prices on their mobile phones.
         <p></p>We hope that this is a first step towards fewer cars and better air in cities. Cito can enforce legal pollution thresholds and bans on diesel cars - without tracking any personal GPS data.
-        Let us turn the grey sky blue again!
+        <p></p>Let us turn the grey sky blue again!
+        <p></p>
         <iframe
           width="100%"
           height="100%"
@@ -36,7 +39,7 @@
           allowfullscreen
         ></iframe>
         <p></p>
-        <v-img :src="require('@/assets/pics/code4green-device.jpg')"/>
+        <v-img :src="require('@/assets/pics/code4green-device.jpg')" />
       </base-text>
     </section>
 
