@@ -1,7 +1,7 @@
 <template>
   <center>
-    <v-flex xs12 md10>
-      <v-card>
+    <v-flex xs12 md10 primary fluid> 
+      <v-card color="primary">
         <title-header>
           Veit Wehner
           <template v-slot:header>
@@ -24,7 +24,7 @@
                 <hr>user.DOB= 2 October 1978
                 <hr>user.made.in= Germany
                 <hr>user.location= Gerstenbergstr. 8, Erlangen, Germany
-                <hr>user.email= wehner@posteo.de
+                <hr>user.email= veit.wehner@gmail.com
               </v-flex>
 
               <v-flex xs12 md3>

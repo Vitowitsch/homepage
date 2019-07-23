@@ -16,7 +16,7 @@ import Carbon from "./Carbon";
 export default {
   name: "blog-post",
   resource: "BlogPost",
-  components: { VueDisqus, RailRadar, CityToll, Carbon },
+  components: { VueDisqus, RailRadar, CityToll, Carbon, Cognac },
   props: { post: String },
   data() {
     return {
