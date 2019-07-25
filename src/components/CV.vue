@@ -12,7 +12,7 @@
                 <div class="py-3">
                   <span :class="`headline font-weight-bold black--text`" v-text="item.year"></span>
                   <h2 :class="`headline font-weight-light mb-3 teal--text`">{{item.title}}</h2>
-                  <div>{{item.text}}</div>
+                  <div style="font-size:18px;">{{item.text}}</div>
                 </div>
               </v-timeline-item>
             </v-slide-x-reverse-transition>

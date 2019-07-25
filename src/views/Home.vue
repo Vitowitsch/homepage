@@ -9,7 +9,7 @@
       <CV style="border: 1px solid black;" />
       <p></p>
       <v-card style="border: 1px solid black;">
-        <center>
+        <center style="font-size:18px;">
           For more about my recent projects please refer to the
           <!-- <router-link :to="l.target"> -->
           <v-btn to="/blog">
