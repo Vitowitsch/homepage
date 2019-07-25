@@ -1,18 +1,11 @@
 <template>
   <v-toolbar app dark tabs class="accent">
     <v-toolbar-side-icon @click.stop="handleDrawerToggle"></v-toolbar-side-icon>
-    <v-toolbar-title>Bots and Clouds</v-toolbar-title>
+    <v-toolbar-title style="font-family: 'Geostar Fill', cursive; padding: 1px">Bots and Bytes</v-toolbar-title>
     <v-spacer></v-spacer>
     <!-- <template v-slot:extension> -->
     <!-- <v-tabs v-model="tab" dark grow align-with-title> -->
     <!-- <v-tabs-slider color="black"></v-tabs-slider> -->
-    <v-toolbar-items v-for="l in links" :key="l.target">
-      <router-link :to="{hash: l.target}">
-        <v-btn icon flat :to="{hash: l.target}">
-          <v-icon>{{l.icon}}</v-icon>
-        </v-btn>
-      </router-link>
-    </v-toolbar-items>
     <!-- <v-tab v-for="l in links" :key="l.target">
           <router-link :to="{hash: l.target}">
             <v-btn icon flat :to="{hash: l.target}">
@@ -47,7 +40,13 @@ export default {
         x: false,
         y: true
       },
-      links: []
+      links: [
+        {
+          title: "Blog",
+          target: "/blog",
+          icon: "list"
+        }
+      ]
     };
   },
   methods: {

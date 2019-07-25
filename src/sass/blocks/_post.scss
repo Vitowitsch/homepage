@@ -125,9 +125,15 @@
   &__body {
     padding: 1.25rem 1.25rem 3.75rem;
     border-bottom: 1px solid cc(border);
+    font-size: 14px;
 
     @media (--laptop) {
       padding: 0 1.25rem 2.5rem;
+    }
+
+    @media (--phone) {
+      padding: 0 1.25rem 2.5rem;
+      font-size: 20px;
     }
   }
 

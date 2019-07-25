@@ -19,18 +19,18 @@
   position: relative;
   display: inline-block;
   border: 1px solid #252525;
-  padding-left:26px;
-  padding-right:26px;
-  padding-top:70px;
+  padding-left:70px;
+  padding-right:70px;
+  padding-top:40px;
   color: #252525;
   font: 12px "PT Sans", sans-serif;
   line-height: 20px;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 30px;
 }
 
 .headline p span {
-  padding: 0 10px;
+  padding: 0 0px;
   background-color: #fff;
 }
 
@@ -38,7 +38,7 @@
   padding: 10px 25px;
   margin-bottom: 0;
   text-transform: uppercase;
-  line-height: 53px;
+  line-height: 83px;
 }
 
 h1,

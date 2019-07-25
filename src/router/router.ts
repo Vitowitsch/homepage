@@ -2,7 +2,6 @@ import Vue from "vue";
 import { RouterOptions, RouteConfig } from "vue-router";
 import Router from "vue-router";
 import Blog from "@/views/Blog.vue";
-import Projects from "@/views/Projects.vue";
 import Home from "@/views/Home.vue";
 
 Vue.use(Router);
@@ -65,7 +64,6 @@ const router = new Router({
     { path: "/home", name: "home", component: Home },
     { path: "/blog", name: "feed", component: Blog },
     { path: "/blog", name: "post", component: Blog, props: true },
-    { path: "/projects", name: "projects", component: Projects },
     {
       path: "/",
       name: "feed",

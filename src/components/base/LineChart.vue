@@ -34,7 +34,6 @@ export default {
          initOptions: {
         renderer: "canvas"
       },
-      legend: {},
       chart: null,
       sidebarElm: null,
       options: {
@@ -42,14 +41,14 @@ export default {
         // title: [
         //   {
         //     left: "center",
-        //     text: "Gigatons  CO₂ emissions and the Climate"
+        //     text: "GT CO₂"
         //   }
         // ],
         tooltip: {
           trigger: "axis"
         },
         xAxis: { type: "category" },
-        yAxis: { gridIndex: 0,   name: "Gigatons-CO₂", },
+        yAxis: { gridIndex: 0,   name: "GT-CO₂", },
         dataZoom: [
           {
             id: "dataZoomX",
@@ -503,8 +502,8 @@ figure
   figure
     width 100vw
     margin 1em auto
-    padding 0 1em
-    border none
+    padding 0
+    border dotted
     border-radius 0
     box-shadow none
     .echarts
