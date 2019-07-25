@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import ToolBar from "@/components/base/ToolBar";
+import ToolBar from "@/components/base/Toolbar";
 import AppDrawer from "@/components/base/AppDrawer";
 import AppEvents from "./event.js";
 export default {
