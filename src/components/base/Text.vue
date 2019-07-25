@@ -19,8 +19,7 @@ export default {
       console.log("font size: " +this.$vuetify.breakpoint.name);
       switch (this.$vuetify.breakpoint.name) {
         case "xs":
-          console.log("big font");
-          return "font-size:20px;";
+          return "font-size:18px;";
         default:
           return "font-size:14px;";
       }
