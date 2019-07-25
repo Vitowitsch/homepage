@@ -16,9 +16,11 @@ export default {
   methods: {},
   computed: {
     fontSiz() {
+      console.log("font size: " +this.$vuetify.breakpoint.name);
       switch (this.$vuetify.breakpoint.name) {
         case "xs":
-          return "12";
+          console.log("big font");
+          return "font-size:20px;";
         default:
           return "font-size:14px;";
       }
@@ -35,6 +37,7 @@ export default {
   font-family: "PT Sans", sans-serif;
   font-weight: normal;
   font-style: normal;
+  font-size: 16px;
   line-height: 1.5;
   color: black;
   text-align: left;

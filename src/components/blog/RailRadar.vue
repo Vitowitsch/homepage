@@ -2,11 +2,6 @@
   <article v-if="allReady" class="post">
     <header class="post__header">
       <h2 class="post__title">{{ title }}</h2>
-      <h3 class="post__meta">
-        <span class="post__sep"></span>
-        <time>{{ prettyDate(published) }}</time>
-      </h3>
-      <blockquote class="post__subtitle">{{ description }}</blockquote>
     </header>
     <section class="post__body rte">
       Dieses Foto mag alt sein, doch solche Zugkollisionen gibt es auch heute immer wieder –

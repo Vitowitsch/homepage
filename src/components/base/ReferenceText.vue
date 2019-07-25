@@ -6,5 +6,3 @@
     </h1>
   </center>
 </template>
-<style scoped>
-</style>

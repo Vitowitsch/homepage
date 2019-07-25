@@ -1,14 +1,13 @@
 <template>
   <div style="border-style: dotted dashed solid double;">
-    <v-navigation-drawer
+    <v-navigation-drawer 
       id="appDrawer"
       width="170"
       app
+      bottom
       dark 
       v-model="drawer"
       class="accent darken-4"
-      hide-overlay
-      stateless
     >
       <v-toolbar flat transparent color="accent">
         <v-list class="pa-0">
@@ -32,7 +31,6 @@
             :to="{path: item.target}"
             ripple="ripple"
             :key="item.name"
-            v-if="item.title!='Projects'"
             @click.stop="drawer = false"
           >
             <v-list-tile-action v-if="item.icon">
@@ -43,27 +41,7 @@
               <v-list-tile-title class="menu-item subheading">{{ item.title }}</v-list-tile-title>
             </v-list-tile-content>
           </v-list-tile>
-          <div v-else :key="item.name">
-            <v-list-group no-action prepend-icon="format_align_left">
-              <template v-slot:activator>
-                <v-list-tile ripple="ripple">
-                  <v-list-tile-title class="menu-item subheading">Projects</v-list-tile-title>
-                </v-list-tile>
-              </template>
-              <v-list-tile v-for="(p, i) in projects" :key="i" :to="{path: p.target}">
-                <v-list-tile-title
-                  class="menu-item body-2"
-                  ripple="ripple"
-                  v-text="p.title"
-                  :to="p.target"
-                  @click.stop="mini = !mini; drawer = false"
-                ></v-list-tile-title>
-                <v-list-tile-action>
-                  <v-icon v-text="p.icon"></v-icon>
-                </v-list-tile-action>
-              </v-list-tile>
-            </v-list-group>
-          </div>
+          
         </template>
       </v-list>
     </v-navigation-drawer>
@@ -89,7 +67,7 @@ export default {
   },
   data: () => ({
     mini: true,
-    drawer: false,
+    drawer: null,
     scrollSettings: {
       maxScrollbarLength: 160
     },
@@ -99,11 +77,6 @@ export default {
         target: "/",
         icon: "dashboard"
       },
-      // {
-      //   title: "Projects",
-      //   target: "recent-projects",
-      //   icon: "format_align_left"
-      // },
       {
         title: "CV",
         target: "/home#cv",
@@ -130,11 +103,6 @@ export default {
         icon: "favorite_border"
       }
     ],
-    projects: [
-      { title: "Carbon", target: "/projects#carbon", icon: "code" },
-      { title: "City Toll", target: "/projects#citytoll", icon: "code" },
-      { title: "Cognac", target: "/projects#cognac", icon: "code" }
-    ]
   })
 };
 </script>
