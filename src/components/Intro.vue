@@ -30,7 +30,7 @@
               <v-flex xs12 md3>
              Welcome!<p/>
                 My name is Veit Wehner. If you are looking for an experienced software architect or full stack developer, I might be the right person for you.<p/>
-                I have a broad range of expert IT knowledge and demonstrated experiences as with AI, Cloud, Big-Data, Embedded, Backend- and Frontend, Clean-Code, Agile and lots of other areas.<p/>
+                I have a broad range of expert IT knowledge and demonstrated experiences with AI, Cloud, Big-Data, Embedded, Backend- and Frontend, Clean-Code, Agile and lots of other areas.<p/>
               </v-flex>
               <v-flex xs12 md3>
                 My motto is to keep it simple, but I with an M.Sc. in Computer Science and Mathematics and a lot of experience I have the understanding for complex requirements.<p/>

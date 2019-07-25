@@ -1,6 +1,6 @@
 <template>
   <div>
-    <ToolBar/>
+    <ToolBar />
     <AppDrawer></AppDrawer>
     <v-app>
       <v-content>
@@ -45,3 +45,4 @@ export default {
   }
 };
 </script>
+

@@ -130,8 +130,8 @@ figure {
 
   .echarts {
     // width 40vw
-    width: 100%;
-    min-width: 100vw;
+    width: 90vw;
+    min-width: 80vw;
     height: 600px;
   }
 }
