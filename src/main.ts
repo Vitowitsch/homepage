@@ -34,7 +34,6 @@ Vue.use(deviceQueries, {
 new Vue({
   router,
   render: h => h(App),
-  mounted: () => document.dispatchEvent(new Event("x-app-rendered")),
   mounted() {
     Pace.start()
     Pace.on('hide', () => {

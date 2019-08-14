@@ -37,7 +37,7 @@ module.exports = {
         '/',
         '/#/'
       ],
-      useRenderEvent: true,
+      useRenderEvent: false,
       headless: true,
       onlyProduction: true
     }
