@@ -34,7 +34,7 @@
               </v-flex>
               <v-flex xs12 md3>
                 My motto is to keep it simple, but I with an M.Sc. in Computer Science and Mathematics and a lot of experience I have the understanding for complex requirements.<p/>
-                At the moment I am working at Siemens for customers in Europe, where I got excellent recommendations. I want to take on interesting projects as a freelancer in Home Office. If you have any fitting projects, please get in contact with me. There is always an option to switch to full time.
+                At the moment I am working at Siemens for customers in Europe, where I got excellent recommendations. I want to take on interesting projects as a freelancer. If you have any fitting projects, please get in contact with me. There is always an option to switch to full time.
               </v-flex>
             </v-layout>
           </base-text>

@@ -40,9 +40,8 @@
       That is something we want to avoid. Therefore we decided on a different consensus strategy than the traditional proof of work approach, which is used in the infamous bitcoin mining farms: Hyperledger's permission-based algorithm runs on standard enterprise servers that don't require many ressources - neither hardware nor energy.
       <p></p>Theoretically this idea could generate a lot of money.
       <br />The commission for world-wide trade could bring up to two billion a year.
-      We see a better trading system as a viable way to reduce CO₂ emission.
       <p></p>This is a huge number and - we have to admit - too large a project for us to realise.
-      <br />By sharing the concept with different people in politics and within Siemens we hope to initiate changes - big or small.
+      <br />We see a better trading system as a viable way to reduce CO₂ emission. By sharing the concept with different people in politics and within Siemens we hope to initiate changes - big or small.
       <p></p>Click the graph to see how the influence of CO₂ per head and year on the climate goal of Paris.
       <v-layout justify-center mt-2 mb-4 wrap justify-start>
         <ClimatePathways />
