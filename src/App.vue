@@ -14,6 +14,9 @@
 import ToolBar from "@/components/base/Toolbar";
 import AppDrawer from "@/components/base/AppDrawer";
 import AppEvents from "./event.js";
+import Vue from "vue";
+
+
 export default {
   components: {
     home: () => import("@/views/Home"),
