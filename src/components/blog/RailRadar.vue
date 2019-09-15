@@ -1,7 +1,10 @@
 <template>
   <article v-if="allReady" class="post">
     <header class="post__header">
-      <h2 class="post__title">{{ title }}</h2>
+      <project-headline id="carbon" theme="secondary">
+        <template v-slot:header>My Project</template>
+        {{title}}
+      </project-headline>
     </header>
     <section class="post__body rte">
       Dieses Foto mag alt sein, doch solche Zugkollisionen gibt es auch heute immer wieder –
@@ -54,15 +57,14 @@
 
  <script>
 import VueDisqus from "vue-disqus/VueDisqus";
-import { scrollTo, kebabify, prettyDate } from '@/utils/helpers'
+import { scrollTo, kebabify, prettyDate } from "@/utils/helpers";
 export default {
   resource: "BlogPost",
   components: { VueDisqus },
   props: { post: String },
   data() {
     return {
-      title:
-        "RailRadar – ein Siemens Intrapreneurs Bootcamp Projekt",
+      title: "RailRadar – ein Siemens Intrapreneurs Bootcamp Projekt",
       author: "Veit Wehner",
       content: "",
       published: "2019-06-17T18:31:01Z",
@@ -73,7 +75,7 @@ export default {
   },
   computed: {
     allReady() {
-      return this.ready && ('railradar' === this.post);
+      return this.ready && "railradar" === this.post;
     }
   },
   methods: {

@@ -1,6 +1,6 @@
 <template>
   <v-btn icon small @click="navBack">
-    <v-icon dark>navigate_before</v-icon>
+    <v-icon dark>mdi-arrow-left</v-icon>
   </v-btn>
 </template>
 
@@ -14,3 +14,6 @@ export default {
   }
 };
 </script>
+<style lang="scss" scoped>
+@import "../../sass/app";
+</style>
