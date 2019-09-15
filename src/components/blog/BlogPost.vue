@@ -1,10 +1,10 @@
 <template>
-  <div>
+  <base-text>
     <RailRadar :post="post"/>
     <CityToll :post="post"/>
     <Carbon :post="post"/>
     <Cognac :post="post"/>
-  </div>
+  </base-text>
 </template>
 
  <script>
