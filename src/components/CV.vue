@@ -73,7 +73,7 @@ export default {
         year: "2018 - today",
         title: "Intrapreneurs-Sponsorship at Siemens",
         text:
-          "Ein Siemens-Förderprojekt"
+          "A project promoted by Siemens"
       },
       {
         color: "#b6b7ba",
