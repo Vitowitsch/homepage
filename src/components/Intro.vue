@@ -22,7 +22,7 @@
         <hr />user.DOB= 2 October 1978
         <hr />user.made.in= Germany
         <hr />user.location= Gerstenbergstr. 8, Erlangen, Germany
-        <hr />user.email= veit.wehner@gmail.com
+        <hr />user.email= info@botsandbytes.de
       </v-flex>
       <v-flex xs12 md5 primary mb-5>
         <v-img :src="require('@/assets/pics/intro.jpg')" aspect-ratio="3.0"></v-img>
