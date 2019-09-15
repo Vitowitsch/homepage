@@ -32,7 +32,7 @@ export default {
         "Veit Wehner<br>\
         91052 Erlangen\
         Germany\
-        E-Mail: veit.wehner@gmail.com\
+        E-Mail: info@botsandbytes.de\
 "
     };
   }
