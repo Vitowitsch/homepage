@@ -30,6 +30,8 @@
         <p></p>We hope that this is a first step towards fewer cars and better air in cities. Cito can enforce legal pollution thresholds and bans on diesel cars - without tracking any personal GPS data.
         <p></p>Let us turn the grey sky blue again!
         <p></p>
+        <v-img :src="require('@/assets/pics/code4green-device.jpg')" />
+        <p />
         <iframe
           width="100%"
           height="100%"
@@ -39,7 +41,6 @@
           allowfullscreen
         ></iframe>
         <p></p>
-        <v-img :src="require('@/assets/pics/code4green-device.jpg')" />
       </base-text>
     </section>
 
