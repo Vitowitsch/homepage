@@ -2,24 +2,19 @@
   <div style="border-style: dotted dashed solid double;">
     <v-navigation-drawer 
       id="appDrawer"
-      width="170"
+      width="156"
       app
       bottom
       dark 
       v-model="drawer"
       class="accent darken-4"
     >
-      <v-toolbar flat transparent color="accent">
+      <v-toolbar flat transparent color="accent darken-4">
         <v-list class="pa-0">
           <v-list-tile>
             <v-list-tile-avatar>
               <img src="@/assets/pics/me-thumb.jpg" />
             </v-list-tile-avatar>
-
-            <v-list-tile-content>
-              <v-list-tile-title>Veit Wehner</v-list-tile-title>
-            </v-list-tile-content>
-
           </v-list-tile>
         </v-list>
       </v-toolbar>
@@ -33,12 +28,12 @@
             :key="item.name"
             @click.stop="drawer = false"
           >
-            <v-list-tile-action v-if="item.icon">
+            <!-- <v-list-tile-action v-if="item.icon">
               <v-icon>{{ item.icon }}</v-icon>
-            </v-list-tile-action>
+            </v-list-tile-action> -->
 
             <v-list-tile-content>
-              <v-list-tile-title class="menu-item subheading">{{ item.title }}</v-list-tile-title>
+              <v-list-tile-title style="font-family: 'Geostar Fill', cursive; padding: 1px" class="menu-item subheading">{{ item.title }}</v-list-tile-title>
             </v-list-tile-content>
           </v-list-tile>
           

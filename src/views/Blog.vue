@@ -1,21 +1,20 @@
 <template>
   <main class="blog" :class="{ 'blog--reading': this.post }">
-    <blog-nav :content="content" :filters="filters" :navs="navs" />
-    <blog-feed :filters="filters"/>
-    <blog-post :post="post"/>
     <blog-footer/>
+    <blog-nav :content="content" :filters="filters" :navs="navs" />
+    <blog-feed :filters="filters" />
+    <blog-post :post="post" />
   </main>
 </template>
 
 <script>
-import BlogNav from "@/components/blog/BlogNav";
 import BlogFeed from "@/components/blog/BlogFeed";
 import BlogPost from "@/components/blog/BlogPost";
 import RailRadar from "@/components/blog/RailRadar";
 import BlogFooter from "@/components/blog/BlogFooter";
 export default {
   name: "activities",
-  components: { BlogNav, BlogFeed, BlogPost, BlogFooter},
+  components: { BlogFeed, BlogPost, BlogFooter },
   resource: "Blog",
   props: {
     post: String,
@@ -54,7 +53,7 @@ export default {
   }
 };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 @import "../sass/app";
 </style>
 

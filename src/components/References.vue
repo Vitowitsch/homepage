@@ -17,9 +17,9 @@
               </v-flex>
               <v-flex xs12 md5>
                 <div
-                  :class="`black--text text--darken-1`"
-                  style="border: 1px dotted black; padding: 20px; font-size:16px;"
-                >{{r.text}}</div>
+                  :class="`text--darken-1`"
+                  style="border: 1px dotted black; padding: 20px;"
+                ><i>{{r.text}}</i></div>
               </v-flex>
             </v-layout>
           </v-layout>
