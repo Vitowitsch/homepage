@@ -4,7 +4,7 @@
       botsandbytes
       <template v-slot:header>about</template>
     </project-headline>
-    <v-layout wrap justify-space-around align-start class="text-sm-left subtitle-2" >
+    <v-layout wrap justify-space-around align-start class="text-xs-left subtitle-2" >
       <v-flex xs12 md5>
         Welcome!
         My name is Veit Wehner. If you are looking for an experienced software architect or full stack developer, I might be the right person for you.
