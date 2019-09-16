@@ -10,7 +10,7 @@
           <v-container grid-list-sm fluid>
             <v-layout wrap>
               <v-flex v-for="p in projects" :key="p.url" xs4 d-flex>
-                <v-card flat tile class="d-flex" style="border: 1px dotted black;">
+                <v-card flat tile class="d-flex">
                   <expandable-image class="image" :src="p.url"></expandable-image>
                   <template v-slot:placeholder>
                     <v-layout fill-height align-center justify-center ma-0>
