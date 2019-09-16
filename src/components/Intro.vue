@@ -10,7 +10,7 @@
         My name is Veit Wehner.
         <br />
         <br />If you are looking for an experienced software architect, I might be the right person for you.
-        I have a broad range of expert IT knowledge and demonstrated experiences with AI, Cloud, Big-Data, Embedded, Backend- and Frontend, Clean-Code, Agile and lots of other areas.
+        I have a broad range of expert IT knowledge and demonstrated experiences with AI, Cloud, Big-Data, Blockchain, Embedded, Backend- and Frontend, Clean-Code, Agile and lots of other areas.
         <br />
         <br />With an M.Sc. in Computer Science and Mathematics and a lot of experience I have the understanding for complex requirements. Nonetheless, my motto is to keep it as simple as possible.
         <br />
