@@ -51,14 +51,14 @@ export default {
       {
         color: "#b6b7ba",
         year: "2011 - 2015",
-        title: "Embedded-Architect at Siemens",
+        title: "Software Architect at Siemens: Embedded Systems",
         text:
-          "Selective-Door-Opening. Requirement specification and system architecture of a train-to-shore connectivity. Shore-side connectivity of a train-sided embedded linux system to analyze train data. Design und implementation of a distributed web application."
+          "Shore-side connectivity of a train-sided embedded linux system to analyze train data."
       },
       {
         color: "#b6b7ba",
         year: "2015 - 2017",
-        title: "Cloud-Architect at Siemens",
+        title: "Software Architect at Siemens: Cloud and Big Data",
         text:
           "Migration of shore-side applications for the predictive maintenance into Amazon AWS."
       },
