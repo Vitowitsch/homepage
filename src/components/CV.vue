@@ -37,21 +37,22 @@ export default {
       {
         color: "#b6b7ba",
         year: "2007 - 2009",
+        title: "Software Developer at Siemens",
         text:
-          'Distributed real-time service to annotate PDF documents - awarded as "Most-Popular-Feature with the Process-Optimization-Toolchain"',
-        title: "Fullstack-Developer at Siemens"
+          'Distributed real-time service to annotate PDF documents - awarded as "Most-Popular-Feature with the Process-Optimization-Toolchain"'
+
       },
       {
         color: "#b6b7ba",
         year: "2009 - 2010",
         title: "Embedded-Developer at Siemens",
         text:
-          "Automatic Selective Door Opening: GPS based door opening recommendation system on an embedded Linux system."
+          "GPS based door opening recommendation system on an embedded Linux system."
       },
       {
         color: "#b6b7ba",
         year: "2011 - 2015",
-        title: "Software Architect at Siemens: Embedded Systems",
+        title: "Software Architect at Siemens: Embedded systems, Connectivity, Web Applications",
         text:
           "Shore-side connectivity of a train-sided embedded linux system to analyze train data."
       },
@@ -60,12 +61,12 @@ export default {
         year: "2015 - 2017",
         title: "Software Architect at Siemens: Cloud and Big Data",
         text:
-          "Migration of shore-side applications for the predictive maintenance into Amazon AWS."
+          "Migration of on-premise applications into Amazon Cloud."
       },
       {
         color: "#b6b7ba",
         year: "2017 - today",
-        title: "Blockchain-Architect at Siemens",
+        title: "Software Architect at Siemens: Blockchain",
         text: "Consulting on various Blockchain and ICO projects."
       },
       {
@@ -73,14 +74,14 @@ export default {
         year: "2018 - today",
         title: "Intrapreneurs-Sponsorship at Siemens",
         text:
-          "A project promoted by Siemens"
+          "Foundation member of sponsorship project for Train-Safety"
       },
       {
         color: "#b6b7ba",
         year: "2017 - today",
-        title: "Software-Architect at Siemens - Machine-Learning and Cloud",
+        title: "Software-Architect at Siemens - Machine-Learning, Big Data and Cloud",
         text:
-          "Integration of Matlab-Algorithms for Predictive-Maintenance as Docker-Container into Amazon-AWS."
+          "Integration of data-intense Matlab-Algorithms as Docker-Container into Amazon-AWS."
       }
     ],
     stages: [],
