@@ -52,7 +52,7 @@ export default {
       {
         color: "#b6b7ba",
         year: "2011 - 2015",
-        title: "Software Architect at Siemens: Embedded systems, Connectivity, Web Applications",
+        title: "Software Architect at Siemens: Embedded Systems, Connectivity, Web Applications",
         text:
           "Shore-side connectivity of a train-sided embedded linux system to analyze train data."
       },
