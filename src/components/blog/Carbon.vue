@@ -50,6 +50,7 @@
           <v-img :src="require('@/assets/pics/globe.jpg')" />
         </v-flex>
       </v-layout>
+        <b>Team Carbon: Johannes Oberreuter, Elena Scepankova, Veit Wehner</b>
     </section>
 
     <footer class="post__footer">
