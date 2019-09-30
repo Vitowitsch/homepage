@@ -4,11 +4,15 @@
       <template v-slot:header>Skills</template>
       Experience
     </project-headline>
-    <v-layout>
       <figure style="border-style: dotted dashed solid double;">
-        <v-chart :options="options" :init-options="initOptions" autoresize theme="light"/>
+        <v-chart
+          :options="options"
+          :init-options="initOptions"
+          autoresize
+          theme="light"
+          style="border-style: dotted dashed solid double;"
+        />
       </figure>
-    </v-layout>
   </div>
 </template>
 
@@ -130,7 +134,7 @@ figure {
 
   .echarts {
     // width 40vw
-    width: 90vw;
+    width: 85vw;
     min-width: 80vw;
     height: 600px;
   }
