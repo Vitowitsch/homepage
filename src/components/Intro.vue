@@ -4,7 +4,7 @@
       botsandbytes
       <template v-slot:header>about</template>
     </project-headline>
-    <v-layout class="text-xs-left" wrap pl-3 pr-2>
+    <v-layout class="text-xs-left" wrap pl-4 pr-4>
       <v-flex class="xs12 md5" pb-5 pt-5>
         <v-img :src="require('@/assets/pics/intro.jpg')" contain aspect-ratio="1.0"></v-img>
       </v-flex>
