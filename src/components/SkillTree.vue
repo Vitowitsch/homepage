@@ -128,7 +128,7 @@ figure {
 
   .echarts {
     // width 40vw
-    // width: 85vw;
+    width: 85vw;
     min-width: 80vw;
     height: 600px;
   }
@@ -195,8 +195,8 @@ figure {
 
   figure {
     width: 100vw;
-    margin: 1em auto;
-    padding: 0 1em;
+    margin: 0em 0em 0em 0em;
+    padding: 0em 1em 0em 0em;
     border: none;
     border-radius: 0;
     box-shadow: none;
