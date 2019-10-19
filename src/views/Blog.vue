@@ -1,7 +1,6 @@
 <template>
   <main class="blog" :class="{ 'blog--reading': this.post }">
     <blog-footer/>
-    <blog-nav :content="content" :filters="filters" :navs="navs" />
     <blog-feed :filters="filters" />
     <blog-post :post="post" />
   </main>
@@ -10,7 +9,6 @@
 <script>
 import BlogFeed from "@/components/blog/BlogFeed";
 import BlogPost from "@/components/blog/BlogPost";
-import RailRadar from "@/components/blog/RailRadar";
 import BlogFooter from "@/components/blog/BlogFooter";
 export default {
   name: "activities",

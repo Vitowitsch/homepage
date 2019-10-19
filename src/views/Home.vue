@@ -1,13 +1,11 @@
 <template>
   <v-container fluid>
-    <base-text>
-      <Intro style="border: 1px solid black;" />
-      <div id="start"></div>
-      <SkillTree style="border: 1px solid black;" />
-      <References style="border: 1px solid black;" />
-      <Certs style="border: 1px solid black;" />
-      <CV style="border: 1px solid black;" />
-    </base-text>
+    <Intro style="border: 1px solid black;" />
+    <div id="start"></div>
+    <SkillTree style="border: 1px solid black;" />
+    <References style="border: 1px solid black;" />
+    <Certs style="border: 1px solid black;" />
+    <CV style="border: 1px solid black;" />
   </v-container>
 </template>
 

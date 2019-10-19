@@ -1,13 +1,13 @@
 <template>
-  <v-card flat tile id="references">
+  <v-card text tile id="references">
     <v-window v-model="onboarding">
       <v-window-item v-for="r in refs" :key="r.text">
         <project-headline>
           <template v-slot:header>Personal</template>
           References
         </project-headline>
-        <v-card light tile flat>
-          <v-layout align-center justify-center fill-height tag="v-card-text">
+        <v-card light tile text>
+          <v-layout align-center justify-center fill-height>
             <v-layout justify-space-around wrap>
               <v-flex xs12 md5>
                 <reference-text>
@@ -16,10 +16,9 @@
                 </reference-text>
               </v-flex>
               <v-flex xs12 md5>
-                <div
-                  :class="`text--darken-1`"
-                  style="border: 1px dotted black; padding: 20px;"
-                ><i>{{r.text}}</i></div>
+                <div :class="`text--darken-1`" style="border: 1px dotted black; padding: 20px;">
+                  <i>{{r.text}}</i>
+                </div>
               </v-flex>
             </v-layout>
           </v-layout>
@@ -27,7 +26,7 @@
       </v-window-item>
     </v-window>
     <v-card-actions class="justify-space-between">
-      <v-btn flat @click="prev">
+      <v-btn text @click="prev">
         <v-icon x-large color="black darken-5">mdi-chevron-left</v-icon>
       </v-btn>
       <v-item-group v-model="onboarding" class="text-xs-center" mandatory>
@@ -37,7 +36,7 @@
           </v-btn>
         </v-item>-->
       </v-item-group>
-      <v-btn flat @click="next">
+      <v-btn text @click="next">
         <v-icon x-large color="black">mdi-chevron-right</v-icon>
       </v-btn>
     </v-card-actions>
@@ -84,9 +83,15 @@ export default {
       },
       {
         text:
-          "''Veit Wehner always shows initiative, diligence and has good ideas that work in practice. He always reaches the target goals and surpasses them often.''",
-        who: "%name on request%",
-        position: "Siemens Project Manager"
+          "''I have been working with Veit during an intense 48-hour hackathon. Thanks to his enthusiasm, his devotion to quickly learn new technologies and his collaborative team play, we were able to develop an innovative prototype and win the hackathon. Ever since the event we have been in touch and Veit continues to develop the idea both on a technical level as well as finding potential partners. I can highly recommend working with Veit.''",
+        who: "Johannes Oberreuter",
+        position: "Physicist-turned-Data-Scientist"
+      },
+      {
+        text:
+          "''Veit is one of the keen learners I have worked with. His understanding of Software Architect concepts and implementation of the same is commendable. He is technology savvy and he can pick up new technologies on the fly. We worked briefly on one of the IOT projects and I was impressed with his ability to understand the new concepts of Machine Learning and quickly implement them. Veit has great attitude and keen intellectual appetite. I highly recommend him in the field of software and data science and machine learning.''",
+        who: "Avinash Kumar",
+        position: "Data Scientist at Siemens"
       }
     ],
     projects: ["ai-hack1.jpg", "intrapreneurs.jpg", "futureland.png", "neo.png"]

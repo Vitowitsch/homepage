@@ -7,6 +7,7 @@ import Home from "@/views/Home.vue";
 Vue.use(Router);
 
 var scrollBehavior = function(to, from, savedPosition) {
+  console.log("entering scrollbehior");
   if (savedPosition) {
     // savedPosition is only available for popstate navigations.
     return savedPosition;
@@ -60,15 +61,10 @@ const router = new Router({
   scrollBehavior: scrollBehavior,
   linkActiveClass: "active",
   routes: [
-    { path: "/", name: "home", component: Home, meta: { scrollToTop: true } },
-    { path: "/home", name: "home", component: Home },
+    { path: "/", name: "home", component: Home },
+    // { path: "/", name: "home", component: Home },
     { path: "/blog", name: "feed", component: Blog },
     { path: "/blog", name: "post", component: Blog, props: true },
-    {
-      path: "/",
-      name: "feed",
-      component: Blog
-    },
     {
       path: "/read/:post",
       name: "post",
