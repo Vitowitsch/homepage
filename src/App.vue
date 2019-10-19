@@ -1,13 +1,18 @@
 <template>
   <v-app id="app">
-    <v-app-bar app src="@/assets/pics/background.jpg" dense>
+    <v-app-bar
+      app
+      src="@/assets/pics/background.jpg"
+      hide-on-scroll
+      dense prominent
+    >
       <template v-slot:extension>
         <v-tabs grow background-color="transparent">
           <v-tab to="/">
-            <v-icon large color="white">home</v-icon>
+            <v-icon x-large color="white">home</v-icon>
           </v-tab>
           <v-tab to="blog">
-            <v-icon large color="white">mdi-blogger</v-icon>
+            <v-icon x-large color="white">mdi-blogger</v-icon>
           </v-tab>
         </v-tabs>
       </template>
