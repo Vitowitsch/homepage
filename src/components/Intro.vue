@@ -9,7 +9,6 @@
         <v-img :src="require('@/assets/pics/intro.jpg')" contain aspect-ratio="1.0"></v-img>
       </v-flex>
       <v-flex xs12 md6>
-        <base-text>
           <div style="color:teal;margin-top:55px;">:~$ git config --list</div>
           <hr />user.name= Veit Wehner
           <hr />user.DOB= 2 October 1978
@@ -36,7 +35,6 @@
           <br />In addition, I am looking for interesting side projects.
           <router-link to="/blog" class="routerlink">About some of them you can read in my blog</router-link>.
           <br />
-        </base-text>
       </v-flex>
     </v-layout>
   </center>

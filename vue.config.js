@@ -8,15 +8,23 @@ module.exports = {
         target: "http://www.panacherock.com/downloads/mp3/01_05_Shes_Mine.mp3",
         changeOrigin: true
       }
-    },
+    }
     // host: "192.168.99.190"
   },
 
+  css: {
+    loaderOptions: {
+      sass: {
+        implementation: require("sass"),
+        fiber: require("fibers")
+      }
+    }
+  },
   configureWebpack: {
     devtool: "source-map"
   },
 
-  transpileDependencies: ["vue-echarts","resize-detector"],
+  transpileDependencies: ["vue-echarts", "resize-detector"],
 
   chainWebpack: config => {
     config.plugins.delete("named-chunks");
@@ -33,10 +41,7 @@ module.exports = {
   pluginOptions: {
     prerenderSpa: {
       registry: undefined,
-      renderRoutes: [
-        '/',
-        '/#/'
-      ],
+      renderRoutes: ["/", "/#/"],
       useRenderEvent: false,
       headless: true,
       onlyProduction: true
