@@ -1,6 +1,5 @@
 <template>
   <v-card class="mx-auto">
-    <v-card-text class="py-0">
       <v-timeline dense>
         <v-slide-x-reverse-transition group hide-on-leave>
           <v-timeline-item
@@ -17,7 +16,6 @@
           </v-timeline-item>
         </v-slide-x-reverse-transition>
       </v-timeline>
-    </v-card-text>
   </v-card>
 </template>
 
