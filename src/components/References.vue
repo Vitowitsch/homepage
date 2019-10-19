@@ -10,7 +10,7 @@
           <div v-for="r in refs" :key="r.text">
             <i>{{r.text}}</i>
             <div style="text-decoration: underline;">({{r.who}}, {{r.position}}</div>
-            <p></p>
+            <p><hr/></p>
           </div>
         </v-col>
       </v-row>
