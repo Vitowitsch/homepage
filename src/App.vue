@@ -3,8 +3,9 @@
     <v-app-bar
       app
       src="@/assets/pics/background.jpg"
-      hide-on-scroll
-      dense prominent
+      :dense="$vuetify.breakpoint.xsOnly"
+      :hide-on-scroll="$vuetify.breakpoint.xsOnly"
+      :height="height"
     >
       <template v-slot:extension>
         <v-tabs grow background-color="transparent">
@@ -17,6 +18,7 @@
         </v-tabs>
       </template>
     </v-app-bar>
+
     <v-content>
       <router-view></router-view>
     </v-content>
@@ -33,6 +35,16 @@ export default {
       this.$on(item.name, item.callback);
     });
     window.getApp = this;
+  },
+  computed: {
+    height() {
+      switch (this.$vuetify.breakpoint.name) {
+        case "xs":
+          return "0";
+        default:
+          return "60";
+      }
+    }
   },
   data() {
     return {
