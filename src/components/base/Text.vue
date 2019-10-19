@@ -1,6 +1,6 @@
 <template>
   <p class="base-text" :style="fontSiz">
-    <slot/>
+    <slot />
   </p>
 </template>
 <script>
@@ -16,7 +16,7 @@ export default {
   methods: {},
   computed: {
     fontSiz() {
-      console.log("font size: " +this.$vuetify.breakpoint.name);
+      console.log("font size: " + this.$vuetify.breakpoint.name);
       switch (this.$vuetify.breakpoint.name) {
         case "xs":
           return "font-size:18px;";
