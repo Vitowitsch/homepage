@@ -1,46 +1,21 @@
 <template>
-  <v-card text tile id="references">
-    <v-window v-model="onboarding">
-      <v-window-item v-for="r in refs" :key="r.text">
-        <project-headline>
-          <template v-slot:header>Personal</template>
-          References
-        </project-headline>
-        <v-card light tile text>
-          <v-layout align-center justify-center fill-height>
-            <v-layout justify-space-around wrap>
-              <v-flex xs12 md5>
-                <reference-text>
-                  <template v-slot:header>{{r.position}}</template>
-                  {{r.who}}
-                </reference-text>
-              </v-flex>
-              <v-flex xs12 md5>
-                <div :class="`text--darken-1`" style="border: 1px dotted black; padding: 20px;">
-                  <i>{{r.text}}</i>
-                </div>
-              </v-flex>
-            </v-layout>
-          </v-layout>
-        </v-card>
-      </v-window-item>
-    </v-window>
-    <v-card-actions class="justify-space-between">
-      <v-btn text @click="prev">
-        <v-icon x-large color="black darken-5">mdi-chevron-left</v-icon>
-      </v-btn>
-      <v-item-group v-model="onboarding" class="text-xs-center" mandatory>
-        <!-- <v-item v-for="n in refs.length" :key="`btn-${n}`">
-          <v-btn slot-scope="{ active, toggle }" :input-value="active" icon @click="toggle">
-            <v-icon small>mdi-record</v-icon>
-          </v-btn>
-        </v-item>-->
-      </v-item-group>
-      <v-btn text @click="next">
-        <v-icon x-large color="black">mdi-chevron-right</v-icon>
-      </v-btn>
-    </v-card-actions>
-  </v-card>
+  <div id="references">
+    <project-headline>
+      <template v-slot:header>Personal</template>
+      References
+    </project-headline>
+    <v-container>
+      <v-row>
+        <v-col>
+          <div v-for="r in refs" :key="r.text">
+            <i>{{r.text}}</i>
+            <div style="text-decoration: underline;">({{r.who}}, {{r.position}}</div>
+            <p></p>
+          </div>
+        </v-col>
+      </v-row>
+    </v-container>
+  </div>
 </template>
 
 <script>

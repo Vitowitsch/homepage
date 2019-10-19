@@ -1,25 +1,21 @@
 <template>
-    <v-layout justify-center>
-      <v-flex xs12 >
-        <v-card xs12 id="cv">
-          <project-headline>
-            <template v-slot:header>CV</template>
-            Curriculum Vitae
-          </project-headline>
-          <v-timeline dense>
-            <v-slide-x-reverse-transition group hide-on-leave>
-              <v-timeline-item v-for="(item, i) in items" :key="i" color="blue-grey" small>
-                <div class="py-3">
-                  <span :class="`headline font-weight-bold black--text`" v-text="item.year"></span>
-                  <h2 :class="`headline font-weight-light mb-3 teal--text`">{{item.title}}</h2>
-                  <div >{{item.text}}</div>
-                </div>
-              </v-timeline-item>
-            </v-slide-x-reverse-transition>
-          </v-timeline>
-        </v-card>
-      </v-flex>
-    </v-layout>
+  <div id="cv">
+    <project-headline>
+      <template v-slot:header>CV</template>
+      Curriculum Vitae
+    </project-headline>
+    <v-container>
+      <!-- <v-row xs12 md10> -->
+        <v-timeline :dense="$vuetify.breakpoint.xsOnly">
+          <v-timeline-item v-for="(item, i) in items" :key="i" color="blue-grey" small>
+            <span :class="`headline font-weight-bold black--text`" v-text="item.year"></span>
+            <h2 :class="`headline font-weight-light mb-3 teal--text`">{{item.title}}</h2>
+            <div>{{item.text}}</div>
+          </v-timeline-item>
+        </v-timeline>
+      <!-- </v-row> -->
+    </v-container>
+  </div>
 </template>
 
 <script>
@@ -40,7 +36,6 @@ export default {
         title: "Software Developer at Siemens",
         text:
           'Distributed real-time service to annotate PDF documents - awarded as "Most-Popular-Feature with the Process-Optimization-Toolchain"'
-
       },
       {
         color: "#b6b7ba",
@@ -52,7 +47,8 @@ export default {
       {
         color: "#b6b7ba",
         year: "2011 - 2015",
-        title: "Software Architect at Siemens: Embedded Systems, Connectivity, Web Applications",
+        title:
+          "Software Architect at Siemens: Embedded Systems, Connectivity, Web Applications",
         text:
           "Shore-side connectivity of a train-sided embedded linux system to analyze train data."
       },
@@ -60,8 +56,7 @@ export default {
         color: "#b6b7ba",
         year: "2015 - 2017",
         title: "Software Architect at Siemens: Cloud and Big Data",
-        text:
-          "Migration of on-premise applications into Amazon Cloud."
+        text: "Migration of on-premise applications into Amazon Cloud."
       },
       {
         color: "#b6b7ba",
@@ -73,13 +68,13 @@ export default {
         color: "#b6b7ba",
         year: "2018 - today",
         title: "Intrapreneurs-Sponsorship at Siemens",
-        text:
-          "Foundation member of sponsorship project for Train-Safety"
+        text: "Foundation member of sponsorship project for Train-Safety"
       },
       {
         color: "#b6b7ba",
         year: "2017 - today",
-        title: "Software-Architect at Siemens - Machine-Learning, Big Data and Cloud",
+        title:
+          "Software-Architect at Siemens - Machine-Learning, Big Data and Cloud",
         text:
           "Integration of data-intense Matlab-Algorithms as Docker-Container into Amazon-AWS."
       }

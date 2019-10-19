@@ -1,13 +1,12 @@
 <template>
-  <v-toolbar app dark tabs class="accent darken-4">
-    <v-toolbar-side-icon @click.stop="handleDrawerToggle"></v-toolbar-side-icon>
+  <v-app-bar app dark tabs class="accent darken-4">
+    <v-app-bar-side-icon @click.stop="handleDrawerToggle"></v-app-bar-side-icon>
     <v-toolbar-title style="font-family: 'Geostar Fill', cursive;">Bots and Bytes</v-toolbar-title>
-  </v-toolbar>
+  </v-app-bar>
 </template>
 <script>
 import AnchorRouterLink from "vue-anchor-router-link";
 export default {
-  name: "app-toolbar",
   components: {
     AnchorRouterLink
   },

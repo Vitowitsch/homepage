@@ -1,14 +1,12 @@
 <template>
-  <center>
+  <div>
     <project-headline>
       botsandbytes
       <template v-slot:header>about</template>
     </project-headline>
-    <v-layout class="text-xs-left" wrap pl-4 pr-4>
-      <v-flex class="xs12 md5" pb-5 pt-5>
-        <v-img :src="require('@/assets/pics/intro.jpg')" contain aspect-ratio="1.0"></v-img>
-      </v-flex>
-      <v-flex xs12 md6>
+    <v-container>
+      <v-row>
+        <v-col cols="12" md="6">
           <div style="color:teal;margin-top:55px;">:~$ git config --list</div>
           <hr />user.name= Veit Wehner
           <hr />user.DOB= 2 October 1978
@@ -18,11 +16,8 @@
           <hr />
           <p></p>
           <br />
-          <br />
-          <br />
 
           <br />
-
           <br />Welcome!
           My name is Veit Wehner.
           <br />
@@ -35,9 +30,14 @@
           <br />In addition, I am looking for interesting side projects.
           <router-link to="/blog" class="routerlink">About some of them you can read in my blog</router-link>.
           <br />
-      </v-flex>
-    </v-layout>
-  </center>
+        </v-col>
+        <v-col cols="0" md="1"></v-col>
+        <v-col cols="12" md="5" align-self="center">
+          <v-img :src="require('@/assets/pics/intro.jpg')" contain aspect-ratio="1.0"></v-img>
+        </v-col>
+      </v-row>
+    </v-container>
+  </div>
 </template>
 <script>
 export default {
