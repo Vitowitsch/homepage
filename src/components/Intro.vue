@@ -6,7 +6,7 @@
     </project-headline>
     <v-container>
       <v-row>
-        <v-col cols="12" md="6">
+        <v-col cols="12" sm="6">
           <div style="color:teal;margin-top:55px;">:~$ git config --list</div>
           <hr />user.name= Veit Wehner
           <hr />user.DOB= 2 October 1978
@@ -31,8 +31,8 @@
           <router-link to="/blog" class="routerlink">About some of them you can read in my blog</router-link>.
           <br />
         </v-col>
-        <v-col cols="0" md="1"></v-col>
-        <v-col cols="12" md="5" align-self="center">
+        <v-col cols="0" sm="1"></v-col>
+        <v-col cols="12" sm="5" align-self="center">
           <v-img :src="require('@/assets/pics/intro.jpg')" contain aspect-ratio="1.0"></v-img>
         </v-col>
       </v-row>

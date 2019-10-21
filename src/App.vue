@@ -41,8 +41,12 @@ export default {
       switch (this.$vuetify.breakpoint.name) {
         case "xs":
           return "0";
+        case "sm":
+          return "10";
+        case "md":
+          return "20";
         default:
-          return "60";
+          return "30";
       }
     }
   },
