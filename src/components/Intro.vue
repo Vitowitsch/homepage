@@ -33,7 +33,7 @@
         </v-col>
         <v-col cols="0" sm="1"></v-col>
         <v-col cols="12" sm="5" align-self="center">
-          <v-img :src="require('@/assets/pics/intro.jpg')" contain aspect-ratio="1.0"></v-img>
+          <v-img :src="require('@/assets/pics/me.jpg')" contain aspect-ratio="1.0"></v-img>
         </v-col>
       </v-row>
     </v-container>
