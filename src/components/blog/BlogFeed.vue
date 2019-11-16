@@ -9,10 +9,10 @@
                 class="preview__title"
                 :to="`/read/${post.id}`"
                 @click.native="scrollTo(0, 220, scrollDelay)"
-              >{{ post.title }}</router-link>
+              ></router-link>
 
               <div class="preview__meta">
-                <time class="preview__published">{{ prettyDate(post.published) }} by Veit Wehner (click-to-read)</time>
+                <time class="preview__published">{{ prettyDate(post.published) }} by Veit Wehner <font color="blue">(click-to-read)</font></time>
               </div>
             </figcaption>
           </transition>

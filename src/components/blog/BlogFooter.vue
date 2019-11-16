@@ -1,6 +1,6 @@
 <template>
   <v-btn icon small @click="navBack">
-    <v-icon dark>mdi-arrow-left</v-icon>
+    <v-icon color="blue">mdi-arrow-left</v-icon>
   </v-btn>
 </template>
 

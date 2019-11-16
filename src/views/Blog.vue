@@ -34,21 +34,13 @@ export default {
     },
     filters() {
       let filters = {};
-      if (this.post) filters.post = this.post;
-      if (this.author) filters.author = this.author;
+      if (this.post !="blog"){
+        if (this.post) filters.post = this.post;
+        if (this.author) filters.author = this.author;
+      }
       return filters;
     }
   },
-  watch: {
-    "$route.name"(to, from) {
-      if (to !== from) this.navs++;
-    }
-  },
-  mounted() {
-    this.$getResource("blog").then(x => {
-      // use pace hook to know when rendering is ready
-    });
-  }
 };
 </script>
 <style lang="scss" scoped>

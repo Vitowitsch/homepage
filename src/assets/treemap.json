@@ -20,23 +20,7 @@
     },
     "Elastic Beanstalk": {},
     "CloudWatch": {},
-    "IAM": {},
-    "ECS": {},
-    "ECS": {},
-    "EC2": {},
-    "Aurora": {},
-    "RDS": {},
-    "EC2": {},
-    "ECS": {},
-    "ECS": {},
-    "ECS": {},
-    "ECS": {},
-    "ECS": {},
-    "ECS": {},
-    "ECS": {},
-    "ECS": {},
-    "ECS": {},
-    "ECS": {}
+    "IAM": {}
   },
   "Databases": {
     "SQL": {
@@ -56,7 +40,6 @@
     },
     "Datalakes": {
       "Presto": {},
-      "DynamoDB": {},
       "HBase": {},
       "Hive": {},
       "Hadoop": {}
