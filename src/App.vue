@@ -1,8 +1,7 @@
 <template>
-  <v-app id="app">
-    <v-app-bar
+  <v-app id="app" px-4>
+    <v-app-bar style="border: 1px solid black;"
       app bottom=true
-      src="@/assets/pics/background.jpg"
       :dense="$vuetify.breakpoint.xsOnly"
       :hide-on-scroll="$vuetify.breakpoint.xsOnly"
       :height="height"
@@ -10,10 +9,11 @@
       <template v-slot:extension>
         <v-tabs grow background-color="transparent">
           <v-tab to="/">
-            <v-icon x-large color="white">home</v-icon>
+            <v-icon x-large>home</v-icon>
           </v-tab>
+          <hr>
           <v-tab to="blog">
-            <v-icon x-large color="white">mdi-blogger</v-icon>
+            <v-icon x-large>mdi-blogger</v-icon>
           </v-tab>
         </v-tabs>
       </template>
@@ -23,6 +23,7 @@
       <router-view></router-view>
     </v-content>
   </v-app>
+  
 </template>
 
 <script>
