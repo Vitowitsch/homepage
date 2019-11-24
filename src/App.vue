@@ -2,12 +2,11 @@
   <v-app id="app" px-4>
     <v-app-bar style="border: 1px solid black;"
       app bottom=true
-      :dense="$vuetify.breakpoint.xsOnly"
-      :hide-on-scroll="$vuetify.breakpoint.xsOnly"
+      dense="$vuetify.breakpoint.xsOnly"
       :height="height"
     >
       <template v-slot:extension>
-        <v-tabs background-color="transparent">
+        <v-tabs grow background-color="transparent">
           <v-tab to="/">
             <v-icon x-large>home</v-icon>
           </v-tab>
