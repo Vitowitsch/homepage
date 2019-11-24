@@ -7,7 +7,7 @@
       :height="height"
     >
       <template v-slot:extension>
-        <v-tabs grow background-color="transparent">
+        <v-tabs background-color="transparent">
           <v-tab to="/">
             <v-icon x-large>home</v-icon>
           </v-tab>
