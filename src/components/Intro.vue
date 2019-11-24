@@ -7,7 +7,7 @@
     <v-container>
       <v-row>
         <v-col cols="12" sm="6">
-          <div style="color:teal;margin-top:55px;">:~$ git config --list</div>
+          <div style="color:teal;">:~$ git config --list</div>
           <hr />user.name= Veit Wehner
           <hr />user.DOB= 2 October 1978
           <hr />user.made.in= Germany

@@ -1,7 +1,7 @@
 <template>
   <v-app id="app">
     <v-app-bar
-      app
+      app bottom=true
       src="@/assets/pics/background.jpg"
       :dense="$vuetify.breakpoint.xsOnly"
       :hide-on-scroll="$vuetify.breakpoint.xsOnly"
@@ -40,13 +40,9 @@ export default {
     height() {
       switch (this.$vuetify.breakpoint.name) {
         case "xs":
-          return "0";
-        case "sm":
           return "10";
-        case "md":
-          return "20";
         default:
-          return "30";
+          return "10";
       }
     }
   },
