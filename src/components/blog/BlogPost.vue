@@ -4,6 +4,7 @@
     <CityToll :post="post" />
     <Cognac :post="post" />
     <RailRadar :post="post" />
+    <Consensus :post="post" />
   </div>
 </template>
 
@@ -13,10 +14,11 @@ import RailRadar from "./RailRadar";
 import CityToll from "./CityToll";
 import Cognac from "./Cognac";
 import Carbon from "./Carbon";
+import Consensus from "./Consensus";
 export default {
   name: "blog-post",
   resource: "BlogPost",
-  components: { VueDisqus, RailRadar, CityToll, Carbon, Cognac },
+  components: { VueDisqus, RailRadar, CityToll, Carbon, Cognac, Consensus },
   props: { post: String },
   data() {
     return {

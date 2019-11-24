@@ -14,14 +14,12 @@
     <section class="post__body rte">
       <blockquote class="post__subtitle">
         <center>
-          <div class="title">A suite of Machine Learning models for aiding air traffic controllers.</div>
+          <div class="title">“Alexa! Is the gangway free?” <br>“Sorry I am having trouble understanding you right now”.</div>
         </center>
       </blockquote>
       <p></p>
       <AtcStream />
-    “Alexa! Is the gangway free?”
--“Sorry I am having trouble understanding you right now”.
- <p></p>
+    
 Speech Recognition often fails to understand what was said - especially in a noisy environment. Therefore, there are many business cases not yet working.
  <p></p>
 At this year's Industry@AI, organized by the Siemens AI@Lab in Munich and Mindsphere© , we implemented a suite of Machine Learning models for a very noisy environment: Air-to-Ground communication (ATC) for planes.
@@ -38,7 +36,7 @@ Our solution was awarded with the prize for „Technical Excellence“. Further 
  <p></p>
 For a fully functional system it might take a few more years of development and training. Within the few days many teams created useful prototypes. After the event, I was a bit exhausted but also pleased with what we had learned and achieved.
  <p></p>
-Thanks for making this possible to my team, Siemens AI-Lab and Siemens Mindsphere©.
+Thanks for making this possible to my team and the Siemens AI-Lab.
 
  <p />
   <iframe width="100%" height="315" src="https://www.youtube.com/embed/iZQyoFR9wWI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

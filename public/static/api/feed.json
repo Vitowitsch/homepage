@@ -24,10 +24,18 @@
 
     {
       "title": "ATC",
-      "image": "https://sanvito-blog.s3.eu-central-1.amazonaws.com/atc/atc.png",
-      "published": "2018-09-14T18:17:00Z",
+      "image": "https://sanvito-blog.s3.eu-central-1.amazonaws.com/atc/atc2.png",
+      "published": "2018-09-14T18:17:01Z",
       "author": "Veit Wehner",
       "id": "atc"
+    },
+
+    {
+      "title": "Consensus",
+      "image": "https://sanvito-blog.s3.eu-central-1.amazonaws.com/consensus/consensus.png",
+      "published": "2019-11-24T18:17:01Z",
+      "author": "Veit Wehner",
+      "id": "consensus"
     }
   ]
 }
