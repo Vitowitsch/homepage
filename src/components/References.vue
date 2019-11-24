@@ -77,9 +77,9 @@ export default {
         text:
           "''I had very positive experience with Veit Wehner. \
           The software he developed greatly exceeded my expectations. \
-          He showed high amount of self-organization. \
-          We value him for his broad experience as a software architect and his remarkable efficiency. \
-          We were really lucky to get him. He is the kind of employee you could wish for.''",
+          We value him for his broad experience as a software architect, \
+          high amount of self-organization, and remarkable efficiency. \
+          He is the kind of employee you could wish for. We were really lucky to get him.''",
         who: "Alexander Eck-Zimmer",
         position: "Head of Software Development, Siemens Graz",
         color: "indigo",
