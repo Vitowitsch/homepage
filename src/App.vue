@@ -1,22 +1,25 @@
 <template>
+
   <v-app id="app" px-4>
-    <v-app-bar style="border: 1px solid black;"
-      app bottom=true
-      dense="$vuetify.breakpoint.xsOnly"
-      :height="height"
-    >
-      <template v-slot:extension>
-        <v-tabs grow background-color="transparent">
-          <v-tab to="/">
-            <v-icon x-large>home</v-icon>
-          </v-tab>
-          <hr>
-          <v-tab to="blog">
-            <v-icon x-large>mdi-blogger</v-icon>
-          </v-tab>
-        </v-tabs>
-      </template>
-    </v-app-bar>
+<v-bottom-navigation grow horizontal  app 
+background-color="teal lighten-2"
+  >
+      <v-btn to="/">
+      <span>Home</span>
+     <v-icon x-large>home</v-icon>
+    </v-btn>
+
+    <v-btn to="blog">
+      <span>Blog</span>
+       <v-icon x-large>mdi-blogger</v-icon>
+    </v-btn>
+
+    </v-bottom-navigation>
+     <!-- <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon> -->
+    <!-- <v-app-bar style="border: 1px solid black;"
+      app bottom=true>
+     
+    </v-app-bar> -->
 
     <v-content>
       <router-view></router-view>

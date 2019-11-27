@@ -4,7 +4,7 @@ var MockAdapter = require("axios-mock-adapter");
 let mock = new MockAdapter(mock_axios);
 
 mock
-  .onGet("/healthsummary")
+  .onGet("/bogiediagnosis/healthsummary")
   .reply(200, [
     { green: 584, yellow: 0, red: 0, group: "AirSpringSystem" },
     { green: 293, yellow: 0, red: 0, group: "AntiRollSystem" },

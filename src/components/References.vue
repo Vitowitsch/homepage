@@ -43,7 +43,7 @@
 <script>
 export default {
   data: () => ({
-    cycle: true,
+    cycle: false,
     refs: [
       {
         text:
