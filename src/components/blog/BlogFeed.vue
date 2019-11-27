@@ -8,7 +8,6 @@
               <router-link
                 class="preview__title"
                 :to="`/read/${post.id}`"
-                @click.native="scrollTo(0, 220, scrollDelay)"
               ></router-link>
 
               <div class="preview__meta">

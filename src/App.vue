@@ -1,37 +1,48 @@
 <template>
-
   <v-app id="app" px-4>
-<v-bottom-navigation grow horizontal  app 
-background-color="teal lighten-2"
-  >
-      <v-btn to="/">
-      <span>Home</span>
-     <v-icon x-large>home</v-icon>
-    </v-btn>
+    <v-app-bar style="border: 1px solid black;" app dense>
+      <!-- <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon> -->
+      <v-tabs grow background-color="transparent" color="red accent-3">
+        <v-tab to="/">
+          <v-icon x-large>home</v-icon>
+        </v-tab>
+        <v-tab to="blog">
+          <v-icon x-large>mdi-blogger</v-icon>
+        </v-tab>
+      </v-tabs>
+    </v-app-bar>
 
-    <v-btn to="blog">
-      <span>Blog</span>
-       <v-icon x-large>mdi-blogger</v-icon>
-    </v-btn>
+    <!-- <v-navigation-drawer v-model="drawer" app width="100">
+      <v-list nav dense>
+        <v-list-item-group v-model="group" active-class="deep-purple--text text--accent-4">
+          <v-list-item>
+            <v-list-item-title to="{hash: #cv}">CV</v-list-item-title>
+          </v-list-item>
 
-    </v-bottom-navigation>
-     <!-- <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon> -->
-    <!-- <v-app-bar style="border: 1px solid black;"
-      app bottom=true>
-     
-    </v-app-bar> -->
+          <v-list-item>
+            <v-list-item-title>Bar</v-list-item-title>
+          </v-list-item>
+
+          <v-list-item>
+            <v-list-item-title>Fizz</v-list-item-title>
+          </v-list-item>
+
+          <v-list-item>
+            <v-list-item-title>Buzz</v-list-item-title>
+          </v-list-item>
+        </v-list-item-group>
+      </v-list>
+    </v-navigation-drawer> -->
 
     <v-content>
       <router-view></router-view>
     </v-content>
   </v-app>
-  
 </template>
 
 <script>
 import AppEvents from "./event.js";
 import Vue from "vue";
-
 export default {
   created() {
     AppEvents.forEach(item => {
@@ -49,21 +60,16 @@ export default {
       }
     }
   },
+  watch: {
+    group() {
+      this.drawer = false;
+    }
+  },
   data() {
     return {
+      drawer: false,
+      group: null,
       tab: null,
-      scrollOptions: {
-        container: "body",
-        duration: 700,
-        easing: "ease",
-        offset: 0,
-        cancelable: true,
-        onStart: false,
-        onDone: false,
-        onCancel: false,
-        x: false,
-        y: true
-      },
       items: [
         {
           title: "Home",
