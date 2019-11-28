@@ -2,10 +2,6 @@
   <article v-if="allReady" class="post">
     <header class="post__header">
       <h2 class="post__title">{{ title }}</h2>
-      <h3 class="post__meta">
-        <span class="post__sep"></span>
-        <time>{{ prettyDate(published) }}</time>
-      </h3>
       <project-headline id="carbon" theme="secondary">
         <template v-slot:header>My Project</template>
         Forget Bitcoin - Blockchain can help reduce CO₂-emissions

@@ -14,13 +14,14 @@
       </center>
     </p>
 </template>
+
 <style scoped>
 .headline {
   position: relative;
   display: inline-block;
   border: 1px solid #252525;
   margin-bottom: 20px;
-  margin-top: 70px;
+  margin-top: 40px;
   color: #252525;
   font: 12px "PT Sans", sans-serif;
   line-height: 20px;

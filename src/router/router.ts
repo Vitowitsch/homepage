@@ -55,7 +55,7 @@ var scrollBehavior = function(to, from, savedPosition) {
 
 
 const router = new Router({
-  mode: "history",
+  mode: "hash",
   scrollBehavior: scrollBehavior,
   linkActiveClass: "active",
   routes: [

@@ -3,15 +3,10 @@
   min-height: 100vh;
   max-width: 90rem;
   margin: 0 auto;
-  padding-top: 6.25rem;
   overflow-x: hidden;
 
-  @media (--tablet) {
-    padding: 7.5rem 0;
-  }
-
   @media (--desktop) {
-    padding: 7.5rem 2.5rem 6.5vw;
+    padding: 1rem 2.5rem 6.5vw;
 
     &--reading {
       padding-bottom: 0;
@@ -19,7 +14,7 @@
   }
 
   @media (--monitor) {
-    padding: 7.5rem 0 6.5vw;
+    padding: .5rem 0 6.5vw;
 
     &--reading {
       padding-bottom: 0;
