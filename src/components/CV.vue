@@ -4,12 +4,12 @@
       <template v-slot:header>CV</template>
       Curriculum Vitae
     </project-headline>
-    <v-container>
+    <v-container align-content-start style="padding-left:0px;margin-left:px;">
       <!-- <v-row xs12 md10> -->
-        <v-timeline :dense="$vuetify.breakpoint.xsOnly">
+        <v-timeline :dense="$vuetify.breakpoint.xsOnly" >
           <v-timeline-item v-for="(item, i) in items" :key="i" color="blue-grey" small>
-            <span :class="`headline font-weight-bold black--text`" v-text="item.year"></span>
-            <h2 :class="`headline font-weight-light mb-3 teal--text`">{{item.title}}</h2>
+            <span :class="myYearStyle" v-text="item.year"></span>
+            <h2 :class="myTitleStyle">{{item.title}}</h2>
             <div>{{item.text}}</div>
           </v-timeline-item>
         </v-timeline>
@@ -21,6 +21,26 @@
 <script>
 const COLORS = ["#ced3db"];
 export default {
+  computed: {
+    myYearStyle() {
+      console.log("font size: " + this.$vuetify.breakpoint.name);
+      switch (this.$vuetify.breakpoint.name) {
+        case 'xs':
+          return 'subtitle-1 font-weight-bold black--text';
+        default:
+          return 'headline font-weight-bold black--text';
+      }
+    },
+     myTitleStyle() {
+      console.log("font size: " + this.$vuetify.breakpoint.name);
+      switch (this.$vuetify.breakpoint.name) {
+        case 'xs':
+          return 'subtitle-1 font-weight-light mb-3 teal--text';
+        default:
+          return 'headline font-weight-light mb-3 teal--text';
+      }
+    }
+  },
   data: () => ({
     items: [
       {
@@ -85,3 +105,4 @@ export default {
   })
 };
 </script>
+

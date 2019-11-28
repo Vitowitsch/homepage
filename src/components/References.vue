@@ -7,7 +7,7 @@
 
     <v-container>
       <v-card elevation="24" class="mx-auto">
-        <v-carousel show-arrows-on-hover=true :show-arrows="false" :cycle="cycle" height="auto" progress-color="teal lighten-2">
+        <v-carousel :show-arrows="false" :cycle="cycle" height="auto" progress-color="teal lighten-2">
           <v-carousel-item v-for="r in refs" :key="r.text">
             <v-sheet style="padding-top:10px;" height="100%" color="white">
               <div class="text-center">
