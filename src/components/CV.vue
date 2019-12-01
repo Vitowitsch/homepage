@@ -4,7 +4,7 @@
       <template v-slot:header>CV</template>
       Curriculum Vitae
     </project-headline>
-    <v-container align-content-start style="padding-left:0px;margin-left:px;">
+    <v-container style="padding-left:0px;margin-left:px;">
       <!-- <v-row xs12 md10> -->
         <v-timeline :dense="$vuetify.breakpoint.xsOnly" >
           <v-timeline-item v-for="(item, i) in items" :key="i" color="blue-grey" small>
