@@ -45,9 +45,7 @@ Imagine Walter White and Jesse disputing whether the cocaine or the crystal meth
 In their white paper and this <a href="https://medium.com/a-qube/introducing-qps-a-consensus-model-for-real-world-collaborative-networks-b7ba0467d60c">article</a> a-Qube describes a new voting mechanism to solve this class of problems. The voting is implemented on a distributed ledger, which can be a blockchain or a non-linear structure like a Hashgraph.
 <p></p>
 The idea of fair collaboration is fascinating for the open source community. Especially if you do not know if a project will later be profitable, it offers an option for all contributors to participate in potential earnings.
-<p></p>
-If you liked the article and want to read more, please visit me on https://www.botsandbytes.de/#/blog.
-   </section>
+</section>
   </article>
 </template>
 
