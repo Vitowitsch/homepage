@@ -1,12 +1,14 @@
 <template>
   <v-app id="app" px-4>
-    <v-app-bar style="border: 1px solid black;" app dense>
+    <v-app-bar style="border: 1px solid black;" app prominent>
       <!-- <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon> -->
-      <v-tabs grow background-color="transparent" color="teal">
+      <v-tabs grow background-color="transparent" color="teal" icons-and-text>
         <v-tab to="/">
+        home
           <v-icon x-large>home</v-icon>
         </v-tab>
         <v-tab to="blog">
+          blog
           <v-icon x-large>mdi-blogger</v-icon>
         </v-tab>
       </v-tabs>
