@@ -9,7 +9,7 @@
       <v-card elevation="24" class="mx-auto">
         <v-carousel :show-arrows="false" :cycle="cycle" height="auto" progress-color="teal lighten-2">
           <v-carousel-item v-for="r in refs" :key="r.text">
-            <v-sheet style="padding-top:10px;" height="100%" color="white">
+            <v-sheet style="padding-top:10px;" height="100%" color="grey lighten-4">
               <div class="text-center">
                 <div class="black--text font-italic">
                   <i>{{r.text}}</i>

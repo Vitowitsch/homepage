@@ -1,6 +1,6 @@
 <template>
   <div fluid id="main">
-    <v-btn @click="start(0)" dark depressed>Start Streaming</v-btn>
+    <v-btn @click="start(0)" color="teal" dark depressed>Start Streaming</v-btn>
 
     <div v-for="(data, index) in myTransscript" v-bind:key="index">
       <v-layout column>
