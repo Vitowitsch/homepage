@@ -4,7 +4,7 @@
       <h2 class="post__title">{{ title }}</h2>
       <project-headline id="carbon" theme="secondary">
         <template v-slot:header>My Project</template>
-        Eploring Blockchain Consensus Strategies
+        Exploring Blockchain Consensus Strategies
       </project-headline>
     </header>
     <section class="post__body rte">
@@ -21,7 +21,7 @@ But DLT is not undisputed. Others criticize it as an unnecessary technology whic
 To me, the idea seems fascinating because it promises decentralized systems where today we have central institutions as a middle man.
 <p></p>
 But let’s first start with the basics:<br>
-First and foremost, a distributed ledger is a data structure. It consists of consecutive blocks. These blocks usually contain the information how crypto tokens were transferred from one person to another. This is called a transaction. The blockchain stores all transactions permanently and tamper-proof. That way anybody can backtrace the balance of everybody’s wallet.
+First and foremost, a distributed ledger is a data structure. It consists of consecutive blocks. These blocks usually contain the information how crypto tokens were transferred from one person to another. This is calledcalled a transaction. The blockchain stores all transactions permanently and tamper-proof. That way anybody can backtrace the balance of everybody’s wallet.
 <p></p>
 To give you an example: Imagine Walter White from Breaking Bad transferring 10 Bitcoins to his lawyer Saul Goodman. To do this, he signs a transaction with the private key of his crypto-wallet. Now we need to make sure that Walter is not double spending: As there is no bank to assure that he has not spent all his funds on chemotherapy, the blockchain takes over. If somebody adds transactions, other participants - called Validators - must agree and confirm the validity of each transaction. This is called Consensus. If the validators do not agree, the consensus cannot be reached and the transaction won’t be added to the ledger.
 <p></p>
@@ -35,7 +35,7 @@ The deposit in a POS-system doesn’t need to be money, but it can be anything o
 <p></p>
 The POS consensus is not perfect yet. The system still needs to prove itself in respect to security. In terms of transaction speed and energy consumption they are already superior to POW. 
 <p></p>
-I find those novel consensus strategies very interesting. During my parental leave I contributed to a startup called a-Qube. They designed a non-monetary stake for collaborative work, with game theory and predictive guesses. 
+I find those novel consensus strategies very interesting. During my parental leave I contributed to a startup named a-Qube. They designed a non-monetary stake for collaborative work, with game theory and predictive guesses. 
 <p></p>
 Walter, Jesse and Saul could use this system to rate the value of their individual contributions to distribute potential profits accordingly. Consensus strategy and game theory guarantee a fair evaluation: If someone votes his colleagues down to raise his own profits, he will be punished. His engagement rate - the non-monetary stake he brought in - is diminished. 
 <p></p>
