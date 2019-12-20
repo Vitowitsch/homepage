@@ -1,7 +1,7 @@
 <template>
   <v-app id="app" px-4>
     <v-app-bar style="border: 1px solid black;" app>
-      <!-- <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon> -->
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
       <v-tabs grow background-color="transparent" color="teal">
         <v-tab to="/">
           <v-icon x-large>home</v-icon>
@@ -14,11 +14,11 @@
       </v-tabs>
     </v-app-bar>
 
-    <!-- <v-navigation-drawer v-model="drawer" app width="100">
+    <v-navigation-drawer v-model="drawer" app width="100">
       <v-list nav dense>
         <v-list-item-group v-model="group" active-class="deep-purple--text text--accent-4">
           <v-list-item>
-            <v-list-item-title to="{hash: #cv}">CV</v-list-item-title>
+            <v-list-item-title   :to="{path: goto}">CV</v-list-item-title>
           </v-list-item>
 
           <v-list-item>
@@ -34,7 +34,7 @@
           </v-list-item>
         </v-list-item-group>
       </v-list>
-    </v-navigation-drawer> -->
+    </v-navigation-drawer>
 
     <v-content>
       <router-view></router-view>
@@ -69,6 +69,7 @@ export default {
   },
   data() {
     return {
+      goto: "/home#cv",
       drawer: false,
       group: null,
       tab: null,

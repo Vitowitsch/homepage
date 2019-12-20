@@ -7,25 +7,28 @@ import Home from "@/views/Home.vue";
 Vue.use(Router);
 
 var scrollBehavior = function(to, from, savedPosition) {
-  console.log("entering scrollbehior");
   if (savedPosition) {
     // savedPosition is only available for popstate navigations.
-    console.log("to saved position");
     return savedPosition;
   } else {
     const position = {};
 
     // scroll to anchor by returning the selector
     if (to.hash) {
-      console.log("to hash" + to.hash);
       (position as any).selector = to.hash;
 
       // specify offset of the element
-      
+      if (to.hash === "#anchor2") {
+        (position as any).offset = { y: 100 };
+      }
+
       if (document.querySelector(to.hash)) {
-        console.log("jump to anchor..");
-        (position as any).selector = to.hash
-        return position;
+        return {
+          selector: <any>window.scrollTo({
+            top: document.querySelector(to.hash).offsetTop,
+            behavior: "smooth"
+          })
+        };
         // return position
       }
 
@@ -55,7 +58,7 @@ var scrollBehavior = function(to, from, savedPosition) {
 
 
 const router = new Router({
-  mode: "hash",
+  // mode: "hash",
   scrollBehavior: scrollBehavior,
   linkActiveClass: "active",
   routes: [

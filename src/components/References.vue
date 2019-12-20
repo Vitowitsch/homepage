@@ -64,7 +64,7 @@ export default {
       {
         text:
           "''I had very positive experience with Veit Wehner. \
-          The software he developed greatly exceeded my expectations. \
+          The software he developed with much dedication greatly exceeded my expectations. \
           We value him for his broad experience as a software architect, \
           high amount of self-organization, and remarkable efficiency. \
           He is the kind of employee you could wish for. We were really lucky to get him.''",
