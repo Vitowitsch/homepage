@@ -1,8 +1,6 @@
 <template>
-  <v-container fluid>
-    <!-- <Bar3D></Bar3D> -->
+  <v-container fluid id="start">
     <Intro style="border: 1px solid black;" />
-    <div id="start"></div>
     <SkillTree style="border: 1px solid black;" />
     <References style="border: 1px solid black;" />
     <Certs style="border: 1px solid black;" />

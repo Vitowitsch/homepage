@@ -1,37 +1,25 @@
 <template>
-  <v-app id="app" px-4>
+  <v-app px-4>
     <v-app-bar style="border: 1px solid black;" app>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
       <v-tabs grow background-color="transparent" color="teal">
         <v-tab to="/">
-          <v-icon x-large>home</v-icon>
-          home
+          <v-icon x-large>home</v-icon>home
         </v-tab>
         <v-tab to="blog">
-          <v-icon x-large>mdi-blogger</v-icon>
-           blog
+          <v-icon x-large>mdi-blogger</v-icon>blog
         </v-tab>
       </v-tabs>
     </v-app-bar>
 
-    <v-navigation-drawer v-model="drawer" app width="100">
+    <v-navigation-drawer v-model="drawer" app width="120">
       <v-list nav dense>
         <v-list-item-group v-model="group" active-class="deep-purple--text text--accent-4">
-          <v-list-item>
-            <v-list-item-title   :to="{path: goto}">CV</v-list-item-title>
-          </v-list-item>
-
-          <v-list-item>
-            <v-list-item-title>Bar</v-list-item-title>
-          </v-list-item>
-
-          <v-list-item>
-            <v-list-item-title>Fizz</v-list-item-title>
-          </v-list-item>
-
-          <v-list-item>
-            <v-list-item-title>Buzz</v-list-item-title>
-          </v-list-item>
+          <v-list-item
+            v-for="item in items"
+            :key="item.hash"
+            :to="{ name: item.name, hash: item.hash }"
+          >{{item.text}}</v-list-item>
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
@@ -75,34 +63,40 @@ export default {
       tab: null,
       items: [
         {
-          title: "Home",
-          target: "/",
+          name: "home",
+          text: "HOME",
+          hash: "#start",
           icon: "dashboard"
         },
         {
-          title: "CV",
-          target: "/#cv",
+          name: "home",
+          text: "CV",
+          hash: "#cv",
           icon: "person_outline"
         },
         {
-          title: "Skills",
-          target: "/home#skills",
+          name: "home",
+          hash: "#skills",
+          text: "SKILLS",
           icon: "center_focus_strong"
         },
         {
-          title: "Badges",
-          target: "/home#badges",
+          name: "home",
+          hash: "#badges",
+          text: "BADGES",
           icon: "monetization_on"
         },
         {
-          title: "References",
-          target: "/home#references",
+          text: "REFERENCES",
+          hash: "#references",
+          name: "home",
           icon: "grade"
         },
         {
-          title: "Blog",
-          target: "blog",
-          icon: "favorite_border"
+          text: "BLOG",
+          hash: "",
+          name: "feed",
+          icon: "mdi-blogger"
         }
       ]
     };
