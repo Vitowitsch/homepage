@@ -1,18 +1,10 @@
 <template>
   <v-app px-4>
-    <v-app-bar style="border: 1px solid black;" app>
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-      <v-tabs grow background-color="transparent" color="teal">
-        <v-tab to="/">
-          <v-icon x-large>home</v-icon>home
-        </v-tab>
-        <v-tab to="blog">
-          <v-icon x-large>mdi-blogger</v-icon>blog
-        </v-tab>
-      </v-tabs>
+    <v-app-bar app collapse>
+      <v-app-bar-nav-icon color="teal" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
     </v-app-bar>
 
-    <v-navigation-drawer v-model="drawer" app width="120">
+    <v-navigation-drawer v-model="drawer" app width="160">
       <v-list nav dense>
         <v-list-item-group v-model="group" active-class="deep-purple--text text--accent-4">
           <v-list-item
@@ -48,6 +40,14 @@ export default {
         default:
           return "10";
       }
+    },
+    drawerWidth() {
+      switch (this.$vuetify.breakpoint.name) {
+        case "xs":
+          return 220;
+        default:
+          return 300;
+      }
     }
   },
   watch: {
@@ -58,7 +58,7 @@ export default {
   data() {
     return {
       goto: "/home#cv",
-      drawer: false,
+      drawer: null,
       group: null,
       tab: null,
       items: [

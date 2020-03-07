@@ -14,10 +14,9 @@
           <hr />user.location= Gerstenbergstr. 8, Erlangen, Germany
           <hr />user.email= info@botsandbytes.de
           <hr />
-          <p></p>
-          <br />
 
           <br />
+
           <br />Welcome!
           My name is Veit Wehner.
           <br />

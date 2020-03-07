@@ -1,15 +1,22 @@
 <template>
   <v-container fluid id="start">
-    <Intro style="border: 1px solid black;" />
-    <SkillTree style="border: 1px solid black;" />
-    <References style="border: 1px solid black;" />
-    <Certs style="border: 1px solid black;" />
-    <CV style="border: 1px solid black;"/>
+    <Intro />
+    <hr />
+    <Blog />
+    <hr />
+    <CV />
+    <hr />
+    <References />
+    <hr />
+    <SkillTree />
+    <hr />
+    <Certs />
   </v-container>
 </template>
 
 <script>
 import Intro from "@/components/Intro";
+import Blog from "@/views/Blog.vue";
 //import Imagebar from "@/components/Imagebar";
 //import Bar3D from "@/components/Bar3D";
 export default {
@@ -19,9 +26,10 @@ export default {
     contact: () => import("@/components/Contact"),
     Certs: () => import("@/components/Certs"),
     SkillTree: () => import("@/components/SkillTree"),
-    Intro,
+    Blog,
+    Intro
     //Imagebar,
-  //  Bar3D
+    //  Bar3D
   }
 };
 </script>

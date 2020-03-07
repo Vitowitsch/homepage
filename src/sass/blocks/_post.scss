@@ -3,8 +3,12 @@
   background-color: cc(bg);
   transform: translate3d(0, 0, 0);
 
-  &-enter-active { transition: all 375ms cb(out) 225ms }
-  &-leave-active { transition: all 300ms cb(in) }
+  &-enter-active {
+    transition: all 375ms cb(out) 225ms;
+  }
+  &-leave-active {
+    transition: all 300ms cb(in);
+  }
 
   &-enter,
   &-leave-to {
@@ -13,16 +17,19 @@
   }
 
   @media (--laptop) {
-    position: fixed;
     top: 0;
     left: calc(100% / 3 + 3.25rem);
     width: calc(100% / 1.5 - 3.25rem);
     height: 100%;
     padding: 3rem 5rem 5rem 5rem;
-    overflow-y: scroll;
+    overflow-y: auto;
 
-    &-enter-active { transition: all 525ms cb(out) 225ms }
-    &-leave-active { transition: all 350ms cb(in) }
+    &-enter-active {
+      transition: all 525ms cb(out) 225ms;
+    }
+    &-leave-active {
+      transition: all 350ms cb(in);
+    }
 
     &-enter,
     &-leave-to {
@@ -66,7 +73,7 @@
     @media (--tablet) {
       display: block;
       color: cc(txt, alt);
-      margin-bottom: .75rem;
+      margin-bottom: 0.75rem;
       padding-left: 1.25rem;
     }
   }
@@ -93,14 +100,14 @@
 
   &__sep {
     display: block;
-    height: .625rem;
+    height: 0.625rem;
 
     @media (--laptop) {
       display: inline-block;
-      margin: 0 .5rem;
+      margin: 0 0.5rem;
 
       &::before {
-        content: '—';
+        content: "—";
       }
     }
   }

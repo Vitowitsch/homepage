@@ -7,7 +7,12 @@
 
     <v-container>
       <v-card elevation="24" class="mx-auto">
-        <v-carousel :show-arrows="false" :cycle="cycle" height="auto" progress-color="teal lighten-2">
+        <v-carousel
+          :show-arrows="false"
+          :cycle="cycle"
+          height="auto"
+          progress-color="teal lighten-2"
+        >
           <v-carousel-item v-for="r in refs" :key="r.text">
             <v-sheet style="padding-top:10px;" height="100%" color="grey lighten-4">
               <div class="text-center">
@@ -17,7 +22,7 @@
                 <hr />
                 <div
                   style="padding-bottom:50px;"
-                  class="black--text subtitle-1 font-weight-medium"
+                  class="teal--text subtitle-1 font-weight-medium"
                 >by {{r.who}} - {{r.position}}</div>
               </div>
             </v-sheet>

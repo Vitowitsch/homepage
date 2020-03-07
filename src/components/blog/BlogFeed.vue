@@ -5,13 +5,13 @@
         <figure class="preview__figure" :class="figureClass" :style="getBgImg(post.image)">
           <transition name="v--fade">
             <figcaption v-if="!reading || $device.phone" class="preview__details">
-              <router-link
-                class="preview__title"
-                :to="`/read/${post.id}`"
-              ></router-link>
+              <router-link class="preview__title" :to="`/read/${post.id}`"></router-link>
 
               <div class="preview__meta">
-                <time class="preview__published">{{ prettyDate(post.published) }} by Veit Wehner <font color="blue">(click-to-read)</font></time>
+                <time class="preview__published">
+                  {{ prettyDate(post.published) }} by Veit Wehner
+                  <font color="blue">(click-to-read)</font>
+                </time>
               </div>
             </figcaption>
           </transition>

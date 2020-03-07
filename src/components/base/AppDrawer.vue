@@ -1,11 +1,11 @@
 <template>
-  <div style="border-style: dotted dashed solid double;">
-    <v-navigation-drawer 
+  <div>
+    <v-navigation-drawer
       id="appDrawer"
       width="156"
       app
       bottom
-      dark 
+      dark
       v-model="drawer"
       class="accent darken-4"
     >
@@ -30,13 +30,15 @@
           >
             <!-- <v-list-tile-action v-if="item.icon">
               <v-icon>{{ item.icon }}</v-icon>
-            </v-list-tile-action> -->
+            </v-list-tile-action>-->
 
             <v-list-tile-content>
-              <v-list-tile-title style="font-family: 'Geostar Fill', cursive; padding: 1px" class="menu-item subheading">{{ item.title }}</v-list-tile-title>
+              <v-list-tile-title
+                style="font-family: 'Geostar Fill', cursive; padding: 1px"
+                class="menu-item subheading"
+              >{{ item.title }}</v-list-tile-title>
             </v-list-tile-content>
           </v-list-tile>
-          
         </template>
       </v-list>
     </v-navigation-drawer>
@@ -73,9 +75,19 @@ export default {
         icon: "dashboard"
       },
       {
+        title: "Blog",
+        target: "blog",
+        icon: "favorite_border"
+      },
+      {
         title: "CV",
         target: "/home#cv",
         icon: "person_outline"
+      },
+      {
+        title: "References",
+        target: "/home#references",
+        icon: "grade"
       },
       {
         title: "Skills",
@@ -86,18 +98,8 @@ export default {
         title: "Badges",
         target: "/home#badges",
         icon: "monetization_on"
-      },
-      {
-        title: "References",
-        target: "/home#references",
-        icon: "grade"
-      },
-      {
-        title: "Blog",
-        target: "blog",
-        icon: "favorite_border"
       }
-    ],
+    ]
   })
 };
 </script>

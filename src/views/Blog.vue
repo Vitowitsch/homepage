@@ -34,13 +34,13 @@ export default {
     },
     filters() {
       let filters = {};
-      if (this.post !="blog"){
+      if (this.post != "blog") {
         if (this.post) filters.post = this.post;
         if (this.author) filters.author = this.author;
       }
       return filters;
     }
-  },
+  }
 };
 </script>
 <style lang="scss" scoped>
