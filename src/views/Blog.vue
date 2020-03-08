@@ -10,11 +10,17 @@
       <v-row>
         <v-col v-for="item in props.items" :key="item.name" cols="12" sm="6" md="4" lg="3">
           <Teaser>
+            <template v-slot:title>
+              {{item.title}}
+            </template>
+              <template v-slot:subtitle>
+              {{item.subtitle}}
+            </template>
             <template v-slot:img>
               <v-img :src="item.img" height="194"></v-img>
             </template>
             <template v-slot:default>
-              <component v-bind:is="item.name" />
+              <component v-bind:is="item.component" />
             </template>
           </Teaser>
         </v-col>
@@ -50,26 +56,36 @@ export default {
       page: 1,
       items: [
         {
-          name: "Carbon",
+          component: "Carbon",
+          title: "Forget Bitcoin",
+          subtitle: "Blockchain can help reduce CO₂-emissions",
           img:
             "https://sanvito-blog.s3.eu-central-1.amazonaws.com/carbon/eisi.jpg"
         },
         {
-          name: "RailRadar",
+          component: "RailRadar",
+          title: "RailRadar",
+          subtitle: "Ein Siemens-Intrapreneurs Projekt",
           img:
             "https://sanvito-blog.s3.eu-central-1.amazonaws.com/railradar/train-station-accidant.png"
         },
         {
-          name: "CityToll",
+          component: "CityToll",
+          subtitle: "Pollution is in the air",
+          title: "CityTax",
           img:
             "https://sanvito-blog.s3.eu-central-1.amazonaws.com/citytoll/smog.jpg"
         },
         {
-          name: "Cognac",
+          component: "Cognac",
+          title: "Speech Recognition",
+          subtitle: "A suite of machine learning models helping air-traffic-controllers",
           img: "https://sanvito-blog.s3.eu-central-1.amazonaws.com/atc/atc2.png"
         },
         {
-          name: "Consensus",
+          component: "Consensus",
+          title: "POW, POS ... WTF",
+          subtitle: "Exploring Blockchain-Consensus-Strategies",
           img:
             "https://sanvito-blog.s3.eu-central-1.amazonaws.com/consensus/consensus_botsandbytes.png"
         }
