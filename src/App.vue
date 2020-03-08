@@ -23,13 +23,9 @@
 </template>
 
 <script>
-import AppEvents from "./event.js";
 import Vue from "vue";
 export default {
   created() {
-    AppEvents.forEach(item => {
-      this.$on(item.name, item.callback);
-    });
     window.getApp = this;
   },
   computed: {
@@ -52,7 +48,7 @@ export default {
   },
   watch: {
     group() {
-      this.drawer = false;
+      this.drawer = null;
     }
   },
   data() {
@@ -69,16 +65,23 @@ export default {
           icon: "dashboard"
         },
         {
+          text: "BLOG",
+          hash: "#blog",
+          name: "home",
+          icon: "mdi-blogger"
+        },
+        
+        {
           name: "home",
           text: "CV",
           hash: "#cv",
           icon: "person_outline"
         },
-        {
+{
+          text: "REFERENCES",
+          hash: "#references",
           name: "home",
-          hash: "#skills",
-          text: "SKILLS",
-          icon: "center_focus_strong"
+          icon: "grade"
         },
         {
           name: "home",
@@ -86,17 +89,13 @@ export default {
           text: "BADGES",
           icon: "monetization_on"
         },
+        
+
         {
-          text: "REFERENCES",
-          hash: "#references",
           name: "home",
-          icon: "grade"
-        },
-        {
-          text: "BLOG",
-          hash: "",
-          name: "feed",
-          icon: "mdi-blogger"
+          hash: "#skills",
+          text: "SKILLS",
+          icon: "center_focus_strong"
         }
       ]
     };

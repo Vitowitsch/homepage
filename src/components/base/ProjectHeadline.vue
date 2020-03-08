@@ -1,18 +1,18 @@
 <template>
-    <p>
-      <center>
-        <div class="headline">
-          <p>
-            <span>
-              <slot name="header"/>
-            </span>
-          </p>
-          <h1>
-            <slot></slot>
-          </h1>
-        </div>
-      </center>
-    </p>
+  <p>
+    <center>
+      <div class="headline">
+        <p>
+          <span>
+            <slot name="header" />
+          </span>
+        </p>
+        <h1>
+          <slot></slot>
+        </h1>
+      </div>
+    </center>
+  </p>
 </template>
 
 <style scoped>
@@ -21,8 +21,7 @@
   display: inline-block;
   border: 1px solid #252525;
   margin-bottom: 20px;
-  margin-top: 40px;
-  color: #252525;
+  margin-top: 10px;
   font: 12px "PT Sans", sans-serif;
   line-height: 20px;
   text-align: center;
@@ -51,7 +50,6 @@ h3,
 h4,
 h5,
 h6 {
-  color: #252525;
   font-family: "Oswald", sans-serif;
   font-weight: normal;
 }

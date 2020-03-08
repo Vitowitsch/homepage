@@ -27,18 +27,3 @@ export default {
   }
 };
 </script>
-<style scoped>
-@import url("https://fonts.googleapis.com/css?family=PT+Sans+Narrow");
-@import url("https://fonts.googleapis.com/css?family=Oswald");
-@import url("https://fonts.googleapis.com/css?family=PT+Sans:400,700");
-.base-text {
-  /* border-left: 1px solid #e1e1e1; */
-  font-family: "PT Sans", sans-serif;
-  font-weight: normal;
-  font-style: normal;
-  font-size: 16px;
-  line-height: 1.5;
-  color: black;
-  text-align: left;
-}
-</style>

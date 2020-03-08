@@ -1,42 +1,37 @@
 <template>
-  <div>
+  <v-container>
     <project-headline>
       botsandbytes
       <template v-slot:header>about</template>
     </project-headline>
-    <v-container>
-      <v-row>
-        <v-col cols="12" sm="6">
-          <div style="color:teal;">:~$ git config --list</div>
-          <hr />user.name= Veit Wehner
-          <hr />user.DOB= 2 October 1978
-          <hr />user.made.in= Germany
-          <hr />user.location= Gerstenbergstr. 8, Erlangen, Germany
-          <hr />user.email= info@botsandbytes.de
-          <hr />
-
-          <br />
-
-          <br />Welcome!
-          My name is Veit Wehner.
-          <br />
-          <br />If you are looking for an experienced software architect, I might be the right person for you.
-          I have a broad range of expert IT knowledge and demonstrated experiences with AI, Cloud, Big-Data, Blockchain, Embedded, Backend- and Frontend, Clean-Code, Agile and lots of other areas.
-          <br />
-          <br />With an M.Sc. in Computer Science and Mathematics and a lot of experience I have the understanding for complex requirements. Nonetheless, my motto is to keep it as simple as possible.
-          <br />
-          <br />At the moment I am working for Siemens in Europe, where I got excellent recommendations.
-          <br />In addition, I am looking for interesting side projects.
-          <router-link to="/blog" class="routerlink">About some of them you can read in my blog</router-link>.
-          <br />
-        </v-col>
-        <v-col cols="0" sm="1"></v-col>
-        <v-col cols="12" sm="5" align-self="center">
-          <v-img :src="require('@/assets/pics/intro.jpg')" contain aspect-ratio="1.0"></v-img>
-        </v-col>
-      </v-row>
-    </v-container>
-  </div>
+    <v-row>
+      <v-col cols="12" sm="6">
+        <div style="color:teal;">:~$ git config --list</div>
+        <hr />user.name= Veit Wehner
+        <hr />user.DOB= 2 October 1978
+        <hr />user.made.in= Germany
+        <hr />user.location= Gerstenbergstr. 8, Erlangen, Germany
+        <hr />user.email= info@botsandbytes.de
+        <hr />
+        <br />
+        <br />Welcome!
+        My name is Veit Wehner.
+        <br />
+        <br />If you are looking for an experienced software architect, I might be the right person for you.
+        I have a broad range of expert IT knowledge and demonstrated experiences with AI, Cloud, Big-Data, Blockchain, Embedded, Backend- and Frontend, Clean-Code, Agile and lots of other areas.
+        <br />
+        <br />With an M.Sc. in Computer Science and Mathematics and a lot of experience I have the understanding for complex requirements. Nonetheless, my motto is to keep it as simple as possible.
+        <br />
+        <br />At the moment I am working for Siemens in Europe, where I got excellent recommendations.
+        <br />In addition, I am looking for interesting side projects. About some of them you can read in my blog.
+        <br />
+      </v-col>
+      <v-spacer></v-spacer>
+      <v-col cols="12" sm="5">
+        <v-img :src="require('@/assets/pics/intro.jpg')" aspect-ratio="2.0" contain></v-img>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 <script>
 export default {

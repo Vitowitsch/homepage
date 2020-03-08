@@ -1,8 +1,8 @@
 import Vue from "vue";
 import { RouterOptions, RouteConfig } from "vue-router";
 import Router from "vue-router";
-import Blog from "@/views/Blog.vue";
 import Home from "@/views/Home.vue";
+import CityToll from "@/views/blog/CityToll.vue";
 
 Vue.use(Router);
 
@@ -56,7 +56,6 @@ var scrollBehavior = function(to, from, savedPosition) {
   }
 };
 
-
 const router = new Router({
   // mode: "hash",
   scrollBehavior: scrollBehavior,
@@ -64,14 +63,19 @@ const router = new Router({
   routes: [
     { path: "/", name: "home", component: Home },
     // { path: "/", name: "home", component: Home },
-    { path: "/blog", name: "feed", component: Blog },
-    { path: "/blog", name: "post", component: Blog, props: true },
+    //{ path: "/blog", name: "feed", component: Blog },
     {
-      path: "/read/:post",
-      name: "post",
-      props: true,
-      component: Blog
+      path: "/blog/citytoll",
+      name: "citytoll",
+      component: CityToll,
+      props: true
     }
+    // {
+    //   path: "/read/:post",
+    //   name: "post",
+    //   props: true,
+    //   component: Blog
+    // }
   ]
 });
 

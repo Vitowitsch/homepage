@@ -1,5 +1,5 @@
 <template>
-  <div id="badges">
+  <v-container id="badges">
     <project-headline>
       <template v-slot:header>Badges</template>
       Certificates
@@ -22,7 +22,7 @@
         </v-layout>
       </v-container>
     </v-layout>
-  </div>
+  </v-container>
 </template>
 
 <script>

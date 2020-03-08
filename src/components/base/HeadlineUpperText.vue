@@ -1,6 +1,6 @@
 <template>
   <h3 class="text-uppercase">
-    <slot/>
+    <slot />
   </h3>
 </template>
 <style scoped>
