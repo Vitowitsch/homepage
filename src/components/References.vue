@@ -9,6 +9,7 @@
         :items-per-page.sync="itemsPerPage"
         :page="page"
         hide-default-footer
+        content-class="layout row wrap"
       >
         <template v-slot:default="props">
           <v-row>

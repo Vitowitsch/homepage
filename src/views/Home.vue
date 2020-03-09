@@ -1,5 +1,6 @@
 <template>
   <v-container fluid id="start">
+    <Carousel></Carousel>
     <Intro />
     <hr />
     <Blog />
@@ -10,7 +11,7 @@
     <hr />
     <Certs />
     <hr />
-      <SkillTree />
+    <SkillTree />
   </v-container>
 </template>
 
@@ -20,6 +21,7 @@ import Blog from "@/views/Blog.vue";
 export default {
   components: {
     References: () => import("@/components/References"),
+    Carousel: () => import("@/components/Carousel"),
     CV: () => import("@/components/CV"),
     Certs: () => import("@/components/Certs"),
     SkillTree: () => import("@/components/SkillTree"),
