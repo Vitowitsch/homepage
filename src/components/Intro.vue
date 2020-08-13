@@ -10,7 +10,7 @@
         <hr />user.name= Veit Wehner
         <hr />user.DOB= 2 October 1978
         <hr />user.made.in= Germany
-        <hr />user.location= Gerstenbergstr. 8, Erlangen, Germany
+        <hr />user.location= Erlangen, Germany
         <hr />user.email= info@botsandbytes.de
         <hr />
         <br />
