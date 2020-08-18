@@ -43,7 +43,6 @@
 export default {
   data() {
     return {
-      filter: {},
       page: 1,
       items: [
         {
@@ -98,6 +97,13 @@ export default {
           who: "Avinash Kumar",
           position: "Data Scientist at Siemens",
           color: "indigo"
+        },
+         {
+          text:
+            "''Veit is curious, respectful with his teammates' opinions, and a pleasure to work with. During our brief collaboration, not only he proved to be knowledgeable and well organized, but also to be a proactive developer who enjoys to get hands on a product, solving problems and optimizing processes from day 1!''",
+          who: "Alessandro Perico",
+          position: "Blockchain / DLT Governance | Consensus Architect",
+          color: "indigo"
         }
       ]
     };
@@ -106,20 +112,12 @@ export default {
     numberOfPages() {
       return Math.ceil(this.items.length / this.itemsPerPage);
     },
-    // itemsPerPage() {
-    //   switch (this.$vuetify.breakpoint.name) {
-    //     case "xs":
-    //       return 1;
-    //     default:
-    //       return 7;
-    //   }
-    // },
     itemsPerPage:{
                     get: function () {
                        switch (this.$vuetify.breakpoint.name) {
                            case "xs":
                               return 1;
-                          default:  return 7;
+                          default:  return 4;
                        }
                     },
                     set: function (newValue) {

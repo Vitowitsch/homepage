@@ -15,7 +15,7 @@
   </p>
 </template>
 
-<style scoped>
+<style>
 .headline {
   position: relative;
   display: inline-block;

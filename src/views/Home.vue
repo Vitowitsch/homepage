@@ -1,6 +1,6 @@
 <template>
   <v-container fluid id="start">
-    <Carousel></Carousel>
+    <!-- <Carousel></Carousel> -->
     <Intro />
     <hr />
     <Blog />

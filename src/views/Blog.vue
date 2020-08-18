@@ -103,7 +103,7 @@ export default {
           case "xs":
             return 1;
           default:
-            return 5;
+            return 4;
         }
       },
       set: function(newValue) {

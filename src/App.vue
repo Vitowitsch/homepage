@@ -70,14 +70,14 @@ export default {
           name: "home",
           icon: "mdi-blogger"
         },
-        
+
         {
           name: "home",
           text: "CV",
           hash: "#cv",
           icon: "person_outline"
         },
-{
+        {
           text: "REFERENCES",
           hash: "#references",
           name: "home",
@@ -89,7 +89,6 @@ export default {
           text: "BADGES",
           icon: "monetization_on"
         },
-        
 
         {
           name: "home",
