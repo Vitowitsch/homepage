@@ -8,9 +8,9 @@
       <v-col cols="12" sm="6">
         <div style="color:teal;">:~$ git config --list</div>
         <hr />user.name= Veit Wehner
-        <hr />user.login= 2 October 1978
+        <hr />user.uptime= 2 October 1978
         <hr />user.made.in= Germany
-        <hr />user.location= Gerstenbergstr. 8, Erlangen, Germany
+        <hr />user.location= Erlangen, Germany
         <hr />user.email= info@botsandbytes.de
         <hr />
         <br />
