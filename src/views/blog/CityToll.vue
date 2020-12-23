@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div :class="['ma-5', 'pa-5']">
     <project-headline id="citytoll">
       <template v-slot:header>My Project</template>
       Pollution is in the air
@@ -75,6 +75,5 @@ article {
   -webkit-column-rule: 1px dotted #ddd;
   -moz-column-rule: 1px dotted #ddd;
   column-rule: 1px dotted #ddd;
-  margin: 120px;
 }
 </style>

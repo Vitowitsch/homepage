@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div :class="['ma-5', 'pa-5']">
     <project-headline id="carbon" theme="secondary">
       <template v-slot:header>My Project</template>
       Forget Bitcoin - Blockchain can help reduce CO₂-emissions
@@ -83,6 +83,5 @@ article {
   -webkit-column-rule: 1px dotted #ddd;
   -moz-column-rule: 1px dotted #ddd;
   column-rule: 1px dotted #ddd;
-  margin: 120px;
 }
 </style>
