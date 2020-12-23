@@ -3,10 +3,14 @@ import { RouterOptions, RouteConfig } from "vue-router";
 import Router from "vue-router";
 import Home from "@/views/Home.vue";
 import CityToll from "@/views/blog/CityToll.vue";
+import Cognac from "@/views/blog/Cognac.vue";
+import Carbon from "@/views/blog/Carbon.vue";
+import Consensus from "@/views/blog/Consensus.vue";
+import RailRadar from "@/views/blog/RailRadar.vue";
 
 Vue.use(Router);
 
-var scrollBehavior = function(to, from, savedPosition) {
+var scrollBehavior = function (to, from, savedPosition) {
   if (savedPosition) {
     // savedPosition is only available for popstate navigations.
     return savedPosition;
@@ -62,20 +66,36 @@ const router = new Router({
   linkActiveClass: "active",
   routes: [
     { path: "/", name: "home", component: Home },
-    // { path: "/", name: "home", component: Home },
-    //{ path: "/blog", name: "feed", component: Blog },
+    {
+      path: "/blog/consensus",
+      name: "consensus",
+      component: Consensus,
+      props: true
+    },
+    {
+      path: "/blog/railradar",
+      name: "citytoll",
+      component: RailRadar,
+      props: true
+    },
+    {
+      path: "/blog/carbon",
+      name: "carbon",
+      component: Carbon,
+      props: true
+    },
+    {
+      path: "/blog/cognac",
+      name: "cognac",
+      component: Cognac,
+      props: true
+    },
     {
       path: "/blog/citytoll",
       name: "citytoll",
       component: CityToll,
       props: true
     }
-    // {
-    //   path: "/read/:post",
-    //   name: "post",
-    //   props: true,
-    //   component: Blog
-    // }
   ]
 });
 

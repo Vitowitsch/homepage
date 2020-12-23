@@ -1,7 +1,10 @@
 <template>
   <v-app px-4>
     <v-app-bar app collapse>
-      <v-app-bar-nav-icon color="teal" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon
+        color="teal"
+        @click.stop="drawer = !drawer"
+      ></v-app-bar-nav-icon>
     </v-app-bar>
 
     <v-navigation-drawer v-model="drawer" app width="160">
@@ -11,7 +14,8 @@
             v-for="item in items"
             :key="item.hash"
             :to="{ name: item.name, hash: item.hash }"
-          >{{item.text}}</v-list-item>
+            >{{ item.text }}</v-list-item
+          >
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
@@ -44,12 +48,12 @@ export default {
         default:
           return 300;
       }
-    }
+    },
   },
   watch: {
     group() {
       this.drawer = null;
-    }
+    },
   },
   data() {
     return {
@@ -62,42 +66,48 @@ export default {
           name: "home",
           text: "HOME",
           hash: "#start",
-          icon: "dashboard"
+          icon: "dashboard",
         },
         {
           text: "BLOG",
           hash: "#blog",
           name: "home",
-          icon: "mdi-blogger"
+          icon: "mdi-blogger",
         },
 
         {
           name: "home",
           text: "CV",
           hash: "#cv",
-          icon: "person_outline"
+          icon: "person_outline",
         },
         {
           text: "REFERENCES",
           hash: "#references",
           name: "home",
-          icon: "grade"
+          icon: "grade",
         },
         {
           name: "home",
           hash: "#badges",
-          text: "BADGES",
-          icon: "monetization_on"
+          text: "CERTIFICATES",
+          icon: "monetization_on",
         },
 
         {
           name: "home",
           hash: "#skills",
           text: "SKILLS",
-          icon: "center_focus_strong"
-        }
-      ]
+          icon: "center_focus_strong",
+        },
+      ],
     };
-  }
+  },
 };
 </script>
+<style>
+* {
+  font-family: Mansalva;
+  font-size: medium;
+}
+</style>

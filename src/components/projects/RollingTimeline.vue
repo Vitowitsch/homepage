@@ -1,21 +1,21 @@
 <template>
   <v-card class="mx-auto">
-      <v-timeline dense>
-        <v-slide-x-reverse-transition group hide-on-leave>
-          <v-timeline-item
-            v-for="(item,index) in items"
-            :key="item.id"
-            :color="item.color"
-            small
-            fill-dot
-          >
-            <v-alert :value="true" :color="item.color">
-              <v-icon x-large>{{getIcon()}}</v-icon>
-              {{text[index]}}
-            </v-alert>
-          </v-timeline-item>
-        </v-slide-x-reverse-transition>
-      </v-timeline>
+    <v-timeline dense>
+      <v-slide-x-reverse-transition group hide-on-leave>
+        <v-timeline-item
+          v-for="(item, index) in items"
+          :key="item.id"
+          :color="item.color"
+          small
+          fill-dot
+        >
+          <v-alert :value="true" :color="item.color">
+            <v-icon x-large>{{ getIcon() }}</v-icon>
+            {{ text[index] }}
+          </v-alert>
+        </v-timeline-item>
+      </v-slide-x-reverse-transition>
+    </v-timeline>
   </v-card>
 </template>
 
@@ -26,13 +26,13 @@ const ICONS = {
   info: "mdi-information",
   warning: "mdi-alert",
   error: "mdi-alert-circle",
-  success: "mdi-check-circle"
+  success: "mdi-check-circle",
 };
 export default {
   props: ["index", "annotation", "speakerid", "callsign"],
   mounted() {
     var myThis = this;
-    EventBus.$on("play-features" + myThis.index, function() {
+    EventBus.$on("play-features" + myThis.index, function () {
       if (myThis.interval == null) {
         myThis.start();
       } else {
@@ -48,7 +48,7 @@ export default {
     items: [-1],
     text: [],
     nonce: 3,
-    contentAdded: 0
+    contentAdded: 0,
   }),
   display(index) {
     console.log("index: " + index);
@@ -86,7 +86,7 @@ export default {
       this.items.unshift({
         id: this.nonce++,
         color,
-        icon
+        icon,
       });
       if (this.nonce > 8) {
         this.items.pop();
@@ -96,7 +96,7 @@ export default {
       const color = this.genColor();
       return {
         color,
-        icon: this.genIcon(color)
+        icon: this.genIcon(color),
       };
     },
     genColor() {
@@ -113,7 +113,7 @@ export default {
     stop() {
       clearInterval(this.interval);
       this.interval = null;
-    }
-  }
+    },
+  },
 };
 </script>

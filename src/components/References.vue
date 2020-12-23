@@ -15,9 +15,9 @@
           <v-row>
             <v-col v-for="item in props.items" :key="item.name" cols="12" sm="6" md="4" lg="3">
               <v-card>
-                <v-card-title class="subheading font-weight-bold">{{ item.who }}</v-card-title>
+                <v-card-title>{{ item.who }}</v-card-title>
                 <v-divider></v-divider>
-                <v-card-text class="subheading font-weight-bold">{{ item.text }}</v-card-text>
+                <v-card-text>{{ item.text }}</v-card-text>
               </v-card>
             </v-col>
           </v-row>
@@ -104,7 +104,14 @@ export default {
           who: "Alessandro Perico",
           position: "Blockchain / DLT Governance | Consensus Architect",
           color: "indigo"
-        }
+        },
+        {
+          text:
+            "''Now, this is going to be a list of praise and buzz words, since all of them are true. Veit is never satisfied to build a solution with just the technologies he has already mastered. But is constantly looking for the best set of tools and services to solve a problem. I am always taken aback by how fast he picks up new skills. At the same time he makes no compromise in quality. All components and modules he has built are implemented with an exceptional high grade of technical expertise.''",
+          who: "Roman Zangl",
+          position: "Software-Architect at Siemens",
+          color: "indigo"
+        },
       ]
     };
   },
@@ -117,7 +124,7 @@ export default {
                        switch (this.$vuetify.breakpoint.name) {
                            case "xs":
                               return 1;
-                          default:  return 4;
+                          default:  return 8;
                        }
                     },
                     set: function (newValue) {

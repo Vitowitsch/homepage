@@ -1,23 +1,18 @@
 <template>
-  <v-container style="padding-left: 0px; margin-left: px" id="cv">
+  <div id="cv" class="ml-5">
     <project-headline>
       <template v-slot:header>CV</template>
       Curriculum Vitae
     </project-headline>
     <v-timeline :dense="$vuetify.breakpoint.xsOnly">
-      <v-timeline-item
-        v-for="(item, i) in items"
-        :key="i"
-        color="blue-grey"
-        small
-      >
-        <span :class="myYearStyle" v-text="item.year"></span>
-        <h2 :class="myTitleStyle">{{ item.title }}</h2>
+      <v-timeline-item v-for="(item, i) in items" :key="i" color="blue-grey" small>
+        <span :class="['text-h6']" v-text="item.year"></span>
+        <h2 :class="['text-h6', 'teal--text']">{{ item.title }}</h2>
         <div>{{ item.text }}</div>
       </v-timeline-item>
     </v-timeline>
     <!-- </v-row> -->
-  </v-container>
+  </div>
 </template>
 
 <script>
@@ -62,8 +57,7 @@ export default {
         color: "#b6b7ba",
         year: "2009 - 2010",
         title: "Embedded-Developer at Siemens",
-        text:
-          "GPS based door opening recommendation system on an embedded Linux system.",
+        text: "GPS based door opening recommendation system on an embedded Linux system.",
       },
       {
         color: "#b6b7ba",
@@ -94,8 +88,7 @@ export default {
       {
         color: "#b6b7ba",
         year: "2017 - today",
-        title:
-          "Software-Architect at Siemens - Machine-Learning, Big Data and Cloud",
+        title: "Software-Architect at Siemens - Machine-Learning, Big Data and Cloud",
         text:
           "Integration of data-intense Matlab-Algorithms as Docker-Container into Amazon-AWS.",
       },
@@ -119,4 +112,3 @@ export default {
   }),
 };
 </script>
-

@@ -16,7 +16,6 @@ module.exports = {
     loaderOptions: {
       sass: {
         implementation: require("sass"),
-        fiber: require("fibers")
       }
     }
   },

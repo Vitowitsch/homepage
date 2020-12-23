@@ -1,5 +1,5 @@
 <template>
-  <v-container id="badges">
+  <div id="badges">
     <project-headline>
       <template v-slot:header>Badges</template>
       Certificates
@@ -13,7 +13,10 @@
                 <expandable-image class="image" :src="p.url"></expandable-image>
                 <template v-slot:placeholder>
                   <v-layout fill-height align-center justify-center ma-0>
-                    <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
+                    <v-progress-circular
+                      indeterminate
+                      color="grey lighten-5"
+                    ></v-progress-circular>
                   </v-layout>
                 </template>
               </center>
@@ -22,7 +25,7 @@
         </v-layout>
       </v-container>
     </v-layout>
-  </v-container>
+  </div>
 </template>
 
 <script>
@@ -38,15 +41,15 @@ export default {
       { url: require("@/assets/certs/futureland.png") },
       { url: require("@/assets/certs/neo.png") },
       { url: require("@/assets/certs/mindsphere_hack.png") },
-      { url: require("@/assets/certs/swa_cert.jpg") }
-    ]
+      { url: require("@/assets/certs/swa_cert.jpg") },
+    ],
   }),
   methods: {
     zoom(url) {
       console.log("Zoom", url);
       this.selectedImage = url;
-    }
-  }
+    },
+  },
 };
 </script>
 <style>

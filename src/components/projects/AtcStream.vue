@@ -1,5 +1,5 @@
 <template>
-  <div fluid id="main">
+  <div id="main">
     <v-btn @click="start(0)" color="teal" dark depressed>Start Streaming</v-btn>
 
     <div v-for="(data, index) in myTransscript" v-bind:key="index">
@@ -49,7 +49,7 @@ const ICONS = {
   info: "mdi-information",
   warning: "mdi-alert",
   error: "mdi-alert-circle",
-  success: "mdi-check-circle"
+  success: "mdi-check-circle",
 };
 
 export default {
@@ -58,14 +58,14 @@ export default {
     WaveSurfer,
     TimelinePlugin,
     MinimapPlugin,
-    RollingTimeline: () => import("./RollingTimeline")
+    RollingTimeline: () => import("./RollingTimeline"),
   },
   computed: {
     timeline() {
       return this.events.slice().reverse();
-    }
+    },
   },
-  data: function() {
+  data: function () {
     return {
       wavesurfers: [],
       myTransscript: transscript,
@@ -74,7 +74,7 @@ export default {
       input: null,
       nonce: 0,
       nextIndex: 1,
-      containerkey: 0
+      containerkey: 0,
     };
   },
   created() {},
@@ -88,25 +88,25 @@ export default {
       dca_lc_4_427,
       dfw_le_2_488,
       dfw_lw_2_370,
-      dfw_lw_3_168
+      dfw_lw_3_168,
     ];
-    _.forEach(myThis.myTransscript, function(i, index) {
+    _.forEach(myThis.myTransscript, function (i, index) {
       var wavesurfer = WaveSurfer.create({
         container: "#wave" + index,
         plugins: [
           // TimelinePlugin.create({
           //   container: "#wave-timeline" + index
           // })
-          MinimapPlugin.create()
-        ]
+          MinimapPlugin.create(),
+        ],
       });
       // wavesurfer.load(i.data_lake_file_location);
       console.log("importing " + audio[index]);
       wavesurfer.load(audio[index]);
-      wavesurfer.on("ready", function() {
+      wavesurfer.on("ready", function () {
         console.log("is ready ");
       });
-      wavesurfer.on("finish", function() {
+      wavesurfer.on("finish", function () {
         console.log("audio finsished");
         myThis.playNext();
       });
@@ -133,7 +133,7 @@ export default {
     },
     addNext() {
       this.events.push({
-        id: this.nonce++
+        id: this.nonce++,
       });
       this.input = null;
     },
@@ -141,14 +141,14 @@ export default {
       var that = this;
       axios
         .get("https://tae24storage.blob.core.windows.net/acdn/filename")
-        .then(function(response) {
+        .then(function (response) {
           that.myTransscript = response;
         })
-        .catch(function(error) {
+        .catch(function (error) {
           console.log(error);
         });
-    }
-  }
+    },
+  },
 };
 </script>
 

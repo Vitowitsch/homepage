@@ -24,8 +24,7 @@ export default {
     Certs: () => import("@/components/Certs"),
     SkillTree: () => import("@/components/SkillTree"),
     Blog,
-    Intro
-  }
+    Intro,
+  },
 };
 </script>
-

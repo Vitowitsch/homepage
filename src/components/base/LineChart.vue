@@ -1,6 +1,6 @@
 <template>
   <figure>
-    <v-chart :options="options" :init-options="initOptions" autoresize theme="macarons"/>
+    <v-chart :options="options" :init-options="initOptions" autoresize theme="macarons" />
   </figure>
 </template>
 
@@ -14,25 +14,25 @@ export default {
   props: {
     title: {
       type: String,
-      required: true
+      required: true,
     },
     className: {
       type: String,
-      default: "chart"
+      default: "chart",
     },
     chartData: {
       type: Array,
-      required: true
+      required: true,
     },
     xData: {
       type: Array,
-      required: true
-    }
+      required: true,
+    },
   },
   data() {
     return {
-         initOptions: {
-        renderer: "canvas"
+      initOptions: {
+        renderer: "canvas",
       },
       chart: null,
       sidebarElm: null,
@@ -45,16 +45,16 @@ export default {
         //   }
         // ],
         tooltip: {
-          trigger: "axis"
+          trigger: "axis",
         },
         xAxis: { type: "category" },
-        yAxis: { gridIndex: 0,   name: "GT-CO₂", },
+        yAxis: { gridIndex: 0, name: "GT-CO₂" },
         dataZoom: [
           {
             id: "dataZoomX",
             type: "slider",
-            filterMode: "empty"
-          }
+            filterMode: "empty",
+          },
         ],
         dataset: {
           source: [
@@ -144,7 +144,7 @@ export default {
               "2097",
               "2098",
               "2099",
-              "2100"
+              "2100",
             ],
             [
               "baseline",
@@ -232,7 +232,7 @@ export default {
               171,
               172,
               174,
-              175
+              175,
             ],
             [
               "current policy projections",
@@ -320,7 +320,7 @@ export default {
               49,
               49,
               48,
-              48
+              48,
             ],
             [
               "2-degree-consistent",
@@ -408,106 +408,40 @@ export default {
               4,
               3,
               3,
-              3
-            ]
-          ]
+              3,
+            ],
+          ],
         },
         series: [
           {
             name: "without intervention",
             type: "line",
             smooth: true,
-            seriesLayoutBy: "row"
+            seriesLayoutBy: "row",
           },
           {
             name: "current policy",
             type: "line",
             smooth: true,
-            seriesLayoutBy: "row"
+            seriesLayoutBy: "row",
           },
           {
             name: "2-degree-consistent",
             type: "line",
             smooth: true,
-            seriesLayoutBy: "row"
-          }
-        ]
-      }
+            seriesLayoutBy: "row",
+          },
+        ],
+      },
     };
-  }
+  },
 };
 </script>
-
 <style lang="stylus" scoped>
-*,
-*::before,
-*::after
-  box-sizing border-box
-figure
-  display inline-block
-  position relative
-  margin 2em auto
-  border 1px solid rgba(0, 0, 0, .1)
-  border-radius 8px
-  box-shadow 0 0 45px rgba(0, 0, 0, .2)
-  padding 1.5em 2em
-  min-width: calc(40vw + 4em)
-  .echarts
-    // width 40vw
-    width 100%
-    min-width 400px
-    height 300px
-@media (min-width 980px)
-  figure.half
-    padding 1em 1.5em
-    min-width calc(240px + 3em)
-    .echarts
-      width 28vw
-      min-width 240px
-      height 180px
-    &:not(:last-child)
-      margin-right 15px
-@media (max-width 980px)
-  p
-    display flex
-    justify-content center
-    select
-      text-indent calc(50% - 1em)
-    select,
-    label
-      border 1px solid #4fc08d
-      border-radius 2em
-      background-color #fff
-      color #42b983
-      cursor pointer
-      transition opacity .3s
-    button,
-    input,
-    select,
-    label
-      flex 1 0
-      margin 0 .5em
-      padding 0
-      line-height 2.4em
-      max-width 40vw
-      border-radius 2px
-      font-size .8em
-    select
-      -webkit-appearance none
-    input[type="checkbox"]
-      display none
-      &:checked + label
-        background #42b983
-        color #fff
-  figure
-    width 100vw
-    margin 1em auto
-    padding 0
-    border dotted
-    border-radius 0
-    box-shadow none
-    .echarts
-      width 100%
-      min-width 0
-      height 75vw
+figure {
+  .echarts {
+    height: 500px;
+    width: 95%;
+  }
+}
 </style>
