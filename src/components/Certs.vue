@@ -42,6 +42,7 @@ export default {
       { url: require("@/assets/certs/neo.png") },
       { url: require("@/assets/certs/mindsphere_hack.png") },
       { url: require("@/assets/certs/swa_cert.jpg") },
+      { url: require("@/assets/certs/HarvardX_inference.png") },
     ],
   }),
   methods: {
