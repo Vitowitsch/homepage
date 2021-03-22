@@ -20,21 +20,23 @@
         <hr />
         user.code= https://github.com/Vitowitsch/
         <hr />
-        
+
         <br />Welcome! My name is Veit Wehner.
         <br />
-        <br />If you are looking for an experienced software architect, I might be the
-        right person for you. I have a broad range of expert IT knowledge and demonstrated
-        experiences with AI, Cloud, Big-Data, Blockchain, Embedded, Backend- and Frontend,
+        <br />If you are looking for an experienced software architect,
+        programmer and data-scientist, I might be the right person for you. I
+        have a broad range of expert IT knowledge and demonstrated experiences
+        with AI, Cloud, Big-Data, Blockchain, Embedded, Backend- and Frontend,
         Clean-Code, Agile and lots of other areas.
         <br />
-        <br />With an M.Sc. in Computer Science and Mathematics and a lot of experience I
-        have the understanding for complex requirements. Nonetheless, my motto is to keep
-        it as simple as possible.
+        <br />With an M.Sc. in Computer Science and Mathematics, certification
+        as software architecture and data-scientist, and a lot of experience I
+        have the understanding for complex requirements. Nonetheless, my motto
+        is to keep it as simple as possible.
         <br />
-        <br />At the moment I am working for Siemens in Europe, where I got excellent
-        recommendations. <br />In addition, I am looking for interesting side projects.
-        About some of them you can read in my blog.
+        <br />At the moment I am working for Siemens in Europe, where I got
+        excellent recommendations. <br />In addition, I am looking for
+        interesting side projects. About some of them you can read in my blog.
         <br />
       </v-col>
       <v-col cols="12" sm="6">
