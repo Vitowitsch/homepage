@@ -5,7 +5,12 @@
       Curriculum Vitae
     </project-headline>
     <v-timeline :dense="$vuetify.breakpoint.xsOnly">
-      <v-timeline-item v-for="(item, i) in items" :key="i" color="blue-grey" small>
+      <v-timeline-item
+        v-for="(item, i) in items"
+        :key="i"
+        color="blue-grey"
+        small
+      >
         <span :class="['text-h6']" v-text="item.year"></span>
         <h2 :class="['text-h6', 'teal--text']">{{ item.title }}</h2>
         <div>{{ item.text }}</div>
@@ -41,31 +46,41 @@ export default {
     items: [
       {
         color: "#b6b7ba",
-        year: "2007",
-        text:
-          "Master in Computer Science (major), Mathematics (minor) at University of Würzburg. Thesis about Remote-Control in Sensor-Networks.",
-        title: "Master's Degree",
+        year: "2022 - today",
+        text: "Software Architect for Public-Key-Infrastructure automation.",
+        title: "Software Architect: Security",
       },
       {
         color: "#b6b7ba",
-        year: "2007 - 2009",
-        title: "Software Developer at Siemens",
-        text:
-          'Distributed real-time service to annotate PDF documents - awarded as "Most-Popular-Feature with the Process-Optimization-Toolchain"',
+        year: "2020 - today",
+        text: "Mentor for Softwarearchitecture of the Digital-Excellence-Program within the Siemens Expert House.",
+        title: "Supervisor",
       },
       {
         color: "#b6b7ba",
-        year: "2009 - 2010",
-        title: "Embedded-Developer at Siemens",
-        text: "GPS based door opening recommendation system on an embedded Linux system.",
+        year: "2020",
+        text: "Certified-Software-Architect (ISAQB)",
+        title: "Certification",
+      },
+
+      {
+        color: "#b6b7ba",
+        year: "2017 - 2018",
+        title: "Software Architect at Siemens: Blockchain",
+        text: "Consulting on various Blockchain and ICO projects.",
       },
       {
         color: "#b6b7ba",
-        year: "2011 - 2015",
+        year: "2018 - 2020",
+        title: "Intrapreneurs-Sponsorship at Siemens",
+        text: "Foundation member of sponsorship project for Train-Safety",
+      },
+      {
+        color: "#b6b7ba",
+        year: "2017 - 2020",
         title:
-          "Software Architect at Siemens: Embedded Systems, Connectivity, Web Applications",
-        text:
-          "Shore-side connectivity of a train-sided embedded linux system to analyze train data.",
+          "Software-Architect at Siemens - Machine-Learning, Big Data and Cloud",
+        text: "Integration of data-intense Matlab-Algorithms as Docker-Container into Amazon-AWS.",
       },
       {
         color: "#b6b7ba",
@@ -75,35 +90,29 @@ export default {
       },
       {
         color: "#b6b7ba",
-        year: "2017 - today",
-        title: "Software Architect at Siemens: Blockchain",
-        text: "Consulting on various Blockchain and ICO projects.",
+        year: "2011 - 2015",
+        title:
+          "Software Architect at Siemens: Embedded Systems, Connectivity, Web Applications",
+        text: "Shore-side connectivity of a train-sided embedded linux system to analyze train data.",
+      },
+
+      {
+        color: "#b6b7ba",
+        year: "2009 - 2010",
+        title: "Embedded-Developer at Siemens",
+        text: "GPS based door opening recommendation system on an embedded Linux system.",
       },
       {
         color: "#b6b7ba",
-        year: "2018 - today",
-        title: "Intrapreneurs-Sponsorship at Siemens",
-        text: "Foundation member of sponsorship project for Train-Safety",
+        year: "2007 - 2009",
+        title: "Software Developer at Siemens",
+        text: 'Distributed real-time service to annotate PDF documents - awarded as "Most-Popular-Feature with the Process-Optimization-Toolchain"',
       },
       {
         color: "#b6b7ba",
-        year: "2017 - today",
-        title: "Software-Architect at Siemens - Machine-Learning, Big Data and Cloud",
-        text:
-          "Integration of data-intense Matlab-Algorithms as Docker-Container into Amazon-AWS.",
-      },
-      {
-        color: "#b6b7ba",
-        year: "2020",
-        text: "Certified-Software-Architect (ISAQB)",
-        title: "Certification",
-      },
-      {
-        color: "#b6b7ba",
-        year: "2020 - today",
-        text:
-          "Mentor for Softwarearchitecture of the Digital-Excellence-Program within the Siemens Expert House.",
-        title: "Supervisor",
+        year: "2007",
+        text: "Master in Computer Science (major), Mathematics (minor) at University of Würzburg. Thesis about Remote-Control in Sensor-Networks.",
+        title: "Master's Degree",
       },
     ],
     stages: [],
