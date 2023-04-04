@@ -34,10 +34,10 @@
         have the understanding for complex requirements. Nonetheless, my motto
         is to keep it as simple as possible.
         <br />
-        <br />At the moment I am working for Siemens in Europe, where I got
+        <!--<br />At the moment I am working for Siemens in Europe, where I got
         excellent recommendations. <br />In addition, I am looking for
         interesting side projects. About some of them you can read in my blog.
-        <br />
+        <br />-->
       </v-col>
       <v-col cols="12" sm="6">
         <v-img
