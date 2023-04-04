@@ -46,7 +46,7 @@ export default {
     items: [
       {
         color: "#b6b7ba",
-        year: "2022 - today",
+        year: "2022 - 03/2022",
         text: "Software Architect for Public-Key-Infrastructure automation.",
         title: "Software Architect: Security",
       },
