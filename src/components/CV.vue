@@ -52,6 +52,12 @@ export default {
       },
       {
         color: "#b6b7ba",
+        year: "2021 - 2022",
+        text: "Data-Scientist / Machine-Learning Engineer Predictive Maintenance.",
+        title: "Software Architect: AI application lifecycle",
+      },
+      {
+        color: "#b6b7ba",
         year: "2020 - today",
         text: "Mentor for Softwarearchitecture of the Digital-Excellence-Program within the Siemens Expert House.",
         title: "Supervisor",
