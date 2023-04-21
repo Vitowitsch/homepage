@@ -7,6 +7,8 @@ import Cognac from "@/views/blog/Cognac.vue";
 import Carbon from "@/views/blog/Carbon.vue";
 import Consensus from "@/views/blog/Consensus.vue";
 import RailRadar from "@/views/blog/RailRadar.vue";
+import References from "@/components/References.vue";
+import Certs from "@/components/Certs.vue";
 
 Vue.use(Router);
 
@@ -95,7 +97,20 @@ const router = new Router({
       name: "citytoll",
       component: CityToll,
       props: true
+    },
+    {
+      path: "/references",
+      name: "references",
+      component: References,
+      props: true
+    },
+    {
+      path: "/badges",
+      name: "badges",
+      component: Certs,
+      props: true
     }
+
   ]
 });
 
