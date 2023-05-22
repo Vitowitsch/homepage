@@ -80,6 +80,13 @@ export default {
         },
         {
           text:
+            "''Herr Wehner war Technical LEad für diverse Applikation [...]. Dank seiner hohen analytischen Fähigkeiten und der schnellen Auffassungsgabe kann er sich sehr schnell einfinden. Wir hatten eine rundum ausgezeichnete Zusammenarbeit, da er flexibel und engagiert ist, ausgesprochen sozialkompetent auftritt und fachlich hervorragende Leistungen erbracht hat. Er zeigt keine Angst vor Herausforderungen und ist bereit, bei schwierigen Aufgaben für Entspannung zu sorgen. [...] Wenn ich wieder einen Softwarearchitekten oder Lead Developer benötige, ist Veit meine erste Anlaufstelle.''",
+          who: "Sven Trippner",
+          pos: "Business Unit Manager",
+          color: "indigo",
+        },
+        {
+          text:
             "''Veit is one of the keen learners I have worked with. His understanding of Software Architect concepts and implementation of the same is commendable. He is technology savvy and he can pick up new technologies on the fly. We worked briefly on one of the IOT projects and I was impressed with his ability to understand the new concepts of Machine Learning and quickly implement them. Veit has great attitude and keen intellectual appetite. I highly recommend him in the field of software and data science and machine learning.''",
           who: "Avinash Kumar",
           pos: "Data Scientist at Siemens",
