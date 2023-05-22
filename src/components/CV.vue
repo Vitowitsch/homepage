@@ -97,7 +97,7 @@ export default {
         year: "2017 - 2020",
         title:
           "Software-Architect at Siemens - Machine-Learning, Big Data and Cloud",
-        text: "Integration of data-intense Matlab-Algorithms as Docker-Container into Amazon-AWS.\nTechnologies: MLFlow, Kubernetes, EKS, AWS-Lambda, GitLab, Python, Machine-Learning, Statistical Learning, Neural Networks, MatLab, SimuLink, Docker, Hive, Athena, Presto, Data Warehouse, Apache Spark, ETL, Hadoop, Spotfire, EMR, AWS Lambda,Cassandra, Liquibase, Vue.js, Typescript, Javascript, GraphQL,OData, Angular, Scrum, Kanban, Microservices, Self-Contained Systems, Knowledge Graphs, Apache Kafka, Rabbit MQ, SQS, SNS, IPython (JupyterLab), SciKit Learn, Theano, MLib, Tensorflow, Pandas, Numpy, R, AWS Sagemaker, Bayes Analysis, Markov Models. ",
+        text: "Integration of data-intense Matlab-Algorithms as Docker-Container into Amazon-AWS.\nTechnologies: MLFlow, Kubernetes, EKS, AWS-Lambda, GitLab, Python, Machine-Learning, Statistical Learning, Neural Networks, Bayes Analysis, Markov Models, MatLab, SimuLink, Docker, Hive, Athena, Presto, Data Warehouse, Apache Spark, ETL, Hadoop, Spotfire, EMR, AWS Lambda,Cassandra, Liquibase, Vue.js, Typescript, Javascript, GraphQL,OData, Angular, Scrum, Kanban, Microservices, Self-Contained Systems, Knowledge Graphs, Apache Kafka, Rabbit MQ, SQS, SNS, IPython (JupyterLab), SciKit Learn, Theano, MLib, Tensorflow, Pandas, Numpy, R, AWS Sagemaker. ",
       },
       {
         color: "#b6b7ba",
