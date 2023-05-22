@@ -59,7 +59,7 @@ export default {
       {
         color: "#b6b7ba",
         year: "2021 - 2022",
-        text: "Data-Scientist / Machine-Learning Engineer Predictive Maintenance.",
+        text: "Data-Scientist / Machine-Learning Engineer Predictive Maintenance.\nTechnologies: MLFlow, Python, AWS Sagemaker, Jupyter, PCA, Neural Networks, Times Series Analyis, Anomaly Detection.",
         title: "Software Architect: AI application lifecycle",
       },
       {
@@ -74,7 +74,12 @@ export default {
         text: "Certified-Software-Architect (ISAQB)",
         title: "Certification",
       },
-
+      {
+        color: "#b6b7ba",
+        year: "2019",
+        text: "Predicting Spare part failures using NLP.\nTechnologies: Python, NLP.",
+        title: "AI Engineer at Siemens",
+      },
       {
         color: "#b6b7ba",
         year: "2017 - 2018",
@@ -92,7 +97,7 @@ export default {
         year: "2017 - 2020",
         title:
           "Software-Architect at Siemens - Machine-Learning, Big Data and Cloud",
-        text: "Integration of data-intense Matlab-Algorithms as Docker-Container into Amazon-AWS.\nTechnologies: MLFlow, Kubernetes, EKS, AWS-Lambda, GitLab, Python, Machine-Learning, Statistical Learning, Neural Networks, MatLab, SimuLink, Docker, Hive, Athena, Presto, Data Warehouse, Apache Spark, ETL, Hadoop, Spotfire, EMR, AWS Lambda,Cassandra, Liquibase, Vue.js, Typescript, Javascript, GraphQL,OData, Angular, Scrum, Kanban, Microservices, Self-Contained Systems, Knowledge Graphs, Apache Kafka, Rabbit MQ, SQS, SNS, IPython (JupyterLab), SciKit Learn, Theano, MLib, Tensorflow, Pandas, Numpy, R, AWS Sagemaker. ",
+        text: "Integration of data-intense Matlab-Algorithms as Docker-Container into Amazon-AWS.\nTechnologies: MLFlow, Kubernetes, EKS, AWS-Lambda, GitLab, Python, Machine-Learning, Statistical Learning, Neural Networks, MatLab, SimuLink, Docker, Hive, Athena, Presto, Data Warehouse, Apache Spark, ETL, Hadoop, Spotfire, EMR, AWS Lambda,Cassandra, Liquibase, Vue.js, Typescript, Javascript, GraphQL,OData, Angular, Scrum, Kanban, Microservices, Self-Contained Systems, Knowledge Graphs, Apache Kafka, Rabbit MQ, SQS, SNS, IPython (JupyterLab), SciKit Learn, Theano, MLib, Tensorflow, Pandas, Numpy, R, AWS Sagemaker, Bayes Analysis, Markov Models. ",
       },
       {
         color: "#b6b7ba",
