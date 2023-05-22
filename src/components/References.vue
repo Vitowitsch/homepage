@@ -80,7 +80,7 @@ export default {
         },
         {
           text:
-            "''Herr Wehner war Technical LEad für diverse Applikation [...]. Dank seiner hohen analytischen Fähigkeiten und der schnellen Auffassungsgabe kann er sich sehr schnell einfinden. Wir hatten eine rundum ausgezeichnete Zusammenarbeit, da er flexibel und engagiert ist, ausgesprochen sozialkompetent auftritt und fachlich hervorragende Leistungen erbracht hat. Er zeigt keine Angst vor Herausforderungen und ist bereit, bei schwierigen Aufgaben für Entspannung zu sorgen. [...] Wenn ich wieder einen Softwarearchitekten oder Lead Developer benötige, ist Veit meine erste Anlaufstelle.''",
+            "''Herr Wehner war Technical Lead für diverse Applikation [...]. Dank seiner hohen analytischen Fähigkeiten und der schnellen Auffassungsgabe kann er sich sehr schnell einfinden. Wir hatten eine rundum ausgezeichnete Zusammenarbeit, da er flexibel und engagiert ist, ausgesprochen sozialkompetent auftritt und fachlich hervorragende Leistungen erbracht hat. Er zeigt keine Angst vor Herausforderungen und ist bereit, bei schwierigen Aufgaben für Entspannung zu sorgen. [...] Wenn ich wieder einen Softwarearchitekten oder Lead Developer benötige, ist Veit meine erste Anlaufstelle.''",
           who: "Sven Trippner",
           pos: "Business Unit Manager",
           color: "indigo",
