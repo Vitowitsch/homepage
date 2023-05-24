@@ -89,7 +89,7 @@
       "Auto-Encoder / Sparse-Coder": {},
       "YOLO": {}
     },
-    "Markow-Modelling": {},
+    "Markov-Modelling": {},
     "Bayes-Encoding": {}
   },
   "CI/CD": {
