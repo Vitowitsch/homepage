@@ -10,8 +10,6 @@
         <hr />
         user.name= Veit Wehner
         <hr />
-        user.uptime= 2 October 1978
-        <hr />
         user.made.in= Germany
         <hr />
         user.location= Erlangen, Germany
