@@ -50,7 +50,7 @@ export default {
       
       {     
         color: "#b6b7ba",
-        year: "2023",
+        year: "today",
         text: "AWS Infrastructure",
         technologies: "Technologies: AWS CDK, Terraform, Typescript, Event Driven Architectures",
         title: "System Architect (for Cariad)",
