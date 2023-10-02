@@ -47,17 +47,24 @@ export default {
   },
   data: () => ({
     items: [
-      {
+      
+      {     
+        color: "#b6b7ba",
+        year: "2023",
+        text: "AWS Infrastructure",
+        technologies: "Technologies: AWS CDK, Terraform, Typescript, Event Driven Architectures",
+        title: "System Architect (for Cariad)",
+      },
         color: "#b6b7ba",
         year: "2023",
         text: "Special Purpose Machines",
         technologies: "Technologies: Python, Kotlin, Quarkus, Vue.js, G Code, OpenCV, YoloV5, FastAPI, RabbitMQ, MQTT, FastAPI, Kubernetes, Gitlab",
-        title: "Technical Lead",
+        title: "Technical Lead (for bcmsolutions)",
       },
       {
         color: "#b6b7ba",
         year: "2022 - 2023",
-        title: "Software Architect: Security",
+        title: "Software Architect: Security (for Siemens)",
         text: "Software Architect for Public-Key-Infrastructure automation",
         technologies:"Technologies: Kotlin, Spring-Boot, BouncyCastle, CMP, Cloudformation, ECS over Fargate, GitLab, TravisCI, ShellSpec, Testcontainers, Kanban, SAFe",
       },
@@ -66,7 +73,7 @@ export default {
         year: "2021 - 2022",
         text: "Data-Scientist / Machine-Learning Engineer Predictive Maintenance",
         technologies:"Technologies: MLFlow, Python, AWS Sagemaker, Jupyter, PCA, Neural Networks, Times Series Analyis, Anomaly Detection",
-        title: "Software Architect: AI application lifecycle",
+        title: "Software Architect: AI application lifecycle (for Siemens)",
       },
       {
         color: "#b6b7ba",
