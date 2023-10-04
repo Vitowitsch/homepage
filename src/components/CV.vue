@@ -55,6 +55,7 @@ export default {
         technologies: "Technologies: AWS CDK, Terraform, Typescript, Event Driven Architectures",
         title: "System Architect (for Cariad)",
       },
+      {
         color: "#b6b7ba",
         year: "2023",
         text: "Special Purpose Machines",
