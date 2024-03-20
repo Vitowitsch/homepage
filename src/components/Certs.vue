@@ -38,6 +38,7 @@ export default {
     projects: [
       { url: require("@/assets/certs/ai-hack1.jpg") },
       { url: require("@/assets/certs/intrapreneurs.jpg") },
+      { url: require("@/assets/certs/siemens_swa_curriculum.jpeg") },
       { url: require("@/assets/certs/futureland.png") },
       { url: require("@/assets/certs/neo.png") },
       { url: require("@/assets/certs/mindsphere_hack.png") },
