@@ -37,7 +37,6 @@
         </template>
       </v-data-iterator>
     </v-container>
-  </div>
 </template>
 
 <script>
@@ -73,9 +72,30 @@ export default {
         },
         {
           text:
+            "''Veit is an outstanding software architect choosimg the best tools for solving any problem in the field of software development. We worked together in the field of health monitoring and diagnosis over more then one year.''",
+          who: "Johannes Simon",
+          pos: "Team Leader Analytics at Siemens Mobility",
+          color: "indigo",
+        },
+        {
+          text:
             "''I mentored Veit at University Würzburg. We worked together on a range of computer science and mathematics topics, including number theory, sensor nodes and embedded programming. Veit is a quick learner with a good grasp of theory. Working with him is fun and efficient, and even long sessions were enjoyable. He is also a good companion to have during hikes in the Scottish Highlands, and he plays a pretty good game of blind chess. I can recommend him as a team player and as a very skilled software creator.''",
           who: "Johannes Schindelin",
           pos: "Maintainer of Git for Windows",
+          color: "indigo",
+        },
+        {
+          text:
+            "''Veits Kombination aus Erfahrung und Neugierde sind ein Erfolgsrezept. Egal ob Data Science, Data Engineering, Database Design oder Softwarearchitektur, er hat für alle Probleme das richtige Werkzeug. Gemeinsam haben wir nachhaltige und effiziente Softwarelösungen designed, implementiert und betrieben. Unsere Wege haben sich bei einem Projekt bei Siemens Mobility zum Thema präventive Instandhaltung gekreuzt. Seine Vielseitigkeit konnte Veit dort sowohl bei Cloud und On-Premises Applikationen, als auch bei einer Frontendkomponente ausspielen. Nicht zuletzt wegen seiner Offenheit und Ehrlichkeit habe ich ihn als Kollegen stets sehr geschätzt. Während unserer mehrjährigen Zusammenarbeit durfte ich auch einiges von ihm lernen und kann stolz auf unsere Produkte zurückblicken.''",
+          who: "David Reiter",
+          pos: "Data Scientist at Siemens",
+          color: "indigo",
+        },
+        {
+          text:
+            "''I had the pleasure of working with Veit for a brief period, but even in that short time, he made a lasting impression with his deep expertise in software architecture and development. Veit possesses a remarkable ability to define and solve complex problems, consistently finding the optimal balance between quality and speed. His approach to work is not only efficient and with his personality he is making collaboration seamless and enjoyable. I highly recommend Veit for any endeavors in his field of expertise as he is truly a valuable asset to any team.''",
+          who: "Sasho Ristovski",
+          pos: "DevOps Consultant",
           color: "indigo",
         },
         {
