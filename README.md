@@ -1,3 +1,3 @@
-1. $env:NODE_OPTIONS="--openssl-legacy-provider"
 2. npm install
-3. npm run serve
+3. export NODE_OPTIONS=--openssl-legacy-provider
+4. npm run serve

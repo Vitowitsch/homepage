@@ -22,7 +22,9 @@
   border: 1px solid #252525;
   margin-bottom: 20px;
   margin-top: 10px;
-  font: 12px "PT Sans", sans-serif;
+  font:
+    12px "PT Sans",
+    sans-serif;
   line-height: 20px;
   text-align: center;
 }

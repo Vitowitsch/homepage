@@ -44,7 +44,7 @@ export default {
       { url: require("@/assets/certs/mindsphere_hack.png") },
       { url: require("@/assets/certs/swa_cert.jpg") },
       { url: require("@/assets/certs/inference_modeling.png") },
-	  { url: require("@/assets/certs/statistical_learning.png") }
+      { url: require("@/assets/certs/statistical_learning.png") },
     ],
   }),
   methods: {

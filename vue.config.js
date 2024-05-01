@@ -6,9 +6,9 @@ module.exports = {
     proxy: {
       "http://www.panacherock.com/downloads/mp3/01_05_Shes_Mine.mp3": {
         target: "http://www.panacherock.com/downloads/mp3/01_05_Shes_Mine.mp3",
-        changeOrigin: true
-      }
-    }
+        changeOrigin: true,
+      },
+    },
     // host: "192.168.99.190"
   },
 
@@ -16,22 +16,22 @@ module.exports = {
     loaderOptions: {
       sass: {
         implementation: require("sass"),
-      }
-    }
+      },
+    },
   },
   configureWebpack: {
-    devtool: "source-map"
+    devtool: "source-map",
   },
 
   transpileDependencies: ["vue-echarts", "resize-detector"],
 
-  chainWebpack: config => {
+  chainWebpack: (config) => {
     config.plugins.delete("named-chunks");
     config.module
       .rule("vue")
       .use("vue-loader")
       .loader("vue-loader")
-      .tap(options => {
+      .tap((options) => {
         options.prettify = false;
         return options;
       });
@@ -43,7 +43,7 @@ module.exports = {
       renderRoutes: ["/", "/#/"],
       useRenderEvent: false,
       headless: true,
-      onlyProduction: true
-    }
-  }
+      onlyProduction: true,
+    },
+  },
 };

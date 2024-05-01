@@ -1,14 +1,16 @@
 <template>
   <v-app-bar app dark tabs class="accent darken-4">
     <v-app-bar-side-icon @click.stop="handleDrawerToggle"></v-app-bar-side-icon>
-    <v-toolbar-title style="font-family: 'Geostar Fill', cursive;">Bots and Bytes</v-toolbar-title>
+    <v-toolbar-title style="font-family: &quot;Geostar Fill&quot;, cursive"
+      >Bots and Bytes</v-toolbar-title
+    >
   </v-app-bar>
 </template>
 <script>
 import AnchorRouterLink from "vue-anchor-router-link";
 export default {
   components: {
-    AnchorRouterLink
+    AnchorRouterLink,
   },
   data() {
     return {
@@ -24,22 +26,22 @@ export default {
         onDone: false,
         onCancel: false,
         x: false,
-        y: true
+        y: true,
       },
       links: [
         {
           title: "Blog",
           target: "/blog",
-          icon: "list"
-        }
-      ]
+          icon: "list",
+        },
+      ],
     };
   },
   methods: {
     handleDrawerToggle() {
       console.log(window.getApp);
       window.getApp.$emit("APP_DRAWER_TOGGLED");
-    }
-  }
+    },
+  },
 };
 </script>

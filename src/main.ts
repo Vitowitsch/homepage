@@ -16,11 +16,11 @@ Vue.config.productionTip = false;
 new Vue({
   router,
   vuetify,
-  render: h => h(App),
+  render: (h) => h(App),
   mounted() {
     Pace.start();
     Pace.on("hide", () => {
       document.dispatchEvent(new Event("app.rendered"));
     });
-  }
+  },
 }).$mount("#app");

@@ -8,9 +8,9 @@ export default {
   mounted() {
     console.log("breakpoint: " + JSON.stringify(this.$vuetify.breakpoint));
   },
-  data: function() {
+  data: function () {
     return {
-      fontSize: ""
+      fontSize: "",
     };
   },
   methods: {},
@@ -23,7 +23,7 @@ export default {
         default:
           return "font-size:14px;";
       }
-    }
-  }
+    },
+  },
 };
 </script>

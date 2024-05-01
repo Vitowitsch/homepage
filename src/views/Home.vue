@@ -11,12 +11,14 @@
     <Certs />
     <hr />
     <SkillTree />
+    <Chatbot />
   </v-container>
 </template>
 
 <script>
 import Intro from "@/components/Intro";
 import Blog from "@/views/Blog.vue";
+import Chatbot from "@/views/Chatbot.vue";
 export default {
   components: {
     References: () => import("@/components/References"),
@@ -25,6 +27,7 @@ export default {
     SkillTree: () => import("@/components/SkillTree"),
     Blog,
     Intro,
+    Chatbot,
   },
 };
 </script>

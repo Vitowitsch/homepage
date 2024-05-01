@@ -44,7 +44,9 @@ export default {
           formatter: function (params) {
             var value = (params.value + "").split(".");
             value =
-              value[0].replace(/(\d{1,3})(?=(?:\d{3})+(?!\d))/g, "$1,") + "." + value[1];
+              value[0].replace(/(\d{1,3})(?=(?:\d{3})+(?!\d))/g, "$1,") +
+              "." +
+              value[1];
             return params.seriesName + "<br/>" + params.name + " : " + value;
           },
         },

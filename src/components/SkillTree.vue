@@ -7,7 +7,12 @@
             <template v-slot:header>Skills</template>
             Experience
           </project-headline>
-          <v-chart :options="options" :init-options="initOptions" autoresize theme="light" />
+          <v-chart
+            :options="options"
+            :init-options="initOptions"
+            autoresize
+            theme="light"
+          />
         </v-col>
       </v-row>
     </v-container>
@@ -30,7 +35,7 @@ function convert(source, target, basePath) {
         path = path.substring(idx);
       }
       var child = {
-        name: path
+        name: path,
       };
 
       target.children.push(child);
@@ -43,28 +48,28 @@ function convert(source, target, basePath) {
   } else {
     target.children.push({
       name: basePath,
-      value: source.$count
+      value: source.$count,
     });
   }
 }
 
 export default {
   components: {
-    "v-chart": ECharts
+    "v-chart": ECharts,
   },
-  data: function() {
+  data: function () {
     var data = [];
     convert(treemap, data, "");
     return {
       initOptions: {
-        renderer: "canvas"
+        renderer: "canvas",
       },
       minimized: true,
       options: {
         theme: "vintage",
         title: {
           text: "",
-          show: true
+          show: true,
         },
         series: [
           {
@@ -81,9 +86,9 @@ export default {
                   normal: {
                     borderColor: "#555",
                     borderWidth: 4,
-                    gapWidth: 4
-                  }
-                }
+                    gapWidth: 4,
+                  },
+                },
               },
               {
                 colorSaturation: [0.1, 0.4],
@@ -91,28 +96,28 @@ export default {
                   normal: {
                     borderColorSaturation: 0.7,
                     gapWidth: 2,
-                    borderWidth: 2
-                  }
-                }
+                    borderWidth: 2,
+                  },
+                },
               },
               {
                 colorSaturation: [0.1, 0.4],
                 itemStyle: {
                   normal: {
                     borderColorSaturation: 0.6,
-                    gapWidth: 1
-                  }
-                }
+                    gapWidth: 1,
+                  },
+                },
               },
               {
-                colorSaturation: [0.3, 0.5]
-              }
-            ]
-          }
-        ]
-      }
+                colorSaturation: [0.3, 0.5],
+              },
+            ],
+          },
+        ],
+      },
     };
-  }
+  },
 };
 </script>
 
@@ -124,4 +129,3 @@ export default {
   height: 100%;
 }
 </style>
-

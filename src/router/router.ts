@@ -9,6 +9,7 @@ import Consensus from "@/views/blog/Consensus.vue";
 import RailRadar from "@/views/blog/RailRadar.vue";
 import References from "@/components/References.vue";
 import Certs from "@/components/Certs.vue";
+import Chatbot from "@/views/Chatbot.vue";
 
 Vue.use(Router);
 
@@ -32,8 +33,8 @@ var scrollBehavior = function (to, from, savedPosition) {
         return {
           selector: <any>window.scrollTo({
             top: document.querySelector(to.hash).offsetTop,
-            behavior: "smooth"
-          })
+            behavior: "smooth",
+          }),
         };
         // return position
       }
@@ -43,9 +44,9 @@ var scrollBehavior = function (to, from, savedPosition) {
       return false;
     }
 
-    return new Promise(resolve => {
+    return new Promise((resolve) => {
       // check if any matched route config has meta that requires scrolling to top
-      if (to.matched.some(m => m.meta.scrollToTop)) {
+      if (to.matched.some((m) => m.meta.scrollToTop)) {
         // coords will be used if no selector is provided,
         // or if the selector didn't match any element.
         (position as any).x = 0;
@@ -72,46 +73,51 @@ const router = new Router({
       path: "/blog/consensus",
       name: "consensus",
       component: Consensus,
-      props: true
+      props: true,
     },
     {
       path: "/blog/railradar",
-      name: "citytoll",
+      name: "railradar",
       component: RailRadar,
-      props: true
+      props: true,
     },
     {
       path: "/blog/carbon",
       name: "carbon",
       component: Carbon,
-      props: true
+      props: true,
     },
     {
       path: "/blog/cognac",
       name: "cognac",
       component: Cognac,
-      props: true
+      props: true,
     },
     {
       path: "/blog/citytoll",
       name: "citytoll",
       component: CityToll,
-      props: true
+      props: true,
     },
     {
       path: "/references",
       name: "references",
       component: References,
-      props: true
+      props: true,
     },
     {
       path: "/badges",
       name: "badges",
       component: Certs,
+      props: true,
+    },
+    {
+      path: "/chatbot",
+      name: "chatbot",
+      component: Chatbot,
       props: true
     }
-
-  ]
+  ],
 });
 
 export default router;

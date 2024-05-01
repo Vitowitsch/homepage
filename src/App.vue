@@ -9,7 +9,10 @@
 
     <v-navigation-drawer v-model="drawer" app width="160">
       <v-list nav dense>
-        <v-list-item-group v-model="group" active-class="teal--text text--accent-4">
+        <v-list-item-group
+          v-model="group"
+          active-class="teal--text text--accent-4"
+        >
           <v-list-item
             v-for="item in items"
             :key="item.hash"

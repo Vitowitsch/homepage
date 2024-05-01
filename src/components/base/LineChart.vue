@@ -1,6 +1,11 @@
 <template>
   <figure>
-    <v-chart :options="options" :init-options="initOptions" autoresize theme="macarons" />
+    <v-chart
+      :options="options"
+      :init-options="initOptions"
+      autoresize
+      theme="macarons"
+    />
   </figure>
 </template>
 

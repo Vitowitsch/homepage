@@ -8,7 +8,13 @@
     >
       <template v-slot:default="props">
         <v-row>
-          <v-col v-for="item in props.items" :key="item.name" cols="12" sm="6" md="2">
+          <v-col
+            v-for="item in props.items"
+            :key="item.name"
+            cols="12"
+            sm="6"
+            md="2"
+          >
             <v-card>
               <router-link :to="item.component">
                 <v-img
@@ -21,7 +27,9 @@
                 >
                   <v-card-title v-text="item.title"></v-card-title>
                   <v-card-actions>
-                    <v-btn text color="teal accent-4" :to="item.component"> Read </v-btn>
+                    <v-btn text color="teal accent-4" :to="item.component">
+                      Read
+                    </v-btn>
                   </v-card-actions>
                 </v-img>
               </router-link>
@@ -29,9 +37,11 @@
           </v-col>
         </v-row>
       </template>
-      <template v-if="itemsPerPage == 1" v-slot:footer >
+      <template v-if="itemsPerPage == 1" v-slot:footer>
         <v-row class="mt-2" align="center" justify="center">
-          <span class="mr-4 grey--text">Page {{ page }} of {{ numberOfPages }}</span>
+          <span class="mr-4 grey--text"
+            >Page {{ page }} of {{ numberOfPages }}</span
+          >
           <v-btn fab dark color="teal" class="mr-1" @click="formerPage">
             <v-icon>mdi-chevron-left</v-icon>
           </v-btn>
@@ -67,8 +77,7 @@ export default {
           component: "/blog/railradar",
           title: "RailRadar",
           subtitle: "Ein Siemens-Intrapreneurs Projekt",
-          img:
-            "https://sanvito-blog.s3.eu-central-1.amazonaws.com/railradar/train-station-accidant.png",
+          img: "https://sanvito-blog.s3.eu-central-1.amazonaws.com/railradar/train-station-accidant.png",
         },
         {
           component: "/blog/citytoll",
@@ -79,15 +88,15 @@ export default {
         {
           component: "/blog/cognac",
           title: "Speech Recognition",
-          subtitle: "A suite of machine learning models helping air-traffic-controllers",
+          subtitle:
+            "A suite of machine learning models helping air-traffic-controllers",
           img: "https://sanvito-blog.s3.eu-central-1.amazonaws.com/atc/atc2.png",
         },
         {
           component: "/blog/consensus",
           title: "POW, POS ... WTF",
           subtitle: "Exploring Blockchain-Consensus-Strategies",
-          img:
-            "https://sanvito-blog.s3.eu-central-1.amazonaws.com/consensus/consensus_botsandbytes.png",
+          img: "https://sanvito-blog.s3.eu-central-1.amazonaws.com/consensus/consensus_botsandbytes.png",
         },
       ],
     };

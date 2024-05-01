@@ -1,3 +1,3 @@
 export function toEpoch(time) {
-    return time;
+  return time;
 }
