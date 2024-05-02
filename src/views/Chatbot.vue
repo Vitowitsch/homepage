@@ -4,15 +4,15 @@
       <div class="chat-container">
         <div class="chat" ref="chatContainer">
           <div v-for="(message, index) in chatMessages" :key="index" class="message-container">
-            <img v-if="message.role === 'assistant'" :src="assistantImage" alt="Assistant Profile"
-              class="profile-image" />
+            <!-- <img v-if="message.role === 'assistant'" :src="assistantImage" alt="Assistant Profile"
+              class="profile-image" /> -->
             <div :class="{
             'user-message': message.role === 'user',
             'assistant-message': message.role === 'assistant',
           }">
               {{ message.content }}
             </div>
-            <img v-if="message.role === 'user'" :src="userImage" alt="User Profile" class="profile-image" />
+            <!-- <img v-if="message.role === 'user'" :src="userImage" alt="User Profile" class="profile-image" /> -->
           </div>
         </div>
       </div>
@@ -28,37 +28,44 @@
 </template>
 
 <script>
-
-import open_ai_backend from "@/composables/openai/endpoints";
-import { sendMessage } from "@/composables/openai/open_ai_backend";
+import { getCurrentInstance, onMounted } from '@vue/composition-api';
+import { useChat } from '@/composables/openai/open_ai_backend';
 
 export default {
-  data() {
-    return {
-      backend_url: open_ai_backend,
-      mytext: "",
-      chatMessages: [],
-      userImage: `${process.env.BASE_URL}Images/user-profile-3.png`,
-      assistantImage: `${process.env.BASE_URL}Images/chatbot.jpg`,
+  setup() {
+
+    // const userImage = ref(`${process.env.BASE_URL}Images/user-profile-3.png`);
+    // const assistantImage = ref(`${process.env.BASE_URL}Images/chatbot.jpg`);
+
+    const { chatMessages, mytext, sendMessage } = useChat();
+
+    const vueInstance = getCurrentInstance(); // Get access to the Vue instance
+
+    const handleSubmit = async () => {
+      await sendMessage();
     };
-  },
-  created() {
-    this.chatMessages.push({
-      role: "assistant",
-      content: "Hi ! How can I help you today?",
-    });
-  },
-  methods: {
-    async handleSubmit() {
-      await sendMessage(
-    },
-    async handleEnterKey() {
+
+    const handleEnterKey = async (event) => {
       if (event.target.tagName !== "TEXTAREA") {
         event.preventDefault();
-        await this.sendMessage();
+        await sendMessage();
       }
-    },
-   
+    };
+
+    onMounted(() => {
+      chatMessages.value.push({
+        role: "assistant",
+        content: "Hi! How can I help you today?"
+      });
+    });
+
+    return {
+      chatMessages,
+      mytext,
+      handleSubmit,
+      handleEnterKey,
+      sendMessage,
+    };
   },
 };
 </script>

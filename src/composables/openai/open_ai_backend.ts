@@ -1,5 +1,13 @@
-import axios from "axios";
-import { open_ai_backend, proxy_url } from "./endpoints";
+import Vue from 'vue';
+import VueCompositionApi, { getCurrentInstance, ref } from '@vue/composition-api';
+
+Vue.use(VueCompositionApi);
+import axios from 'axios';
+
+const proxy_url = "https://api.allorigins.win/raw?url=";
+const open_ai_backend_url =
+  "https://2ald60wqvk.execute-api.eu-central-1.amazonaws.com/prod";
+
 
 interface ApiResponse {
   id: string;
@@ -25,8 +33,7 @@ interface ApiResponse {
 
 export async function get_answer(text: string): Promise<string> {
   try {
-    let fullUrl = `${proxy_url}?url=${encodeURIComponent(open_ai_backend)}`;
-    fullUrl = open_ai_backend;
+    let fullUrl = `${proxy_url}?url=${encodeURIComponent(open_ai_backend_url)}`;
     const response = await axios.post<ApiResponse>(fullUrl, {
       text: text,
     });
@@ -40,57 +47,106 @@ export async function get_answer(text: string): Promise<string> {
   }
 }
 
-export async function sendMessage() {
-  try {
-    const proxyUrl = "https://api.allorigins.win/raw?url=";
-    const targetUrl = "https://www.botsandbytes.de/#";
 
-    const fullUrl = await axios.get(
-      proxyUrl + encodeURIComponent(targetUrl),
-    );
 
-    console.log(fullUrl);
+export function useChat() {
+    const chatMessages = ref([]);
+    const mytext = ref('');
+    const vueInstance = getCurrentInstance();  
 
-    // const userMessage = this.mytext;
+    const sendMessage = async () => {
+        try {
+            chatMessages.value.push({ role: "user", content: mytext.value });
+            mytext.value = "";
+            chatMessages.value.push({ role: "assistant", content: "Typing..." });
 
-    .chatMessages.thispush({ role: "user", content: this.mytext });
+            if (vueInstance) {
+              vueInstance.$nextTick(() => {
+                  const chatContainer = vueInstance.$refs.chatContainer as Element;
+                  if (chatContainer) {
+                      chatContainer.scrollTop = chatContainer.scrollHeight;
+                  }
+              });
+          }
 
-    // Clear input after submitting
-    this.mytext = "";
-    this.chatMessages.push({ role: "assistant", content: "Typing..." });
+          // let fullUrl = `${proxy_url}?url=${encodeURIComponent(open_ai_backend_url)}`;
+          const response = await axios.post<ApiResponse>(open_ai_backend_url, {
+            text: mytext.value,
+          });
 
-    // Use nextTick to wait for DOM update before scrolling
-    this.$nextTick(() => {
-      // Scroll to the bottom of the chat
-      this.$refs.chatContainer.scrollTop =
-        this.$refs.chatContainer.scrollHeight;
-    });
-    const openaiResponse = axios.post < ApiResponse > (fullUrl, {
-      text: this.mytext,
-    });
-
-    // Remove the "Typing..." message
-    this.chatMessages.pop();
-
-    // Add assistant message to chat (if successful response)
-    if (openaiResponse.status === 200) {
-      const assistantMessage =
-        openaiResponse.data.choices[0].message.content;
-      this.chatMessages.push({
-        role: "assistant",
-        content: assistantMessage,
-      });
-    } else {
-      this.chatMessages.push({
-        role: "assistant",
-        content: "Error: Unable to process your request.",
-      });
+          if (response.status === 200) {
+            const assistantMessage = response.data.choices[0].message.content;
+            chatMessages.value.push({ role: "assistant", content: assistantMessage });
+        } else {
+            chatMessages.value.push({ role: "assistant", content: "Error: Unable to process your request." });
+            chatMessages.value.pop();
+        } 
+    } catch (error) {
+        console.error(error);
+        chatMessages.value.push({ role: "assistant", content: "Error: Unable to process your request." });
     }
-  } catch (error) {
-    console.error(error);
-    this.chatMessages.push({
-      role: "assistant",
-      content: "Error: Unable to process your request.",
-    });
+
+    return {
+        chatMessages,
+        mytext,
+        sendMessage
+    };
   }
 }
+
+
+
+// export async function sendMessage2() {
+//   try {
+//     const proxyUrl = "https://api.allorigins.win/raw?url=";
+//     const targetUrl = "https://www.botsandbytes.de/#";
+
+//     const fullUrl = await axios.get(
+//       proxyUrl + encodeURIComponent(targetUrl),
+//     );
+
+//     console.log(fullUrl);
+
+//     // const userMessage = this.mytext;
+
+//     chatMessages.push({ role: "user", content: this.mytext });
+
+//     // Clear input after submitting
+//     this.mytext = "";
+//     this.chatMessages.push({ role: "assistant", content: "Typing..." });
+
+//     // Use nextTick to wait for DOM update before scrolling
+//     this.$nextTick(() => {
+//       // Scroll to the bottom of the chat
+//       this.$refs.chatContainer.scrollTop =
+//         this.$refs.chatContainer.scrollHeight;
+//     });
+//     const openaiResponse = axios.post < ApiResponse > (fullUrl, {
+//       text: this.mytext,
+//     });
+
+//     // Remove the "Typing..." message
+//     this.chatMessages.pop();
+
+//     // Add assistant message to chat (if successful response)
+//     if (openaiResponse.status === 200) {
+//       const assistantMessage =
+//         openaiResponse.data.choices[0].message.content;
+//       this.chatMessages.push({
+//         role: "assistant",
+//         content: assistantMessage,
+//       });
+//     } else {
+//       this.chatMessages.push({
+//         role: "assistant",
+//         content: "Error: Unable to process your request.",
+//       });
+//     }
+//   } catch (error) {
+//     console.error(error);
+//     this.chatMessages.push({
+//       role: "assistant",
+//       content: "Error: Unable to process your request.",
+//     });
+//   }
+// }

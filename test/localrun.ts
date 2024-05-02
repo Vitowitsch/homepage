@@ -1,8 +1,8 @@
-import { get_answer } from "../src/components/openai/open_ai_backend";
+const { get_answer } = require('../src/composables/openai/open_ai_backend');
 
-export async function localRun() {
-  //   const content = await retrieveHomePageContent();
-  //   console.log(content);
+async function localRun() {
   const answer = await get_answer("What is the capital of France?");
   console.log(answer);
 }
+
+localRun();

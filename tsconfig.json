@@ -1,7 +1,7 @@
 {
     "compilerOptions": {
-      "target": "esnext",
-      "module": "esnext",
+      "module": "commonjs",
+      "target": "ESNext",
       "strict": false,
       "jsx": "preserve",
       "importHelpers": true,
@@ -16,7 +16,8 @@
       "types": [
         "webpack-env",
         "jest",
-        "vuetify"
+        "vuetify",
+        "node"
       ],
       "paths": {
         "@/*": [
@@ -32,6 +33,7 @@
     },
     "include": [
       "src/**/*.ts",
+      "**/*.spec.ts",
       "src/**/*.js",
       "src/**/*.tsx",
       "src/**/*.vue",
