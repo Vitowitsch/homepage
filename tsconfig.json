@@ -1,47 +1,34 @@
 {
-    "compilerOptions": {
-      "module": "commonjs",
-      "target": "ESNext",
-      "strict": false,
-      "jsx": "preserve",
-      "importHelpers": true,
-      "moduleResolution": "node",
-      "experimentalDecorators": true,
-      "esModuleInterop": true,
-      "allowJs": true,
-      "noImplicitAny": false,
-      "allowSyntheticDefaultImports": true,
-      "sourceMap": true,
-      "baseUrl": ".", 
-      "types": [
-        "webpack-env",
-        "jest",
-        "vuetify",
-        "node"
-      ],
-      "paths": {
-        "@/*": [
-          "src/*"
-        ]
-      },
-      "lib": [
-        "esnext",
-        "dom",
-        "dom.iterable",
-        "scripthost"
-      ]
+  "compilerOptions": {
+    "module": "ESNext",
+    "target": "ESNext",
+    "strict": false,
+    "jsx": "preserve",
+    "importHelpers": true,
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "allowJs": true,
+    "noImplicitAny": false,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "types": ["webpack-env", "jest", "vuetify", "node"],
+    "paths": {
+      "@/*": ["src/*"]
     },
-    "include": [
-      "src/**/*.ts",
-      "**/*.spec.ts",
-      "src/**/*.js",
-      "src/**/*.tsx",
-      "src/**/*.vue",
-      "tests/**/*.ts",
-      "tests/**/*.tsx", "src/main.ts", "tests/unit/example.spec.js"
-    ],
-    "exclude": [
-      "node_modules"
-    ]
-  }
-  
+    "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
+  },
+  "include": [
+    "src/**/*.ts",
+    "**/*.spec.ts",
+    "src/**/*.js",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "tests/**/*.ts",
+    "tests/**/*.tsx",
+    "src/main.ts",
+    "tests/unit/example.spec.js"
+  ],
+  "exclude": ["node_modules"]
+}

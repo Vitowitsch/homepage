@@ -3,13 +3,19 @@
     <div class="main-div">
       <div class="chat-container">
         <div class="chat" ref="chatContainer">
-          <div v-for="(message, index) in chatMessages" :key="index" class="message-container">
+          <div
+            v-for="(message, index) in chatMessages"
+            :key="index"
+            class="message-container"
+          >
             <!-- <img v-if="message.role === 'assistant'" :src="assistantImage" alt="Assistant Profile"
               class="profile-image" /> -->
-            <div :class="{
-            'user-message': message.role === 'user',
-            'assistant-message': message.role === 'assistant',
-          }">
+            <div
+              :class="{
+                'user-message': message.role === 'user',
+                'assistant-message': message.role === 'assistant',
+              }"
+            >
               {{ message.content }}
             </div>
             <!-- <img v-if="message.role === 'user'" :src="userImage" alt="User Profile" class="profile-image" /> -->
@@ -17,8 +23,14 @@
         </div>
       </div>
       <form class="user-input">
-        <input v-model="mytext" type="text" id="mytext" required placeholder="Type your message here"
-          @keyup.enter="handleEnterKey" />
+        <input
+          v-model="mytext"
+          type="text"
+          id="mytext"
+          required
+          placeholder="Type your message here"
+          @keyup.enter="handleEnterKey"
+        />
         <button type="button" @click="handleSubmit">
           <i class="fa fa-paper-plane" aria-hidden="true"></i>
         </button>
@@ -28,12 +40,17 @@
 </template>
 
 <script>
-import { getCurrentInstance, onMounted } from '@vue/composition-api';
-import { useChat } from '@/composables/openai/open_ai_backend';
+import Vue from "vue";
+import { onMounted } from "@vue/composition-api";
+import { useChat } from "@/composables/openai/open_ai_backend";
+import VueCompositionApi, {
+  getCurrentInstance,
+  ref,
+} from "@vue/composition-api";
 
+Vue.use(VueCompositionApi);
 export default {
   setup() {
-
     // const userImage = ref(`${process.env.BASE_URL}Images/user-profile-3.png`);
     // const assistantImage = ref(`${process.env.BASE_URL}Images/chatbot.jpg`);
 
@@ -55,7 +72,7 @@ export default {
     onMounted(() => {
       chatMessages.value.push({
         role: "assistant",
-        content: "Hi! How can I help you today?"
+        content: "Hi! How can I help you today?",
       });
     });
 

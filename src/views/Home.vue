@@ -1,5 +1,6 @@
 <template>
   <v-container fluid id="start">
+    <!-- <Chatbot /> -->
     <Intro />
     <hr />
     <Blog />
@@ -11,23 +12,24 @@
     <Certs />
     <hr />
     <SkillTree />
-    <Chatbot />
+    <Playground />
   </v-container>
 </template>
 
 <script>
 import Intro from "@/components/Intro";
 import Blog from "@/views/Blog.vue";
-import Chatbot from "@/views/Chatbot.vue";
+import Playground from "@/views/Playground.vue";
 export default {
   components: {
+    Chatbot: () => import("@/views/Chatbot"),
     References: () => import("@/components/References"),
     CV: () => import("@/components/CV"),
     Certs: () => import("@/components/Certs"),
     SkillTree: () => import("@/components/SkillTree"),
     Blog,
     Intro,
-    Chatbot,
+    Playground,
   },
 };
 </script>

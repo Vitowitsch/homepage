@@ -115,8 +115,8 @@ const router = new Router({
       path: "/chatbot",
       name: "chatbot",
       component: Chatbot,
-      props: true
-    }
+      props: true,
+    },
   ],
 });
 
