@@ -83,6 +83,18 @@ export default {
           color: "indigo",
         },
         {
+          text: "''Herr Wehner besitzt die Fähigkeit, schnell Prototypen zu entwickeln, anstatt ausufernde theoretische Diskussionen zu führen. Er zeigt sich in der Lage, komplexe Herausforderungen schnell und korrekt zu verstehen und auf Basis der Informationen Lösungsvorschlä ge auszuarbeiten. Sein Verständnis auf dem Gebiet der Softwareentwicklung ist auf einem außerordentlich hohem Niveau und er besitzt einen generellen Überblick über sämtliche technischen Lösungsmöglichkeiten. Hervorzuheben ist sein Wissen im Bereich der Cloud Architektur. Besonders bemerkenswert war, dass er die notwendige Grundstruktur eigenständig und in beeindruckender Geschwindigkeit erstellt hat. Dies hat es uns ermöglicht, rasch Fortschritte zu erzielen und Lösungen für sämtliche Herausforderungen zu finden. Zusätzlich dazu erweist sich Herr Wehner als Teamplayer der jederzeit dazu bereit ist aktiv Unterstützung anzubieten und auch über seinen eigentlichen Aufgabenbereich hinaus tätig zu werden. In Teammeetings, in welchen ich anwesend war, hat er damit auch regelmäßig praktikable Lösungsvorschlä ge für Herausforderungen von Teammitgliedern formuliert und bei der Umsetzung mitgewirkt. Ich kann Herrn Wehner uneingeschränkt empfehlen. Seine Fähigkeiten, sein Engagement und seine Teamfähigkeit machen ihn zu einem hervorragenden Softwarearchitekten, der jedes Team bereichern wird.''",
+          who: "Florian Sperber",
+          pos: "Senior Project Lead HR Digitalization & Innovation at Cariad SE",
+          color: "indigo",
+        },
+        {
+          text: "''It was a pleasure to work with Veit. He is great at what he is doing. May it be as AWS Consultant or as architect. I would be happy to work again with him.''",
+          who: "Dominik Leusing",
+          pos: "Senior EAI-Entwickler",
+          color: "indigo",
+        },
+        {
           text: "''I mentored Veit at University Würzburg. We worked together on a range of computer science and mathematics topics, including number theory, sensor nodes and embedded programming. Veit is a quick learner with a good grasp of theory. Working with him is fun and efficient, and even long sessions were enjoyable. He is also a good companion to have during hikes in the Scottish Highlands, and he plays a pretty good game of blind chess. I can recommend him as a team player and as a very skilled software creator.''",
           who: "Johannes Schindelin",
           pos: "Maintainer of Git for Windows",
