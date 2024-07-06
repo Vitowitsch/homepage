@@ -19,7 +19,7 @@
 <script>
 import Intro from "@/components/Intro";
 import Blog from "@/views/Blog.vue";
-import Playground from "@/views/Playground.vue";
+// import Playground from "@/views/Playground.vue";
 export default {
   components: {
     Chatbot: () => import("@/views/Chatbot"),
@@ -29,7 +29,7 @@ export default {
     SkillTree: () => import("@/components/SkillTree"),
     Blog,
     Intro,
-    Playground,
+    // Playground,
   },
 };
 </script>
