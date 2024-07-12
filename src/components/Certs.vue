@@ -22,7 +22,17 @@
     </v-row>
 
     <v-dialog v-model="dialog" max-width="800px">
-      <v-img :src="currentImage" max-height="100vh" />
+      <v-card>
+        <v-card-actions>
+          <v-spacer></v-spacer>
+          <v-btn icon @click="dialog = false">
+            <v-icon>mdi-close</v-icon>
+          </v-btn>
+        </v-card-actions>
+        <v-card-text>
+          <v-img :src="currentImage" max-height="100vh" />
+        </v-card-text>
+      </v-card>
     </v-dialog>
   </v-container>
 </template>
