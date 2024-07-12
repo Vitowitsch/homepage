@@ -1,0 +1,46 @@
+[
+  {
+    "speaker_id": 0,
+    "text": "APPROACH GOOD AFTERNOON VIRGIN ZERO ONE ONE HEAVY PASSING NINE THOUSAND FIVE HUNDRED DESCENDING SIX THOUSAND HEADING TWO FOUR ZERO",
+    "_time": "2018-12-09T16:38:26.247Z",
+    "key": "pilot_VIR011_445.wav",
+    "place": 0,
+    "flight": 0,
+    "duration": 90,
+    "show": false,
+    "binClass": "Ground"
+  },
+  {
+    "speaker_id": 1,
+    "text": "AH VIRGIN ONE ONE HEAVY ONE NINE ZERO",
+    "_time": "2018-12-09T16:38:28.247Z",
+    "key": "pilot_VIR011_446.wav",
+    "place": 0,
+    "flight": 0,
+    "duration": 90,
+    "show": false,
+    "binClass": "Air"
+  },
+  {
+    "speaker_id": 0,
+    "text": "MY APOLOGIES VIRGIN ONE ONE",
+    "_time": "2018-12-09T16:38:28.248Z",
+    "key": "pilot_VIR011_453.wav",
+    "place": 0,
+    "flight": 0,
+    "duration": 90,
+    "show": false,
+    "binClass": "Air"
+  },
+  {
+    "speaker_id": 0,
+    "text": "REDUCE SPEED ONE SEVEN ZERO DESCEND MAINTAIN THREE THOUSAND VIRGIN ONE ",
+    "_time": "2018-12-09T16:38:28.249Z",
+    "key": "pilot_VIR011_457.wav",
+    "place": 0,
+    "flight": 0,
+    "duration": 90,
+    "show": false,
+    "binClass": "Air"
+  }
+]

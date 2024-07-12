@@ -1,0 +1,82 @@
+[
+  {
+    "annotation": "okay cleared for takeoff runway three six united sixteen eighty three we re rolling",
+    "speaker_id": "Pilot",
+    "keys": "dca_lc_1_464.wav",
+    "user_id": "UAL1683",
+    "l_time_stamp": 1,
+    "data_lake_file_location": "https://tae24storage.blob.core.windows.net/acdn/dca_lc_1_464.wav",
+    "atc_id": "JFK",
+    "call_sign": "okay clear"
+  },
+  {
+    "annotation": "united sixteen eighty three runway three six cleared for takeoff",
+    "speaker_id": "ATC",
+    "keys": "dca_lc_2_1119.wav",
+    "user_id": "ATC_30",
+    "l_time_stamp": 2,
+    "data_lake_file_location": "https://tae24storage.blob.core.windows.net/acdn/dca_lc_2_1119.wav",
+    "atc_id": "JFK",
+    "call_sign": "united six"
+  },
+  {
+    "annotation": "american eight forty six washington tower runway three six cleared to land wind two niner zero at five",
+    "speaker_id": "ATC",
+    "keys": "dca_lc_3_7.wav",
+    "user_id": "ATC_31",
+    "l_time_stamp": 3,
+    "data_lake_file_location": "https://tae24storage.blob.core.windows.net/acdn/dca_lc_3_7.wav",
+    "atc_id": "JFK",
+    "call_sign": "american e"
+  },
+  {
+    "annotation": "helicopter standby trump sixty four thirty one washington tower wind two eight zero at six cleared to land runway three six",
+    "speaker_id": "ATC",
+    "keys": "dca_lc_4_426.wav",
+    "user_id": "ATC_34",
+    "l_time_stamp": 4,
+    "data_lake_file_location": "https://tae24storage.blob.core.windows.net/acdn/dca_lc_4_426.wav",
+    "atc_id": "JFK",
+    "call_sign": "helicopter"
+  },
+  {
+    "annotation": "cleared to land sixty four thirty one",
+    "speaker_id": "Pilot",
+    "keys": "dca_lc_4_427.wav",
+    "user_id": "TPS6431",
+    "l_time_stamp": 5,
+    "data_lake_file_location": "https://tae24storage.blob.core.windows.net/acdn/dca_lc_4_427.wav",
+    "atc_id": "JFK",
+    "call_sign": "cleared to"
+  },
+  {
+    "annotation": "american thirteen zero four fly heading three six zero at the middle marker runway three five left cleared for takeoff",
+    "speaker_id": "ATC",
+    "keys": "dfw_le_2_488.wav",
+    "user_id": "ATC_68",
+    "l_time_stamp": 6,
+    "data_lake_file_location": "https://tae24storage.blob.core.windows.net/acdn/dfw_le_2_488.wav",
+    "atc_id": "JFK",
+    "call_sign": "american t"
+  },
+  {
+    "annotation": "okay we re cleared to land eight forty six",
+    "speaker_id": "Pilot",
+    "keys": "dfw_lw_2_370.wav",
+    "user_id": "MTR846",
+    "l_time_stamp": 7,
+    "data_lake_file_location": "https://tae24storage.blob.core.windows.net/acdn/dfw_lw_2_370.wav",
+    "atc_id": "JFK",
+    "call_sign": "okay we re"
+  },
+  {
+    "annotation": "northwest four zero one regional tower runway one eight right cleared to land you re three in trail with traffic wind one seven zero at one five",
+    "speaker_id": "ATC",
+    "keys": "dfw_lw_3_168.wav",
+    "user_id": "ATC_73",
+    "l_time_stamp": 8,
+    "data_lake_file_location": "https://tae24storage.blob.core.windows.net/acdn/dfw_lw_3_168.wav",
+    "atc_id": "JFK",
+    "call_sign": "northwest "
+  }
+]

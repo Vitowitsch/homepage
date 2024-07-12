@@ -7,6 +7,23 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    AtcStream: typeof import('./src/components/projects/AtcStream.vue')['default']
+    Certs: typeof import('./src/components/Certs.vue')['default']
+    ClimateForecast: typeof import('./src/components/projects/ClimateForecast.vue')['default']
+    ClimateGlobe: typeof import('./src/components/projects/ClimateGlobe.vue')['default']
+    ClimatePathways: typeof import('./src/components/projects/ClimatePathways.vue')['default']
+    CV: typeof import('./src/components/CV.vue')['default']
+    HeadlineUpperText: typeof import('./src/components/base/HeadlineUpperText.vue')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
+    Intro: typeof import('./src/components/Intro.vue')['default']
+    LineChart: typeof import('./src/components/base/LineChart.vue')['default']
+    ProjectHeadline: typeof import('./src/components/base/ProjectHeadline.vue')['default']
+    References: typeof import('./src/components/References.vue')['default']
+    RollingTimeline: typeof import('./src/components/projects/RollingTimeline.vue')['default']
+    RouterLink: typeof import('vue-router')['RouterLink']
+    RouterView: typeof import('vue-router')['RouterView']
+    SkillTree: typeof import('./src/components/SkillTree.vue')['default']
+    Text: typeof import('./src/components/base/Text.vue')['default']
+    Toolbar: typeof import('./src/components/base/Toolbar.vue')['default']
   }
 }

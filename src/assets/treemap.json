@@ -1,0 +1,140 @@
+{
+  "Agile": {
+    "TDD": {},
+    "Scrum": {},
+    "Kanban": {}
+  },
+  "Docker": {
+    "EKS": {},
+    "ECS": {},
+    "Fargate": {}
+  },
+  "AWS": {
+    "S3": {},
+    "EC2": {},
+    "DB": {
+      "Aurora": {},
+      "RDS": {},
+      "DynamoDB": {},
+      "Redis": {}
+    },
+    "Elastic Beanstalk": {},
+    "CloudWatch": {},
+    "IAM": {}
+  },
+  "Databases": {
+    "SQL": {
+      "MsSQL": {},
+      "Oracle": {},
+      "MySQL": {},
+      "MariaDB": {},
+      "Postgres-SQL": {},
+      "Hibernate": {},
+      "JOOQ": {}
+    },
+    "NoSQL": {
+      "MongoDB": {},
+      "Cassandra": {},
+      "CouchDB": {},
+      "Redis": {}
+    },
+    "Datalakes": {
+      "Presto": {},
+      "HBase": {},
+      "Hive": {},
+      "Hadoop": {}
+    },
+    "Graph": {
+      "Neo4J": {},
+      "SPARQL": {}
+    },
+    "In-Memory": {
+      "Redis": {},
+      "H2": {}
+    }
+  },
+  "UI": {
+    "Languages": {
+      "html": {},
+      "css": {},
+      "Javascript": {},
+      "TypeScript": {},
+      "Dart": {},
+      "Qt": {}
+    },
+    "Web-Frameworks": {
+      "Vue": {},
+      "Node.JS": {},
+      "Flutter": {},
+      "React": {},
+      "Angular 2": {},
+      "Apache Cordova": {},
+      "Ionic": {},
+      "Dash": {},
+      "Bokeh": {},
+      "GWT": {},
+      "Facelets": {},
+      "JSP": {}
+    }
+  },
+  "AI": {
+    "Neural-Networks": {
+      "TensorFlow": {},
+      "TensorFlow Lite": {},
+      "Keras": {},
+      "PyTorch": {},
+      "CNN": {},
+      "LSTM": {},
+      "RNN": {},
+      "Auto-Encoder / Sparse-Coder": {},
+      "YOLO": {}
+    },
+    "Markov-Modelling": {},
+    "Bayes-Encoding": {}
+  },
+  "CI/CD": {
+    "Jenkins": {},
+    "Travis": {},
+    "CruiseControl": {},
+    "Maven": {},
+    "Gradle": {},
+    "NPM": {},
+    "YARN": {},
+    "pip": {}
+  },
+  "Connectivity": {
+    "REST": {},
+    "graphQL": {},
+    "ODATA": {},
+    "ProtoBuffers": {},
+    "Web-Sockets": {},
+    "Low-Energy-Bluetooth": {},
+    "Wireless-Sensor-Networks": {}
+  },
+  "Documentation": {
+    "LaTEX": {},
+    "Markdown": {}
+  },
+  "Git": {},
+  "Programming Languages": {
+    "Java": {},
+    "C": {},
+    "C++": {},
+    "Python": {},
+    "JavaScript": {},
+    "TypeScript": {},
+    "Dart": {},
+    "Go": {},
+    "Groovy": {},
+    "Perl": {},
+    "Assembler": {},
+    "TCL/TK": {},
+    "Qt": {},
+    "Haskell": {},
+    "SML": {},
+    "Modula-2": {},
+    "Basic": {},
+    "Pascal": {},
+    "Shell": {}
+  }
+}
