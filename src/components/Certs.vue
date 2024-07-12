@@ -40,11 +40,17 @@
 <script setup>
 import { ref } from 'vue'
 
+// Definieren Sie die Bildpfade
 const images = ref([
-  { url: 'src/assets/certs/ai-hack1.jpg', alt: 'Image 1' },
-  { url: '/assets/certs/ai-hack1.jpg', alt: 'Image 2' },
-  { url: '@/assets/certs/ai-hack1.jpg', alt: 'Image 3' },
-  // Fügen Sie weitere Bilder nach Bedarf hinzu
+  { url: new URL('@/assets/certs/ai-hack1.jpg', import.meta.url).href, alt: 'AI Hackathon 1' },
+  { url: new URL('@/assets/certs/intrapreneurs.jpg', import.meta.url).href, alt: 'Intrapreneurs' },
+  { url: new URL('@/assets/certs/siemens_swa_curriculum.jpeg', import.meta.url).href, alt: 'Siemens SWA Curriculum' },
+  { url: new URL('@/assets/certs/futureland.png', import.meta.url).href, alt: 'Futureland' },
+  { url: new URL('@/assets/certs/neo.png', import.meta.url).href, alt: 'NEO' },
+  { url: new URL('@/assets/certs/mindsphere_hack.png', import.meta.url).href, alt: 'Mindsphere Hack' },
+  { url: new URL('@/assets/certs/swa_cert.jpg', import.meta.url).href, alt: 'SWA Certificate' },
+  { url: new URL('@/assets/certs/inference_modeling.png', import.meta.url).href, alt: 'Inference Modeling' },
+  { url: new URL('@/assets/certs/statistical_learning.png', import.meta.url).href, alt: 'Statistical Learning' },
 ])
 
 const dialog = ref(false)
