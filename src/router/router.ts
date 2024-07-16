@@ -24,6 +24,7 @@ const routes = [
       { path: "citytoll", name: "citytoll", component: CityToll , props: true},
       { path: "consensus", name: "consensus", component: Consensus, props: true },
       { path: "railradar", name: "railradar", component: RailRadar, props: true },
+      { path: "cognac", name: "cognac", component: Cognac, props: true },
     ]
   },
 ];
