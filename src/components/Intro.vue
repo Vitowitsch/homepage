@@ -1,9 +1,5 @@
 <template>
   <div :class="['ml-5']">
-    <project-headline>
-      botsandbytes
-      <template v-slot:header>about</template>
-    </project-headline>
     <v-row>
       <v-col cols="12" sm="6">
         <div style="color: teal">:~$ git config --list</div>

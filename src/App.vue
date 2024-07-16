@@ -43,7 +43,8 @@ const items = ref([
   { name: 'cv', text: 'CV', icon: 'person_outline' },
   { name: 'references', text: 'REFERENCES', icon: 'grade' },
   { name: 'certificates', text: 'CERTIFICATES', icon: 'grade' },
-  // Fügen Sie hier weitere Menüpunkte hinzu...
+  { name: 'blog', text: 'BLOG', icon: 'grade' },
+  
 ]);
 
 const height = computed(() => {

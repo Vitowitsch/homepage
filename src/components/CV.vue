@@ -1,9 +1,6 @@
 <template>
   <div id="cv" class="ml-5">
-    <project-headline>
-      <template v-slot:header>CV</template>
-      Curriculum Vitae
-    </project-headline>
+   
     <v-timeline :dense="dense">
       <v-timeline-item
         v-for="(item, i) in items"

@@ -1,10 +1,6 @@
 <template>
   <v-container fluid id="references">
 
-    <project-headline>
-      <template v-slot:header>Personal</template>
-      References
-    </project-headline>
  
     <v-data-iterator
       :items="items"
@@ -85,6 +81,12 @@ export default {
           text: "''Veit is an outstanding software architect choosimg the best tools for solving any problem in the field of software development. We worked together in the field of health monitoring and diagnosis over more then one year.''",
           who: "Johannes Simon",
           pos: "Team Leader Analytics at Siemens Mobility",
+          color: "indigo",
+        },
+        {
+          text: "''Ich hatte das Vergnügen, mit Veit zusammenzuarbeiten, und kann ihn als Senior Software Architekt wärmstens empfehlen. Veit ist ein außergewöhnlich sachlicher, freundlicher und höflicher Kollege. Seine Professionalität und Zuverlässigkeit sind bemerkenswert, und er hat jede Aufgabe mit größter Sorgfalt und Engagement erledigt. Veit genießt nicht nur bei seinen Kolleg:innen, sondern auch bei unseren Kunden großes Ansehen. Seine Fähigkeit, auf die Bedürfnisse der Kunden einzugehen und ihre Erwartungen zu übertreffen, hat maßgeblich zu unserem gemeinsamen Erfolg beigetragen. Ich bin überzeugt, dass Veit mit seinen Fähigkeiten und seiner Arbeitseinstellung in jedem Team einen wertvollen Beitrag leisten wird. Ich freue mich darauf, in Zukunft hoffentlich mal wieder mit ihm zusammenzuarbeiten zu können und kann ihn sowohl menschlich als auch fachlich uneingeschränkt empfehlen.''",
+          who: "Dr. Patrick May",
+          pos: "Senior Manager Strategy Consulting",
           color: "indigo",
         },
         {
