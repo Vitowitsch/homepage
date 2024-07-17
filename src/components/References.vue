@@ -1,7 +1,6 @@
 <template>
   <v-container fluid id="references">
 
- 
     <v-data-iterator
       :items="items"
       :items-per-page.sync="itemsPerPage"

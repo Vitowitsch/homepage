@@ -7,20 +7,14 @@
         :color="item.color"
         small
       >
-      <template v-slot:opposite>
+        <template v-slot:opposite>
           {{ item.year }}
-        </template> 
-      <v-card>
-        <v-card-title class="bg-teal-lighten-2">
-          <h2 class="font-weight-light">
-           {{ item.title }}
-          </h2>
-        </v-card-title>
-          <v-card-text>
+        </template>
+        <div>
+          <h2 class="text-h6 teal--text">{{ item.title }}</h2>
           <p class="text-subtitle-2">{{ item.text }}</p>
-          </v-card-text>
           <div>{{ item.technologies }}</div>
-      </v-card> 
+        </div>
       </v-timeline-item>
     </v-timeline>
   </div>
