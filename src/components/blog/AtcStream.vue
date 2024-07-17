@@ -22,7 +22,7 @@ import dfw_le_2_488 from "@/assets/audio/dfw_le_2_488.wav";
 import dfw_lw_2_370 from "@/assets/audio/dfw_lw_2_370.wav";
 import dfw_lw_3_168 from "@/assets/audio/dfw_lw_3_168.wav";
 import transscript from "@/assets/short-transscript.json";
-// import RollingTimeline from './RollingTimeline.vue';
+import emitter from '@/api/event-bus.js';
 
 const waveforms = ref([]);
 const timeline = ref(null);
@@ -58,8 +58,7 @@ function start(index) {
   containerkey.value++;
   console.log("playing " + index);
   wavesurfers.value[index].play();
-  // Assuming EventBus is defined somewhere in your project
-  EventBus.$emit("play-features" + index);
+  emitter.emit("play-features" + index);
 }
 </script>
 

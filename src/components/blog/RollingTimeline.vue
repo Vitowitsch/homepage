@@ -10,8 +10,8 @@
           fill-dot
         >
           <v-alert :value="true" :color="item.color">
-            <v-icon x-large>{{ getIcon() }}</v-icon>
-            {{ text[index] }}
+            <v-icon x-large>{{ item.icon }}</v-icon>
+            {{ item.text }}
           </v-alert>
         </v-timeline-item>
       </v-slide-x-reverse-transition>
@@ -19,8 +19,10 @@
   </v-card>
 </template>
 
-<script>
-import { EventBus } from "@/api/event-bus.js";
+<script setup>
+import { ref, onMounted, onBeforeUnmount } from 'vue';
+import emitter from '@/api/event-bus.js';
+
 const COLORS = ["#607d8b", "#5c6bc0", "#26a69a"];
 const ICONS = {
   info: "mdi-information",
@@ -28,92 +30,109 @@ const ICONS = {
   error: "mdi-alert-circle",
   success: "mdi-check-circle",
 };
-export default {
-  props: ["index", "annotation", "speakerid", "callsign"],
-  mounted() {
-    var myThis = this;
-    EventBus.$on("play-features" + myThis.index, function () {
-      if (myThis.interval == null) {
-        myThis.start();
-      } else {
-        myThis.stop();
-      }
-    });
-    this.text.push("SCRIPT: " + this.annotation);
-    this.text.push("SPEAKER: " + this.speakerid);
-    this.text.push("CALL-SIGN: " + this.callsign);
-  },
-  data: () => ({
-    interval: null,
-    items: [-1],
-    text: [],
-    nonce: 3,
-    contentAdded: 0,
-  }),
-  display(index) {
-    console.log("index: " + index);
-    return this.nonnce >= index;
-  },
-  beforeDestroy() {
-    this.stop();
-  },
-  methods: {
-    getText() {
-      if (this.contentAdded === 0) {
-        return this.annotation;
-      } else if (this.contentAdded === 1) {
-        return this.speakerid;
-      } else if (this.contentAdded === 2) {
-        return this.callsign;
-      }
-    },
-    getIcon() {
-      if (this.speakerid === "ATC") {
-        return "home";
-      } else {
-        return "flight_land";
-      }
-    },
-    addEvent() {
-      if (this.contentAdded++ >= 3) {
-        return;
-      }
-      let { color, icon } = this.genAlert();
-      const previousColor = this.items[0].color;
-      while (previousColor === color) {
-        color = this.genColor();
-      }
-      this.items.unshift({
-        id: this.nonce++,
-        color,
-        icon,
-      });
-      if (this.nonce > 8) {
-        this.items.pop();
-      }
-    },
-    genAlert() {
-      const color = this.genColor();
-      return {
-        color,
-        icon: this.genIcon(color),
-      };
-    },
-    genColor() {
-      var col = COLORS[Math.floor(Math.random() * 3)];
-      console.log("color: " + col);
-      return col;
-    },
-    genIcon(color) {
-      return ICONS[color];
-    },
-    start() {
-      this.interval = setInterval(this.addEvent, 1000);
-    },
-    stop() {
-      clearInterval(this.interval);
-      this.interval = null;
-    },
-  },
-};
+
+const props = defineProps({
+  index: Number,
+  annotation: String,
+  speakerid: String,
+  callsign: String,
+});
+
+const items = ref([]);
+const text = ref([]);
+const interval = ref(null);
+const nonce = ref(3);
+const contentAdded = ref(0);
+
+onMounted(() => {
+  emitter.on(`play-features${props.index}`, () => {
+    if (interval.value === null) {
+      start();
+    } else {
+      stop();
+    }
+  });
+  text.value.push(`SCRIPT: ${props.annotation}`);
+  text.value.push(`SPEAKER: ${props.speakerid}`);
+  text.value.push(`CALL-SIGN: ${props.callsign}`);
+});
+
+onBeforeUnmount(() => {
+  stop();
+  emitter.off(`play-features${props.index}`);
+});
+
+function getIcon(color) {
+  switch (color) {
+    case "#607d8b":
+      return ICONS.info;
+    case "#5c6bc0":
+      return ICONS.warning;
+    case "#26a69a":
+      return ICONS.success;
+    default:
+      return ICONS.error;
+  }
+}
+
+function addEvent() {
+  if (contentAdded.value >= 3) {
+    return;
+  }
+  const alert = genAlert();
+  items.value.unshift({
+    id: nonce.value++,
+    ...alert,
+    text: getText(),
+  });
+  if (items.value.length > 8) {
+    items.value.pop();
+  }
+  contentAdded.value++;
+}
+
+function genAlert() {
+  const color = genColor();
+  return {
+    color,
+    icon: getIcon(color),
+  };
+}
+
+function genColor() {
+  return COLORS[Math.floor(Math.random() * COLORS.length)];
+}
+
+function getText() {
+  if (contentAdded.value === 0) {
+    return props.annotation;
+  } else if (contentAdded.value === 1) {
+    return props.speakerid;
+  } else if (contentAdded.value === 2) {
+    return props.callsign;
+  }
+}
+
+function start() {
+  interval.value = setInterval(addEvent, 1000);
+}
+
+function stop() {
+  clearInterval(interval.value);
+  interval.value = null;
+}
 </script>
+
+<style scoped>
+.v-card {
+  max-width: 100%;
+}
+
+.v-alert {
+  overflow-wrap: break-word;
+}
+
+.v-icon {
+  vertical-align: middle;
+}
+</style>

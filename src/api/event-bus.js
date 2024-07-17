@@ -1,2 +1,4 @@
-import Vue from "vue";
-export const EventBus = new Vue();
+// src/api/event-bus.js
+import mitt from 'mitt';
+const emitter = mitt();
+export default emitter;
