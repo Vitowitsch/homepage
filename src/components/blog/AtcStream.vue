@@ -4,13 +4,12 @@
     <div v-for="(item, index) in transscript" :key="index">
       <div :id="'wave' + index" ref="waveforms"></div>
       <div class="transcript">
-        <p><strong>Annotation:</strong> {{ item.annotation }}</p>
-        <p><strong>Call Sign:</strong> {{ item.call_sign }}</p>
-        <p><strong>Speaker ID:</strong> {{ item.speaker_id }}</p>
+        <p v-if="displayTranscripts[index] >= 3"><strong>Speaker ID:</strong> {{ item.speaker_id }}</p>
+        <p v-if="displayTranscripts[index] >= 1"><strong>Script:</strong> {{ item.annotation }}</p>
+        <p v-if="displayTranscripts[index] >= 2"><strong>Call Sign:</strong> {{ item.call_sign }}</p>
       </div>
     </div>
     <div ref="timeline" id="timeline"></div>
-    <!-- <RollingTimeline/> -->
   </div>
 </template>
 
@@ -18,15 +17,7 @@
 import { ref, onMounted, onBeforeUnmount } from 'vue';
 import WaveSurfer from 'wavesurfer.js';
 import MinimapPlugin from 'wavesurfer.js/dist/plugins/minimap.esm.js';
-import testaudio from "@/assets/audio/testaudio.wav";
 import dca_lc_1_464 from "@/assets/audio/dca_lc_1_464.wav";
-import dca_lc_2_1119 from "@/assets/audio/dca_lc_2_1119.wav";
-import dca_lc_3_7 from "@/assets/audio/dca_lc_3_7.wav";
-import dca_lc_4_426 from "@/assets/audio/dca_lc_4_426.wav";
-import dca_lc_4_427 from "@/assets/audio/dca_lc_4_427.wav";
-import dfw_le_2_488 from "@/assets/audio/dfw_le_2_488.wav";
-import dfw_lw_2_370 from "@/assets/audio/dfw_lw_2_370.wav";
-import dfw_lw_3_168 from "@/assets/audio/dfw_lw_3_168.wav";
 import transscript from "@/assets/short-transscript.json";
 import emitter from '@/api/event-bus.js';
 
@@ -34,6 +25,11 @@ const waveforms = ref([]);
 const timeline = ref(null);
 const wavesurfers = ref([]);
 const containerkey = ref(0);
+const displayTranscripts = ref(Array(transscript.length).fill(0));
+
+const audioFiles = [
+  dca_lc_1_464,
+];
 
 onMounted(() => {
   transscript.forEach((item, index) => {
@@ -42,13 +38,10 @@ onMounted(() => {
       const wavesurfer = WaveSurfer.create({
         container: waveformContainer,
         plugins: [
-          // TimelinePlugin.create({
-          //   container: "#wave-timeline" + index
-          // })
           MinimapPlugin.create(),
         ],
       });
-      wavesurfer.load(testaudio);
+      wavesurfer.load(audioFiles[index]);
       wavesurfers.value.push(wavesurfer);
     } else {
       console.error(`Container #wave${index} not found`);
@@ -65,6 +58,16 @@ function start(index) {
   console.log("playing " + index);
   wavesurfers.value[index].play();
   emitter.emit("play-features" + index);
+  showTranscriptsWithDelay(index);
+}
+
+function showTranscriptsWithDelay(index) {
+  const delays = [1000, 2000, 4000]; 
+  delays.forEach((delay, partIndex) => {
+    setTimeout(() => {
+      displayTranscripts.value[index] = partIndex + 1;
+    }, delay);
+  });
 }
 </script>
 

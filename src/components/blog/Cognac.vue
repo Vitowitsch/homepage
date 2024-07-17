@@ -1,6 +1,5 @@
 <template>
   <div :class="['ma-5', 'pa-5']">
-    <AtcStream class="ma-5" />
     <v-btn
       color="primary"
       outlined
@@ -10,6 +9,7 @@
       <v-icon left>mdi-arrow-left</v-icon>
       Back
     </v-btn>
+    <AtcStream class="ma-5" />
     <v-container>
       <v-row>
         <v-col cols="12">
@@ -28,7 +28,6 @@
                 </div>
               </blockquote>
               <article class="columns">
-                <AtcStream class="ma-5" />
                 Speech Recognition often fails to understand what was said - especially in
                 a noisy environment. Therefore, there are many business cases not yet
                 working.
