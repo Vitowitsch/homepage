@@ -1,11 +1,17 @@
 <template>
   <div>
     <v-btn @click="start(0)" color="teal" dark depressed>Start Streaming</v-btn>
-    <div v-for="(item, index) in transscript" :key="index" :id="'wave' + index" ref="waveforms">
+    <div v-for="(item, index) in transscript" :key="index">
+      <div :id="'wave' + index" ref="waveforms"></div>
+      <div class="transcript">
+        <p><strong>Annotation:</strong> {{ item.annotation }}</p>
+        <p><strong>Call Sign:</strong> {{ item.call_sign }}</p>
+        <p><strong>Speaker ID:</strong> {{ item.speaker_id }}</p>
+      </div>
     </div>
     <div ref="timeline" id="timeline"></div>
     <!-- <RollingTimeline/> -->
-  </div>  
+  </div>
 </template>
 
 <script setup>
@@ -71,5 +77,19 @@ function start(index) {
 #timeline {
   width: 100%;
   height: 30px;
+}
+
+.transcript {
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  color: #333; /* Darker text color for readability */
+}
+
+.transcript p {
+  margin: 0;
+  padding: 5px 0;
 }
 </style>
