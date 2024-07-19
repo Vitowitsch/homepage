@@ -16,7 +16,7 @@
             cols="12"
             sm="6"
             md="4"
-            lg="3"
+            lg="6"
           >
             <v-card style="overflow: initial; z-index: initial">
               <v-card-title>{{ item.raw.who }}</v-card-title>
@@ -173,7 +173,7 @@ export default {
           case "xs":
             return 1;
           default:
-            return 8;
+            return 9;
         }
       },
       set: function (newValue) {
