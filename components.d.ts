@@ -9,6 +9,8 @@ declare module 'vue' {
   export interface GlobalComponents {
     AtcStream: typeof import('./src/components/blog/AtcStream.vue')['default']
     Blog: typeof import('./src/components/Blog.vue')['default']
+    BlogLayout: typeof import('./src/components/BlogLayout.vue')['default']
+    BlogList: typeof import('./src/components/BlogList.vue')['default']
     Carbon: typeof import('./src/components/blog/Carbon.vue')['default']
     Certs: typeof import('./src/components/Certs.vue')['default']
     CityToll: typeof import('./src/components/blog/CityToll.vue')['default']

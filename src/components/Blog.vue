@@ -1,6 +1,6 @@
 <template>
-  <router-view/>
-  <div :class="['mt-5', 'ml-5', 'mr-5', 'mb-5']" id="blog">
+  <router-view  />
+  <div v-if="!reading_article" :class="['mt-5', 'ml-5', 'mr-5', 'mb-5']" id="blog">
     <v-data-iterator
       :items="items"
       :items-per-page.sync="itemsPerPage"
@@ -67,6 +67,7 @@ export default {
   data() {
     return {
       page: 1,
+      reading_article: false,
       items: [
         {
           component: "/blog/carbon",
@@ -113,6 +114,14 @@ export default {
         // not needed, but fixes a warning
       },
     },
+    isArticleSelected() {
+      return this.items.some(item => this.$route.path.includes(item.component));
+    },
+  },
+  watch: {
+    '$route.path'(newPath) {
+      this.updateArticleSelected(newPath);
+    },
   },
   methods: {
     nextPage() {
@@ -127,6 +136,9 @@ export default {
           console.error(`Item at index ${index} is missing a component:`, item);
         }
       });
+    },
+    updateArticleSelected(newPath) {
+      this.reading_article = this.items.some(item => newPath.includes(item.component));
     },
   },
   created() {
