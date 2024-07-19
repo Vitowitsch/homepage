@@ -31,10 +31,10 @@ const side = computed(() => (xs.value || sm.value ? 'end' : 'middle'));
 const items = ref([
   {
     color: "#b6b7ba",
-    year: "today",
+    year: "2023 - 07/2024",
     text: "AWS Infrastructure",
     technologies: "Technologies: AWS CDK, Terraform, Typescript, Event Driven Architectures",
-    title: "System Architect (for Cariad)",
+    title: "Senior System Architect (for Cariad)",
   },
   {
     color: "#b6b7ba",
