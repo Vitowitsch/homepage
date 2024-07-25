@@ -26,7 +26,7 @@ import { useDisplay } from 'vuetify';
 
 const { xs, sm } = useDisplay();
 
-const side = computed(() => (xs.value || sm.value ? 'end' : 'middle'));
+const side = computed(() => (xs.value || sm.value ? 'end' : undefined));
 
 const items = ref([
   {

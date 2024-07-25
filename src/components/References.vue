@@ -113,6 +113,16 @@ export default {
           color: "indigo",
         },
         {
+          text: "''[...] Herr Wehner war im Wesentlichen als Software Architekt und Data Scientist eingesetzt. Zusätzlich war er Gründungsmitglied des Förderprojekts Railradar (eine Erfindungsmeldung, um Zugkollisionen zu erkennen) und Mentor für Software-Architekten mi EH-Förderprogramm Digital Excellence. \
+          [...] Herr Wehner wendete seine sehr guten und soliden Fachkenntnisse laufend mit großem Erfolg in seinem Arbeitsgebiet an. \
+          Seine Aufgaben erledigte er stets selbständig mit äußerster Sorgfalt und größter Genauigkeit. \
+          Durch sein zielgerichtetes und systematisches Vorgehen, seine konstruktiven Vorschläge und durch sein offenes und kooperatives Verhalten hat er immer wieder maßgeblich dazu beigetragen, die Projekte mit großer Problemumsicht und hohem Innovationsgrad mi geplanten Zeitrahmen abzuschließen. \
+          [..] Seine Aufgaben hat er stets zu unserer vollsten Zufriedenheit erfüllt.''",
+          who: "Siemens HR",
+          pos: "",
+          color: "indigo",
+        },
+        {
           text: "''I had the pleasure of working with Veit for a brief period, but even in that short time, he made a lasting impression with his deep expertise in software architecture and development. Veit possesses a remarkable ability to define and solve complex problems, consistently finding the optimal balance between quality and speed. His approach to work is not only efficient and with his personality he is making collaboration seamless and enjoyable. I highly recommend Veit for any endeavors in his field of expertise as he is truly a valuable asset to any team.''",
           who: "Sasho Ristovski",
           pos: "DevOps Consultant",

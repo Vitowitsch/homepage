@@ -40,7 +40,6 @@
 <script setup>
 import { ref } from 'vue'
 
-// Definieren Sie die Bildpfade
 const images = ref([
   { url: new URL('@/assets/certs/ai-hack1.jpg', import.meta.url).href, alt: 'AI Hackathon 1' },
   { url: new URL('@/assets/certs/intrapreneurs.jpg', import.meta.url).href, alt: 'Intrapreneurs' },

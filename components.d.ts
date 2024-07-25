@@ -13,6 +13,7 @@ declare module 'vue' {
     BlogList: typeof import('./src/components/BlogList.vue')['default']
     Carbon: typeof import('./src/components/blog/Carbon.vue')['default']
     Certs: typeof import('./src/components/Certs.vue')['default']
+    Chatbot: typeof import('./src/components/Chatbot.vue')['default']
     CityToll: typeof import('./src/components/blog/CityToll.vue')['default']
     ClimateForecast: typeof import('./src/components/blog/ClimateForecast.vue')['default']
     ClimateGlobe: typeof import('./src/components/blog/ClimateGlobe.vue')['default']
