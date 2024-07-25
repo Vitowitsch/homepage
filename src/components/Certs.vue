@@ -9,7 +9,6 @@
         md="4"
       >
         <v-hover v-slot:default="{ isHovering }">
-          {{ image  }}
           <v-card
             @click="showImage(image.url)"
             :elevation="isHovering ? 12 : 2"
