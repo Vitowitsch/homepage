@@ -45,7 +45,7 @@ import { ref } from 'vue'
 const images = ref([
   { url: new URL('@/assets/certs/ai-hack1.jpg', import.meta.url).href, alt: 'AI Hackathon 1' },
   { url: new URL('@/assets/certs/intrapreneurs.jpg', import.meta.url).href, alt: 'Intrapreneurs' },
-  { url: new URL('@/assets/certs/siemens_swa_curriculum.jpeg', import.meta.url).href, alt: 'Siemens SWA Curriculum' },
+  { url: new URL('@/assets/certs/sie_swa_curriculum.jpg', import.meta.url).href, alt: 'Siemens SWA Curriculum' },
   { url: new URL('@/assets/certs/futureland.png', import.meta.url).href, alt: 'Futureland' },
   { url: new URL('@/assets/certs/neo.png', import.meta.url).href, alt: 'NEO' },
   { url: new URL('@/assets/certs/mindsphere_hack.png', import.meta.url).href, alt: 'Mindsphere Hack' },
