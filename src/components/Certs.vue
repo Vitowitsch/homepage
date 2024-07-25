@@ -9,12 +9,14 @@
         md="4"
       >
         <v-hover v-slot:default="{ isHovering }">
+          {{ image  }}
           <v-card
             @click="showImage(image.url)"
             :elevation="isHovering ? 12 : 2"
             class="d-flex align-center justify-center"
             style="cursor: pointer; height: 200px;"
           >
+         
             <v-img :src="image.url" :alt="image.alt" class="image" />
           </v-card>
         </v-hover>
