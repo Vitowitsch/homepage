@@ -1,7 +1,7 @@
 <template>
-  <v-app>
+  <v-app> 
     <v-app-bar app collapse>
-      <v-app-bar-nav-icon color="teal" @click.stop="drawer = !drawer" />
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
     </v-app-bar>
 
     <v-navigation-drawer v-model="drawer" app :width="drawerWidth">
