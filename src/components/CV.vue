@@ -31,9 +31,9 @@ const side = computed(() => (xs.value || sm.value ? 'end' : undefined));
 const items = ref([
   {
     color: "#b6b7ba",
-    year: "2023 - 07/2024",
-    text: "AWS Infrastructure",
-    technologies: "Technologies: AWS CDK, Terraform, Typescript, Event Driven Architectures",
+    year: "2023 - heute",
+    text: "Azure & AWS Architecture for Big Data Analytics and Data Science topics",
+    technologies: "Technologies: Azure, AWS, AWS CDK, Terraform, Typescript, Python, Event Driven Architectures, Azure Synapse/Fabric, Databricks",
     title: "Senior System Architect (for Cariad)",
   },
   {
