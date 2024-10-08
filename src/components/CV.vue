@@ -33,7 +33,7 @@ const items = ref([
     color: "#b6b7ba",
     year: "2023 - heute",
     text: "Azure & AWS Architecture for Big Data Analytics and Data Science topics",
-    technologies: "Technologies: Azure, AWS, AWS CDK, Terraform, Typescript, Python, Event Driven Architectures, Azure Synapse/Fabric, Databricks, Github Actions",
+    technologies: "Technologies: Azure, AWS, AWS CDK, Terraform, Typescript, Python, Spark, Event Driven Architectures, Azure Synapse/Fabric, Databricks, Github Actions",
     title: "Senior System Architect - AWS & Azure (for Cariad)",
   },
   {
