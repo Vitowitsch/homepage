@@ -33,14 +33,14 @@ const items = ref([
     color: "#b6b7ba",
     year: "2023 - heute",
     text: "Azure & AWS Architecture for Big Data Analytics and Data Science topics",
-    technologies: "Technologies: Azure, AWS, AWS CDK, Terraform, Typescript, Python, Event Driven Architectures, Azure Synapse/Fabric, Databricks",
-    title: "Senior System Architect (for Cariad)",
+    technologies: "Technologies: Azure, AWS, AWS CDK, Terraform, Typescript, Python, Event Driven Architectures, Azure Synapse/Fabric, Databricks, Github Actions",
+    title: "Senior System Architect - AWS & Azure (for Cariad)",
   },
   {
     color: "#b6b7ba",
     year: "2023",
     text: "Special Purpose Machines",
-    technologies: "Technologies: Python, Kotlin, Quarkus, Vue.js, G Code, OpenCV, YoloV5, FastAPI, RabbitMQ, MQTT, FastAPI, Kubernetes, Gitlab",
+    technologies: "Technologies: Python, Kotlin, Quarkus, Vue.js, G Code, OpenCV, YoloV5, FastAPI, RabbitMQ, MQTT, FastAPI, Kubernetes, Gitlab,
     title: "Technical Lead (for bcmsolutions)",
   },
   {
