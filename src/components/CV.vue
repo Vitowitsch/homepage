@@ -40,7 +40,7 @@ const items = ref([
     color: "#b6b7ba",
     year: "2023",
     text: "Special Purpose Machines",
-    technologies: "Technologies: Python, Kotlin, Quarkus, Vue.js, G Code, OpenCV, YoloV5, FastAPI, RabbitMQ, MQTT, FastAPI, Kubernetes, Gitlab,
+    technologies: "Technologies: Python, Kotlin, Quarkus, Vue.js, G Code, OpenCV, YoloV5, FastAPI, RabbitMQ, MQTT, FastAPI, Kubernetes, Gitlab",
     title: "Technical Lead (for bcmsolutions)",
   },
   {
