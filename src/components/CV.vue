@@ -29,9 +29,16 @@ const { xs, sm } = useDisplay();
 const side = computed(() => (xs.value || sm.value ? 'end' : undefined));
 
 const items = ref([
+    {
+    color: "#b6b7ba",
+    year: "2024 - 2025",
+    text: "Architecture and prototype development of a computing platform for high-safety applications in railway infrastructure",
+    technologies: "Technologies: Safety and Security, Arcadia, Virtualization, Hypervisors",
+    title: "Software Architect for Deutsche Bahn",
+  },
   {
     color: "#b6b7ba",
-    year: "2023 - heute",
+    year: "2023 - 2025",
     text: "Azure & AWS Architecture for Big Data Analytics and Data Science topics",
     technologies: "Technologies: Azure, AWS, AWS CDK, Terraform, Typescript, Python, Spark, Event Driven Architectures, Azure Synapse/Fabric, Databricks, Github Actions",
     title: "Senior System Architect - AWS & Azure (for Cariad)",
