@@ -17,7 +17,7 @@
               Exploring Blockchain-Consensus-Strategies
             </v-card-title>
             <v-card-subtitle>
-              my-project
+              by Veit Wehner (2020)
             </v-card-subtitle>
             <v-card-text>
               <blockquote class="post__subtitle">

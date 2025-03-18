@@ -44,6 +44,7 @@ const items = ref([
   { name: 'references', text: 'REFERENCES', icon: 'grade' },
   { name: 'certificates', text: 'CERTIFICATES', icon: 'grade' },
   { name: 'blog', text: 'BLOG', icon: 'grade' },
+  { name: 'chatbot', text: 'CHATBOT', icon: 'grade' },
   
 ]);
 

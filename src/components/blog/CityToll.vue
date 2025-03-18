@@ -17,7 +17,7 @@
               Pollution is in the air
             </v-card-title>
             <v-card-subtitle>
-              my-project
+              by Veit Wehner
             </v-card-subtitle>
             <v-card-text>
               <blockquote class="post__subtitle">

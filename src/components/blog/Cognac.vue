@@ -18,7 +18,7 @@
               Speech Recognition
             </v-card-title>
             <v-card-subtitle>
-              my-project
+              by Veit Wehner (2019)
             </v-card-subtitle>
             <v-card-text>
               <blockquote class="post__subtitle">

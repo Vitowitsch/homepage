@@ -4,6 +4,7 @@ import CV from "@/components/CV.vue";
 import References from "@/components/References.vue";
 import Certs from "@/components/Certs.vue";
 import Blog from "@/components/Blog.vue";
+import Chatbot from "@/components/Chatbot.vue";
 import CityToll from "@/components/blog/CityToll.vue";
 import Cognac from "@/components/blog/Cognac.vue";
 import Consensus from "@/components/blog/Consensus.vue";
@@ -15,6 +16,7 @@ const routes = [
   { path: "/cv", name: "cv", component: CV },
   { path: "/references", name: "references", component: References },
   { path: "/certificates", name: "certificates", component: Certs },
+  { path: "/chatbot", name: "chatbot", component: Chatbot },
   {
     path: "/blog",
     name: "blog",

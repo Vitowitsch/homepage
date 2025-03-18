@@ -86,6 +86,8 @@ Copyright (c) 2016-present Vuetify, LLC
 
 ## Local Development
 
-ngrok config add-authtoken sanvito_auth
-yarn dev --host
+ngrok config add-authtoken $YOUR_TOKEN
+
 ngrok http 3000
+yarn dev --host
+

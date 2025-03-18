@@ -17,7 +17,7 @@
               Forget Bitcoin - Blockchain can help reduce CO₂-emissions
             </v-card-title>
             <v-card-subtitle>
-              my-project
+              by Veit Wehner (2017)
             </v-card-subtitle>
             <v-card-text>
               <blockquote class="post__subtitle">

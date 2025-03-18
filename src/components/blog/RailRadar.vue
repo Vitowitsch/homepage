@@ -17,7 +17,7 @@
               {{ title }}
             </v-card-title>
             <v-card-subtitle>
-             my-project
+              by Veit Wehner (2018)
             </v-card-subtitle>
             <v-card-text>
               <article class="columns">
