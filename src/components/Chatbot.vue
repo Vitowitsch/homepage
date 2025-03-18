@@ -1,35 +1,21 @@
 <template>
   <v-container class="main-div" fluid>
-    <!-- Chat Container -->
     <v-card class="chat-container" elevation="2">
       <v-card-text ref="chatContainer" class="chat">
         <v-row v-for="(message, index) in chatMessages" :key="index" class="message-container">
-          <v-col cols="12">
-            <v-chip
-              :class="message.role === 'user' ? 'user-message' : 'assistant-message'"
-              class="chat-bubble"
-              label
-            >
-              {{ message.content }}
-            </v-chip>
+          <v-col cols="12" style="display: flex; flex-wrap: wrap;">
+            <v-card :class="message.role === 'user' ? 'user-message' : 'assistant-message'" class="chat-bubble"
+              elevation="2" style="padding: 8px; word-wrap: break-word; white-space: pre-line; max-width: 100%;">
+              <v-card-text>{{ message.content }}</v-card-text>
+            </v-card>
           </v-col>
         </v-row>
       </v-card-text>
     </v-card>
 
-    <!-- User Input -->
     <v-form @submit.prevent="handleSubmit" class="user-input">
-      <v-text-field 
-        v-model="mytext" 
-        label="Type your message here" 
-        outlined
-        dense
-        class="message-input"
-        color="white"
-        bg-color="#1e1e1e"
-        hide-details
-        @keyup.enter="handleEnterKey"
-      ></v-text-field>
+      <v-text-field v-model="mytext" label="Type your message here" outlined dense class="message-input" color="white"
+        bg-color="#1e1e1e" hide-details @keyup.enter="handleEnterKey"></v-text-field>
 
       <v-btn @click="handleSubmit" class="send-button" icon>
         <v-icon>mdi-send</v-icon>
@@ -63,10 +49,12 @@ export default {
     };
 
     onMounted(() => {
-      chatMessages.value.push({
-        role: "assistant",
-        content: "Hi! How can I help you today?",
-      });
+      if (chatMessages.value.length === 0) {
+        chatMessages.value.push({
+          role: "assistant",
+          content: "Hi! I'm here to provide additional information about the website owner. Ask me anything...?",
+        });
+      }
     });
 
     return {
