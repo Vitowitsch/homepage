@@ -34,7 +34,7 @@ const items = ref([
     year: "2025 - today",
     text: "Architecture and implementation for augmenting and finetuning LLMs",
     technologies: "Technologies: Huggingface, AWS SageMaker, OpenSearch, Pinecone, Python, LLM Pipeline",
-    title: "AI Architect & Engineer & Large Language Models (for Cariad)",
+    title: "AI Architect & Engineer & Large Language Models (for Cariad / VW)",
   },
     {
     color: "#b6b7ba",
@@ -48,7 +48,7 @@ const items = ref([
     year: "2023 - 2025",
     text: "Azure & AWS Architecture for Big Data Analytics and Data Science topics",
     technologies: "Technologies: Azure, AWS, AWS CDK, Terraform, Typescript, Python, Spark, Event Driven Architectures, Azure Synapse/Fabric, Databricks, Github Actions",
-    title: "Senior System Architect - AWS & Azure (for Cariad)",
+    title: "Senior System Architect - AWS & Azure (for Cariad / VW)",
   },
   {
     color: "#b6b7ba",
