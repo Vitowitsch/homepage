@@ -29,6 +29,13 @@ const { xs, sm } = useDisplay();
 const side = computed(() => (xs.value || sm.value ? 'end' : undefined));
 
 const items = ref([
+  {
+    color: "#b6b7ba",
+    year: "2025 - today",
+    text: "Architecture and implementation for augmenting and finetuning LLMs",
+    technologies: "Technologies: Huggingface, AWS SageMaker, OpenSearch, Pinecone, Python, LLM Pipeline",
+    title: "AI Architect & Engineer & Large Language Models (for Cariad)",
+  },
     {
     color: "#b6b7ba",
     year: "2024 - 2025",
